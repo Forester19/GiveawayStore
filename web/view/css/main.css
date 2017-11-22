@@ -1,0 +1,13 @@
+
+.main{
+	width: 800px;
+	height: 800px;
+	background-color: rgba(24, 33, 52, 0.7);
+	margin: 100px auto 0 auto;
+	
+	text-align: center;
+	box-shadow: 0 -5px 0 #3adbfd;
+	border-radius: 0 0 10px 10px;
+	float: left;
+    min-height: 100%;
+}

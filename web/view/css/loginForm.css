@@ -1,0 +1,74 @@
+body{
+	background-image: url("../img/1283882738_CBE5E4FFEDEEE920F4EEED203036203036.jpg");
+}
+a{
+	color: #FFF;
+}
+a:hover{
+ text-decoration: none;
+}
+.containerLogin{
+	width: 450px;
+	height: 600px;
+	background-color: rgba(24, 33, 52, 0.7);
+	margin: 100px auto 0 auto;
+	
+	text-align: center;
+	box-shadow: 0 -5px 0 #3adbfd;
+	border-radius: 0 0 10px 10px;
+	float: right;
+}
+.containerLogin img{
+	width: 120px;
+	height: 120px;
+	margin: -60px 0 30px 0;
+	border:  5px solid #1a394f;
+	border-radius: 50%
+
+
+}
+input[type="text"], input[type="password"], input[type="email"]{
+	width: 300px;
+	height: 50px;
+	font-size: 18px;
+	margin-bottom: 25px;
+	margin-top: 10px;
+	box-shadow: 4px;
+	padding-left: 40px;
+}
+.dws_submit{
+	padding: 13px 30px;
+	margin: 5px 0 20px 0;
+	font-size: 15px;
+	color: #fff;
+	background-color: #2ca8c6;
+	border: none;
+	border-bottom: 4px solid #6ee9fd;
+	cursor: pointer;
+}
+.dws_submit:hover{
+transition: all 0.5s;
+background: #fff;
+color: #2c536d;
+}
+.dws-input::before{
+font-family: "FontAwesome";
+content: "\f007";
+position: absolute;
+font-size: 30px;
+padding: 23px 0 0 7px;
+color: #2c536c;
+}
+.dws-input:nth-child(2)::before{
+content: "\f09c";
+}
+.dws-input:nth-child(3)::before{
+	content: "\f0e0";
+}
+.dws-input:hover::before{
+color: #319ebc;
+transition: all 0.3s;
+}
+.dws-input input:hover{
+ box-shadow: 0 0 6px 3px rgba(58, 219, 253, 0.35);
+}

@@ -1,0 +1,10 @@
+[INFO] 05:30:03 (DefaultServlet.java:doGet:22)VLad Forester18 
+
+[INFO] 06:42:25 (DefaultServlet.java:process:41)Form with command: null 
+
+[INFO] 06:44:16 (DefaultServlet.java:process:41)Form with command: null 
+
+[INFO] 06:47:36 (DefaultServlet.java:process:41)Form with command: LOGIN_FORM 
+
+[INFO] 06:47:36 (LoginFormExecution.java:execute:21)wqe qwe 
+
