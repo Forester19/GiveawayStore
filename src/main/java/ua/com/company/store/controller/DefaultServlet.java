@@ -3,6 +3,10 @@ package ua.com.company.store.controller;
 import org.apache.log4j.Logger;
 import ua.com.company.store.controller.command.CommandInvoker;
 import ua.com.company.store.controller.command.CommandTypical;
+import ua.com.company.store.model.dao.daoAbstract.GenericDAO;
+import ua.com.company.store.model.dao.exceptions.PersistException;
+import ua.com.company.store.model.dao.factory.FactoryDAO;
+import ua.com.company.store.model.dao.factory.MySqlDaoFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,13 +20,12 @@ import java.io.IOException;
 @WebServlet(name = "default servlet ", urlPatterns = {"/loginForm"})
 public class DefaultServlet extends HttpServlet {
     private Logger logger = Logger.getRootLogger();
-    private CommandInvoker commandInvoker;
+    private CommandInvoker commandInvoker = new CommandInvoker();
     private final String COMMAND = "command";
 
-    @Override
-    public void init() throws ServletException {
-        commandInvoker = new CommandInvoker();
+    public DefaultServlet() throws PersistException {
     }
+
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

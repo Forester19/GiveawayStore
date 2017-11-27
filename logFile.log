@@ -1,10 +1,88 @@
-[INFO] 05:30:03 (DefaultServlet.java:doGet:22)VLad Forester18 
+[INFO] 02:30:11 (AbstractDao.java:getConnectionFromPool:161)Downloaded mysql.jdbc.Driver. 
 
-[INFO] 06:42:25 (DefaultServlet.java:process:41)Form with command: null 
+[INFO] 02:30:11 (AbstractDao.java:getConnectionFromPool:173)Driver registered in Driver Manager. 
 
-[INFO] 06:44:16 (DefaultServlet.java:process:41)Form with command: null 
+[INFO] 02:30:49 (AbstractDao.java:getConnectionFromPool:161)Downloaded mysql.jdbc.Driver. 
 
-[INFO] 06:47:36 (DefaultServlet.java:process:41)Form with command: LOGIN_FORM 
+[INFO] 02:30:49 (AbstractDao.java:getConnectionFromPool:173)Driver registered in Driver Manager. 
 
-[INFO] 06:47:36 (LoginFormExecution.java:execute:21)wqe qwe 
+[INFO] 02:47:44 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 02:47:44 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 02:47:44 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@7cf10a6f 
+
+[INFO] 02:50:32 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 02:50:32 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 02:50:33 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@7cf10a6f 
+
+[INFO] 03:08:44 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 03:08:44 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 03:08:44 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 03:08:44 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@7a66a564 
+
+[INFO] 03:08:44 (LoginFormExecution.java:execute:35)2 
+
+[INFO] 03:10:34 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 03:10:34 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 03:10:34 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 03:10:34 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@4a579bc0 
+
+[INFO] 03:10:34 (LoginFormExecution.java:execute:35)2 
+
+[INFO] 03:11:29 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 03:11:29 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 03:11:29 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 03:11:29 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5feba197 
+
+[INFO] 03:11:40 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 03:11:40 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@4ea54e29 
+
+[INFO] 03:11:41 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 03:11:41 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@8d54aaa 
+
+[INFO] 03:11:42 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 03:11:42 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@1597833c 
+
+[INFO] 03:11:42 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 03:11:42 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@f51646c 
+
+[INFO] 03:11:55 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 03:11:55 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@68f90d70 
+
+[INFO] 04:06:14 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 04:06:14 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 04:06:14 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 04:06:15 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@63db9dc0 
+
+[INFO] 04:06:15 (LoginFormExecution.java:execute:35)2 
+
+[INFO] 04:08:52 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 04:08:52 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 04:08:52 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 04:08:53 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@413193e2 
+
+[INFO] 04:08:53 (LoginFormExecution.java:execute:35)2 
 
