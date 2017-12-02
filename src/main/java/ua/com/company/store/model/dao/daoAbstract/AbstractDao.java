@@ -23,7 +23,10 @@ public abstract class AbstractDao<T> implements GenericDAO<T> {
     private JDBCConnectionPool jdbcConnectionPool;
 
 
-
+    public AbstractDao(JDBCConnectionPool jdbcConnectionPool) {
+        this.jdbcConnectionPool = jdbcConnectionPool;
+        logger.info("Created dao layer + " +  this.toString());
+    }
 
     /**
      * @return returns sql statement as string for getting all elements 'SELECT * FROM [TABLE]'
@@ -45,22 +48,23 @@ public abstract class AbstractDao<T> implements GenericDAO<T> {
      */
     public abstract String getDeleteQuery();
 
+
     /**
      * @return returns sql statement as string for insert rows
      */
     public abstract String getInsertQuery();
 
-
     protected abstract List<T> parseResultSet(ResultSet rs);
 
     protected abstract void prepareStatemantForInsert(PreparedStatement statement, T object);
 
-    protected abstract void prepareStatemantForDelete(PreparedStatement statement, T object);
 
+    protected abstract void prepareStatemantForDelete(PreparedStatement statement, T object);
 
     @Override
     public void insert(T object) {
         String query = getInsertQuery();
+        query += " VALUES (?,?,?,?,?,?)" ;
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         try{
@@ -167,29 +171,34 @@ public abstract class AbstractDao<T> implements GenericDAO<T> {
         try {
             if(resultSet != null){
                 resultSet.close();
+
+                logger.info("Closed resource --" +resultSet.toString() );
             }
             if (preparedStatement != null) {
                 preparedStatement.close();
+
+                logger.info("Closed  resource --" +preparedStatement.toString() );
             }
             if (connection !=null) {
                 connection.close();
+
+                logger.info("Closed resource --" +connection.toString() );
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public AbstractDao() {
-        jdbcConnectionPool = JDBCConnectionPool.getInstanceConnectionPool();
-    }
-
     protected void closeResources(PreparedStatement preparedStatement, Connection connection){
         try {
             if (preparedStatement !=null) {
                 preparedStatement.close();
+                logger.info("Closed resource --" +preparedStatement.toString() );
             }
             if (connection != null) {
                 connection.close();
+
+                logger.info("Closed resource --" +connection.toString() );
             }
         } catch (SQLException e) {
             e.printStackTrace();

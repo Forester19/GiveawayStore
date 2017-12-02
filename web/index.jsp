@@ -11,8 +11,24 @@
 <body>
 
 <div class="header">
-  <div class="headerText"><h2>Online Store Project</h2>
-   </div>
+
+
+    <table>
+      <tr>
+        <td>
+          <div class="headerText">
+    <h2>Online Store Project</h2>
+          </div>
+
+        </td>
+        <td>           </td>
+        <td>
+          <div class ="existUserText">
+    ${existUser}
+          </div>
+        </td>
+      </tr>
+    </table>
  </div>
 
 <div class="main">
@@ -43,9 +59,10 @@
 
 <div class="containerLogin">
   <img src="view/img/fde2503131f76a398589941775680ada.jpg">
-  <a><h1>Sign In</h1></a>
+  <a><h1 color = red>Sign In</h1></a>
   <a name="sign_in"></a>
-  <form>
+  <form action="signUpForm" method="post">
+    <input type="hidden" name="command" value="SIGNUP_FORM">
     <div class="dws-input">
       <input type="text" name="login" placeholder="your login">
     </div>

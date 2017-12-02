@@ -5,5 +5,6 @@ package ua.com.company.store.controller.command;
  */
 public enum CommandEnum {
     LOGIN_FORM,
+    SIGNUP_FORM
 
 }

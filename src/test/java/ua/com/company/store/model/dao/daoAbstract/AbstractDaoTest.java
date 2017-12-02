@@ -3,16 +3,22 @@ package ua.com.company.store.model.dao.daoAbstract;
 
 import org.junit.Assert;
 import org.junit.Test;
+import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
 import ua.com.company.store.model.dao.impl.UserDAO;
+import ua.com.company.store.model.entity.User;
+
+import java.util.List;
 
 /**
  * Created by Владислав on 24.11.2017.
  */
 public class AbstractDaoTest {
+    AbstractDao abstractDao = new UserDAO(JDBCConnectionPool.getInstanceConnectionPool());
+
+
     @Test
     public void insert() throws Exception {
-
-    }
+        }
 
     @org.junit.Test
     public void getById() throws Exception {
@@ -26,8 +32,7 @@ public class AbstractDaoTest {
 
     @org.junit.Test
     public void getConnectionFromPool() throws Exception {
-          AbstractDao abstractDao = new UserDAO();
-         Assert.assertNotNull(abstractDao.getConnectionFromPool());
+          Assert.assertNotNull(abstractDao.getConnectionFromPool());
     }
 
 }

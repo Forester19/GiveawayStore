@@ -1,16 +1,17 @@
 <%--
   Created by IntelliJ IDEA.
   User: Владислав
-  Date: 24.11.2017
-  Time: 18:05
+  Date: 28.11.2017
+  Time: 17:52
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>SuccessfulLogin</title>
+    <title>Admin Page</title>
 </head>
 <body>
-<H1>Congratulation</H1>
+That's your page dear admin ${admin}
+
 </body>
 </html>

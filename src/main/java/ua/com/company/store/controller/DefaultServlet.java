@@ -17,7 +17,7 @@ import java.io.IOException;
 /**
  * Created by Владислав on 22.11.2017.
  */
-@WebServlet(name = "default servlet ", urlPatterns = {"/loginForm"})
+@WebServlet(name = "default servlet ", urlPatterns = {"/loginForm","/signUpForm"})
 public class DefaultServlet extends HttpServlet {
     private Logger logger = Logger.getRootLogger();
     private CommandInvoker commandInvoker = new CommandInvoker();
