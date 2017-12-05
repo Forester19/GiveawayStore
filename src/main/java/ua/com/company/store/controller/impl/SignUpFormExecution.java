@@ -9,15 +9,9 @@ import ua.com.company.store.validation.registration.LoginValidator;
 import ua.com.company.store.validation.registration.PasswordValidator;
 import ua.com.company.store.validation.signup.EmailValidator;
 
-import javax.jnlp.UnavailableServiceException;
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
-import javax.script.ScriptException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
@@ -44,7 +38,7 @@ public class SignUpFormExecution implements CommandTypical{
         }else {
             logger.info("Validated inputs unsuccessful " + login + " -- " + pass);
             req.setAttribute("error", " NUll inputs!!!");
-            req.getRequestDispatcher("view/jspFiles/ErrorInput.jsp").forward(req,resp);
+            req.getRequestDispatcher("view/ErrorInput.jsp").forward(req,resp);
         }
     }
     private boolean doValidationInputs(String login, String pass, String email){
@@ -66,7 +60,7 @@ public class SignUpFormExecution implements CommandTypical{
         if (isExistUser) {
             logger.info("Successful added user " + user.getNickname());
             abstractDao.insert(user);
-             req.getRequestDispatcher("view/jspFiles/SuccessfulRegistrationByUser.jsp").forward(req,resp);
+             req.getRequestDispatcher("view/SuccessfulRegistrationByUser.jsp").forward(req,resp);
         }else {
             StringBuilder sb = new StringBuilder();
             sb.append("<h3>User with email " );

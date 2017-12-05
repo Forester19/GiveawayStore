@@ -13,6 +13,10 @@ public class Image extends Entity {
         this.data = data;
     }
 
+    public Image(int id) {
+        super(id);
+    }
+
     public String getPath() {
         return path;
     }

@@ -37,7 +37,7 @@
 <div class="containerLogin">
   <img src="view/img/1449146235_youloveit_ru_multfilm_2016_ballerina010.jpg">
   <a><h1>Log In</h1></a>
-  <form action="loginForm" method="get">
+  <form action="loginForm" method="post">
     <input type="hidden" name="command" value="LOGIN_FORM">
     <div class="dws-input">
     <input type="text" name="login" placeholder="your login">

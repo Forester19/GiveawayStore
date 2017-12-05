@@ -1,5 +1,6 @@
 package ua.com.company.store.controller.command;
 
+import ua.com.company.store.controller.impl.AddNewProductByAdminExecution;
 import ua.com.company.store.controller.impl.LoginFormExecution;
 import ua.com.company.store.controller.impl.SignUpFormExecution;
 import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
@@ -7,6 +8,8 @@ import ua.com.company.store.model.dao.daoAbstract.AbstractDao;
 import ua.com.company.store.model.dao.exceptions.PersistException;
 import ua.com.company.store.model.dao.factory.FactoryDAO;
 import ua.com.company.store.model.dao.factory.MySqlDaoFactory;
+import ua.com.company.store.model.entity.Image;
+import ua.com.company.store.model.entity.Product;
 import ua.com.company.store.model.entity.User;
 
 import java.util.EnumMap;
@@ -22,6 +25,8 @@ public class CommandInvoker {
         FactoryDAO factoryDAO = new MySqlDaoFactory();
         commands.put(CommandEnum.LOGIN_FORM, new LoginFormExecution((AbstractDao) factoryDAO.getDao(User.class,jdbcConnectionPool)));
         commands.put(CommandEnum.SIGNUP_FORM, new SignUpFormExecution((AbstractDao) factoryDAO.getDao(User.class,jdbcConnectionPool)));
+        commands.put(CommandEnum.ADD_NEW_PRODUCT_FORM, new AddNewProductByAdminExecution((AbstractDao) factoryDAO.getDao(Product.class,jdbcConnectionPool),
+                (AbstractDao) factoryDAO.getDao(Image.class,jdbcConnectionPool)));
     }
 
     public CommandTypical getCommand(String nameCommand) {

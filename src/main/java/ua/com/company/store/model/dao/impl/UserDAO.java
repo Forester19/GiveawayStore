@@ -1,6 +1,5 @@
 package ua.com.company.store.model.dao.impl;
 
-import org.apache.log4j.Logger;
 import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
 import ua.com.company.store.model.dao.daoAbstract.AbstractDao;
 import ua.com.company.store.model.entity.User;
@@ -27,7 +26,7 @@ public class UserDAO extends AbstractDao<User> {
 
     @Override
     public String getSelectQuery() {
-        return "select * from onlinestoreproject.users";
+        return "select * from onlinestoreproject.users ";
     }
 
     @Override
@@ -47,7 +46,7 @@ public class UserDAO extends AbstractDao<User> {
 
     @Override
     public String getInsertQuery() {
-        return "insert into onlinestoreproject.users ";
+        return "insert into onlinestoreproject.users(id,nickname,password,email,role,is_defaulter) VALUES (?,?,?,?,?,?)";
     }
 
     @Override

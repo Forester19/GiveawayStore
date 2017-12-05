@@ -6,7 +6,7 @@ import java.util.List;
  * Created by Владислав on 22.11.2017.
  */
 public interface GenericDAO<T> {
-    void insert(T t);
+    int insert(T t);
 
     T update();
 

@@ -1,18 +1,13 @@
 package ua.com.company.store.model.dao.daoAbstract;
 
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import org.apache.log4j.Logger;
-import org.apache.tomcat.jdbc.pool.ConnectionPool;
-import org.apache.tomcat.jdbc.pool.DataSource;
 import ua.com.company.store.model.dao.connection.ConnectionPoolDataSource;
 import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
+import ua.com.company.store.model.entity.Image;
+import ua.com.company.store.model.entity.Product;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
 import java.sql.*;
 import java.util.List;
-import java.util.Properties;
 
 /**
  * Created by Владислав on 22.1 1.2017.
@@ -62,28 +57,34 @@ public abstract class AbstractDao<T> implements GenericDAO<T> {
     protected abstract void prepareStatemantForDelete(PreparedStatement statement, T object);
 
     @Override
-    public void insert(T object) {
+    public int insert(T object) {
+        int id = 0;
         String query = getInsertQuery();
-        query += " VALUES (?,?,?,?,?,?)" ;
         Connection connection = null;
         PreparedStatement preparedStatement = null;
-        try{
+        ResultSet generatedKeys = null;
+        try {
             connection = getConnectionFromPool();
-            preparedStatement = connection.prepareStatement(query);
+            preparedStatement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             prepareStatemantForInsert(preparedStatement, object);
             preparedStatement.executeUpdate();
+            System.out.println(id);
             logger.info("Insert into db new object " + object.toString());
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-            logger.error("error in inserting of object" + e);
+             generatedKeys = preparedStatement.getGeneratedKeys();
+                if (generatedKeys.next()) {
+                    id = generatedKeys.getInt(1);
+                } else {
+                    throw new SQLException("Creating user failed, no ID obtained.");
+                }
+        } catch (SQLException e1) {
+            e1.printStackTrace();
         }
         finally {
-            closeResources(preparedStatement,connection);
+            closeResources(generatedKeys,preparedStatement,connection);
         }
+        return id;
     }
 
-    ;
 
     @Override
     public T getById(int key) {
@@ -146,7 +147,8 @@ public abstract class AbstractDao<T> implements GenericDAO<T> {
             connection = getConnectionFromPool();
             String sql = getDeleteQuery();
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
-                statement.executeQuery();
+                prepareStatemantForDelete(statement,object);
+                statement.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -205,4 +207,7 @@ public abstract class AbstractDao<T> implements GenericDAO<T> {
         }
 
     }
+    public int[] insertImageAndProduct(Image image, Product product){
+        return null;
+    };
 }

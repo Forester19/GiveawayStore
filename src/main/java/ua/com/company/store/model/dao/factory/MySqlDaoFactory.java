@@ -4,7 +4,11 @@ import org.apache.log4j.Logger;
 import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
 import ua.com.company.store.model.dao.daoAbstract.GenericDAO;
 import ua.com.company.store.model.dao.exceptions.PersistException;
+import ua.com.company.store.model.dao.impl.ImageDAO;
+import ua.com.company.store.model.dao.impl.ProductDAO;
 import ua.com.company.store.model.dao.impl.UserDAO;
+import ua.com.company.store.model.entity.Image;
+import ua.com.company.store.model.entity.Product;
 import ua.com.company.store.model.entity.User;
 
 import java.util.HashMap;
@@ -32,6 +36,19 @@ public class MySqlDaoFactory implements FactoryDAO {
             @Override
             public GenericDAO create(JDBCConnectionPool jdbcConnectionPool) {
                 return new UserDAO(jdbcConnectionPool);
+            }
+        });
+        creators.put(Product.class, new CreatorDao() {
+            @Override
+            public GenericDAO create(JDBCConnectionPool jdbcConnectionPool) {
+                return new ProductDAO(jdbcConnectionPool);
+            }
+        });
+
+        creators.put(Image.class, new CreatorDao() {
+            @Override
+            public GenericDAO create(JDBCConnectionPool jdbcConnectionPool) {
+                return new ImageDAO(jdbcConnectionPool);
             }
         });
     }

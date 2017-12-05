@@ -17,6 +17,13 @@ public class Product extends Entity{
         this.imageId = imageId;
     }
 
+    public Product() {
+    }
+
+    public Product(int id) {
+        super(id);
+    }
+
     public String getTitle() {
         return title;
     }

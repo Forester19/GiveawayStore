@@ -1,204 +1,748 @@
-[INFO] 02:35:45 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+[INFO] 09:56:08 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
 
-[INFO] 02:35:45 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+[INFO] 09:56:08 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
 
-[INFO] 02:35:45 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@57688477 
+[INFO] 09:56:08 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5deb013 
 
-[INFO] 02:35:45 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1ad70744 
+[INFO] 09:56:08 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@16ad6472 
 
-[INFO] 02:35:45 (DefaultServlet.java:process:44)Form with command: SIGNUP_FORM 
+[INFO] 09:56:08 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
 
-[INFO] 02:35:45 (SignUpFormExecution.java:execute:42)Successful validated inputs signUp 
+[INFO] 09:56:08 (LoginFormExecution.java:execute:40)Validated inputs successful Vladiolus -- Forester18 
 
-[INFO] 02:35:46 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@7b6eca3a 
+[INFO] 09:56:08 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@511c39a8 
 
-[INFO] 02:35:46 (AbstractDao.java:closeResources:175)Created resource --com.mysql.jdbc.JDBC42ResultSet@dbd32ef 
+[INFO] 09:56:08 (AbstractDao.java:closeResources:175)Closed resource --com.mysql.jdbc.JDBC42ResultSet@130c4e42 
 
-[INFO] 02:35:46 (AbstractDao.java:closeResources:180)Created resource --com.mysql.jdbc.JDBC42PreparedStatement@29cbf6f7: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 09:56:08 (AbstractDao.java:closeResources:180)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@7c143b49: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
 
-[INFO] 02:35:46 (AbstractDao.java:closeResources:185)Created resource --com.mysql.jdbc.JDBC4Connection@7b6eca3a 
+[INFO] 09:56:08 (AbstractDao.java:closeResources:185)Closed resource --com.mysql.jdbc.JDBC4Connection@511c39a8 
 
-[INFO] 02:35:46 (SignUpFormExecution.java:doSignUp:69)User with email regina@reg.com is already exist. 
+[INFO] 09:56:08 (LoginFormExecution.java:execute:42)log in admin with login Vladiolus 
 
-[INFO] 02:41:40 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+[INFO] 09:58:45 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
 
-[INFO] 02:41:40 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+[INFO] 09:58:45 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
 
-[INFO] 02:41:40 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@74d1a6dc 
+[INFO] 09:58:45 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@715a4572 
 
-[INFO] 02:41:40 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4742489d 
+[INFO] 09:58:45 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5c24b38a 
 
-[INFO] 02:41:40 (DefaultServlet.java:process:44)Form with command: SIGNUP_FORM 
+[INFO] 09:58:45 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
 
-[INFO] 02:41:40 (SignUpFormExecution.java:execute:42)Successful validated inputs signUp 
+[INFO] 09:58:45 (LoginFormExecution.java:execute:40)Validated inputs successful Vladiolus -- Forester18 
 
-[INFO] 02:41:41 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@7ee484b6 
+[INFO] 09:58:46 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@21b6ea68 
 
-[INFO] 02:41:41 (AbstractDao.java:closeResources:175)Closed resource --com.mysql.jdbc.JDBC42ResultSet@4da9d157 
+[INFO] 09:58:46 (AbstractDao.java:closeResources:175)Closed resource --com.mysql.jdbc.JDBC42ResultSet@1325c40f 
 
-[INFO] 02:41:41 (AbstractDao.java:closeResources:180)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@661d6909: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 09:58:46 (AbstractDao.java:closeResources:180)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@73fabfe1: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
 
-[INFO] 02:41:41 (AbstractDao.java:closeResources:185)Closed resource --com.mysql.jdbc.JDBC4Connection@7ee484b6 
+[INFO] 09:58:46 (AbstractDao.java:closeResources:185)Closed resource --com.mysql.jdbc.JDBC4Connection@21b6ea68 
 
-[INFO] 02:41:41 (SignUpFormExecution.java:doSignUp:71)User with email regina@reg.com is already exist. 
+[INFO] 09:58:46 (LoginFormExecution.java:execute:42)log in admin with login Vladiolus 
 
-[INFO] 02:53:12 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+[INFO] 09:59:27 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
 
-[INFO] 02:53:12 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+[INFO] 09:59:27 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
 
-[INFO] 02:53:12 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@18f74705 
+[INFO] 09:59:27 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1b091004 
 
-[INFO] 02:53:12 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@48da6f60 
+[INFO] 09:59:27 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5bcaabfa 
 
-[INFO] 02:53:12 (DefaultServlet.java:process:44)Form with command: SIGNUP_FORM 
+[INFO] 09:59:27 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
 
-[INFO] 02:53:12 (SignUpFormExecution.java:execute:42)Successful validated inputs signUp 
+[INFO] 09:59:27 (LoginFormExecution.java:execute:40)Validated inputs successful Vladiolus -- Forester18 
 
-[INFO] 02:53:13 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@113f9c28 
+[INFO] 09:59:28 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5b077124 
 
-[INFO] 02:53:13 (AbstractDao.java:closeResources:175)Closed resource --com.mysql.jdbc.JDBC42ResultSet@4f83fdaa 
+[INFO] 09:59:28 (AbstractDao.java:closeResources:175)Closed resource --com.mysql.jdbc.JDBC42ResultSet@7b6ceb76 
 
-[INFO] 02:53:13 (AbstractDao.java:closeResources:180)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@2b46b23f: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 09:59:28 (AbstractDao.java:closeResources:180)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@70010eff: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
 
-[INFO] 02:53:13 (AbstractDao.java:closeResources:185)Closed resource --com.mysql.jdbc.JDBC4Connection@113f9c28 
+[INFO] 09:59:28 (AbstractDao.java:closeResources:185)Closed resource --com.mysql.jdbc.JDBC4Connection@5b077124 
 
-[INFO] 02:53:13 (SignUpFormExecution.java:doSignUp:71)User with email boba@mail.com is already exist. 
+[INFO] 09:59:28 (LoginFormExecution.java:execute:42)log in admin with login Vladiolus 
 
-[INFO] 03:04:17 (DefaultServlet.java:process:44)Form with command: SIGNUP_FORM 
+[INFO] 10:12:37 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
 
-[INFO] 03:04:17 (SignUpFormExecution.java:execute:42)Successful validated inputs signUp 
+[INFO] 10:12:37 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
 
-[INFO] 03:04:17 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@1b004ee0 
+[INFO] 10:12:37 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@6956de9 
 
-[INFO] 03:04:17 (AbstractDao.java:closeResources:175)Closed resource --com.mysql.jdbc.JDBC42ResultSet@1afa36a4 
+[INFO] 10:12:37 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
 
-[INFO] 03:04:17 (AbstractDao.java:closeResources:180)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@2ad1b2bc: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 10:12:37 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
 
-[INFO] 03:04:17 (AbstractDao.java:closeResources:185)Closed resource --com.mysql.jdbc.JDBC4Connection@1b004ee0 
+[INFO] 10:12:37 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@67117f44 
 
-[INFO] 03:04:17 (SignUpFormExecution.java:doSignUp:71)User with email boba@mail.com is already exist. 
+[INFO] 10:12:37 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
 
-[INFO] 03:08:08 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+[INFO] 10:12:37 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
 
-[INFO] 03:08:08 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+[INFO] 10:12:37 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2471cca7 
 
-[INFO] 03:08:08 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2978a866 
+[INFO] 10:12:37 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@783e6358 
 
-[INFO] 03:08:08 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@3b3853f7 
+[INFO] 10:12:37 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
 
-[INFO] 03:08:08 (DefaultServlet.java:process:44)Form with command: SIGNUP_FORM 
+[INFO] 10:12:37 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
 
-[INFO] 03:08:08 (SignUpFormExecution.java:execute:42)Successful validated inputs signUp 
+[INFO] 10:12:37 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@735f7ae5 
 
-[INFO] 03:08:09 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@573a79ed 
+[INFO] 10:13:56 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
 
-[INFO] 03:08:09 (AbstractDao.java:closeResources:175)Closed resource --com.mysql.jdbc.JDBC42ResultSet@54d694dc 
+[INFO] 10:13:56 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
 
-[INFO] 03:08:09 (AbstractDao.java:closeResources:180)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@60397d33: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 10:13:56 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@7091c791 
 
-[INFO] 03:08:09 (AbstractDao.java:closeResources:185)Closed resource --com.mysql.jdbc.JDBC4Connection@573a79ed 
+[INFO] 10:13:56 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@18f6c7b6 
 
-[INFO] 03:08:09 (SignUpFormExecution.java:doSignUp:75)User with email boba@mail.com is already exist. 
+[INFO] 10:13:56 (DefaultServlet.java:process:41)Form with command: LOGIN_FORM 
 
-[INFO] 03:11:01 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+[INFO] 10:13:56 (LoginFormExecution.java:execute:38)Validated inputs successful Vladiolus -- Forester18 
 
-[INFO] 03:11:01 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+[INFO] 10:13:56 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@573e2d00 
 
-[INFO] 03:11:01 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@429d7d66 
+[INFO] 10:13:56 (AbstractDao.java:closeResources:171)Closed resource --com.mysql.jdbc.JDBC42ResultSet@3039a5dd 
 
-[INFO] 03:11:01 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@428c8a2 
+[INFO] 10:13:56 (AbstractDao.java:closeResources:176)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@11208f75: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
 
-[INFO] 03:11:01 (DefaultServlet.java:process:44)Form with command: SIGNUP_FORM 
+[INFO] 10:13:56 (AbstractDao.java:closeResources:181)Closed resource --com.mysql.jdbc.JDBC4Connection@573e2d00 
 
-[INFO] 03:11:01 (SignUpFormExecution.java:execute:42)Successful validated inputs signUp 
+[INFO] 10:13:56 (LoginFormExecution.java:execute:40)log in admin with login Vladiolus 
 
-[INFO] 03:11:02 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@64e4e0c4 
+[INFO] 10:18:54 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
 
-[INFO] 03:11:02 (AbstractDao.java:closeResources:175)Closed resource --com.mysql.jdbc.JDBC42ResultSet@40ad4088 
+[INFO] 10:18:54 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
 
-[INFO] 03:11:02 (AbstractDao.java:closeResources:180)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@3cb7f9b1: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 10:18:54 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@7af33ec1 
 
-[INFO] 03:11:02 (AbstractDao.java:closeResources:185)Closed resource --com.mysql.jdbc.JDBC4Connection@64e4e0c4 
+[INFO] 10:18:54 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@23eb098 
 
-[INFO] 03:11:02 (SignUpFormExecution.java:doSignUp:75)User with email boba@mail.com is already exist. 
+[INFO] 10:18:54 (DefaultServlet.java:process:41)Form with command: LOGIN_FORM 
 
-[INFO] 03:11:43 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+[INFO] 10:18:54 (LoginFormExecution.java:execute:38)Validated inputs successful Vladiolus -- Forester18 
 
-[INFO] 03:11:43 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+[INFO] 10:18:55 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@36252b5e 
 
-[INFO] 03:11:43 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@41a9e0 
+[INFO] 10:18:55 (AbstractDao.java:closeResources:171)Closed resource --com.mysql.jdbc.JDBC42ResultSet@7bfab06e 
 
-[INFO] 03:11:43 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@73ae436e 
+[INFO] 10:18:55 (AbstractDao.java:closeResources:176)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@48054bf7: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
 
-[INFO] 03:11:43 (DefaultServlet.java:process:44)Form with command: SIGNUP_FORM 
+[INFO] 10:18:55 (AbstractDao.java:closeResources:181)Closed resource --com.mysql.jdbc.JDBC4Connection@36252b5e 
 
-[INFO] 03:11:43 (SignUpFormExecution.java:execute:42)Successful validated inputs signUp 
+[INFO] 10:18:55 (LoginFormExecution.java:execute:40)log in admin with login Vladiolus 
 
-[INFO] 03:11:44 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@14f4b93f 
+[INFO] 12:27:28 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
 
-[INFO] 03:11:44 (AbstractDao.java:closeResources:175)Closed resource --com.mysql.jdbc.JDBC42ResultSet@78bc41ec 
+[INFO] 12:27:28 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
 
-[INFO] 03:11:44 (AbstractDao.java:closeResources:180)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@2207a08: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 12:27:28 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@60fa6dd 
 
-[INFO] 03:11:44 (AbstractDao.java:closeResources:185)Closed resource --com.mysql.jdbc.JDBC4Connection@14f4b93f 
+[INFO] 12:27:28 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4816d5f 
 
-[INFO] 03:11:44 (SignUpFormExecution.java:doSignUp:75)User with email boba@mail.com is already exist. 
+[INFO] 12:27:28 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@4e889151 
 
-[INFO] 03:13:58 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+[INFO] 12:27:28 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@5021b4c0 
 
-[INFO] 03:13:58 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+[INFO] 12:27:28 (DefaultServlet.java:process:42)Form with command: LOGIN_FORM 
 
-[INFO] 03:13:58 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5d67a58b 
+[INFO] 12:27:28 (LoginFormExecution.java:execute:38)Validated inputs successful Vladiolus -- Forester18 
 
-[INFO] 03:13:58 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@68a2d1e6 
+[INFO] 12:27:31 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@29360c90 
 
-[INFO] 03:13:58 (DefaultServlet.java:process:44)Form with command: SIGNUP_FORM 
+[INFO] 12:27:32 (AbstractDao.java:closeResources:171)Closed resource --com.mysql.jdbc.JDBC42ResultSet@540407f0 
 
-[INFO] 03:13:58 (SignUpFormExecution.java:execute:42)Successful validated inputs signUp 
+[INFO] 12:27:32 (AbstractDao.java:closeResources:176)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@3958d3dc: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
 
-[INFO] 03:13:58 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@6d1b7f15 
+[INFO] 12:27:32 (AbstractDao.java:closeResources:181)Closed resource --com.mysql.jdbc.JDBC4Connection@29360c90 
 
-[INFO] 03:13:58 (AbstractDao.java:closeResources:175)Closed resource --com.mysql.jdbc.JDBC42ResultSet@4a298679 
+[INFO] 12:27:32 (LoginFormExecution.java:execute:40)log in admin with login Vladiolus 
 
-[INFO] 03:13:58 (AbstractDao.java:closeResources:180)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@4e37af13: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 12:28:10 (DefaultServlet.java:process:42)Form with command: null 
 
-[INFO] 03:13:58 (AbstractDao.java:closeResources:185)Closed resource --com.mysql.jdbc.JDBC4Connection@6d1b7f15 
+[INFO] 12:46:20 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
 
-[INFO] 03:13:58 (SignUpFormExecution.java:doSignUp:75)User with email boba@mail.com is already exist. 
+[INFO] 12:46:20 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
 
-[INFO] 03:14:04 (DefaultServlet.java:process:44)Form with command: SIGNUP_FORM 
+[INFO] 12:46:20 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@41bb5bf1 
 
-[INFO] 03:14:04 (SignUpFormExecution.java:execute:42)Successful validated inputs signUp 
+[INFO] 12:46:20 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1321d74b 
 
-[INFO] 03:14:04 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@26722142 
+[INFO] 12:46:20 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@16a7b476 
 
-[INFO] 03:14:04 (AbstractDao.java:closeResources:175)Closed resource --com.mysql.jdbc.JDBC42ResultSet@914e4bc 
+[INFO] 12:46:20 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@42f93705 
 
-[INFO] 03:14:04 (AbstractDao.java:closeResources:180)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@171e0204: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 12:46:20 (DefaultServlet.java:process:42)Form with command: null 
 
-[INFO] 03:14:04 (AbstractDao.java:closeResources:185)Closed resource --com.mysql.jdbc.JDBC4Connection@26722142 
+[INFO] 01:44:45 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
 
-[INFO] 03:14:04 (SignUpFormExecution.java:doSignUp:75)User with email boba@mail.com is already exist. 
+[INFO] 01:44:45 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
 
-[INFO] 03:17:14 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+[INFO] 01:44:45 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@ba4d54 
 
-[INFO] 03:17:14 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+[INFO] 01:44:45 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
 
-[INFO] 03:17:14 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@531bedb6 
+[INFO] 01:44:45 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
 
-[INFO] 03:17:14 (AbstractDao.java:<init>:28)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@38460369 
+[INFO] 01:44:45 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@6979e8cb 
 
-[INFO] 03:17:14 (DefaultServlet.java:process:44)Form with command: SIGNUP_FORM 
+[INFO] 01:44:45 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
 
-[INFO] 03:17:14 (SignUpFormExecution.java:execute:42)Successful validated inputs signUp 
+[INFO] 01:44:45 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
 
-[INFO] 03:17:14 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@338dfbba 
+[INFO] 01:44:45 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5c0369c4 
 
-[INFO] 03:17:14 (AbstractDao.java:closeResources:175)Closed resource --com.mysql.jdbc.JDBC42ResultSet@c394277 
+[INFO] 01:44:46 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@1324409e 
 
-[INFO] 03:17:15 (AbstractDao.java:closeResources:180)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@133b20ba: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 01:44:46 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
 
-[INFO] 03:17:15 (AbstractDao.java:closeResources:185)Closed resource --com.mysql.jdbc.JDBC4Connection@338dfbba 
+[INFO] 01:44:46 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
 
-[INFO] 03:17:15 (SignUpFormExecution.java:doSignUp:75)User with email boba@mail.com is already exist. 
+[INFO] 01:44:46 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@246ae04d 
+
+[INFO] 01:46:21 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 01:46:21 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 01:46:21 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@33421715 
+
+[INFO] 01:46:21 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5d8858dd 
+
+[INFO] 01:46:21 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@3d23f51a 
+
+[INFO] 01:46:21 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@43703eb9 
+
+[INFO] 01:46:21 (DefaultServlet.java:process:44)Form with command: ADD_NEW_PRODUCT_FORM 
+
+[INFO] 10:25:53 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 10:25:53 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 10:25:53 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@25fa98eb 
+
+[INFO] 10:25:53 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@3b9a2f11 
+
+[INFO] 10:25:53 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@2978a866 
+
+[INFO] 10:25:53 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@3b3853f7 
+
+[INFO] 10:25:53 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 10:25:53 (LoginFormExecution.java:execute:38)Validated inputs successful Vladiolus -- Forester18 
+
+[INFO] 10:25:57 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@2640a43d 
+
+[INFO] 10:25:57 (AbstractDao.java:closeResources:171)Closed resource --com.mysql.jdbc.JDBC42ResultSet@60397d33 
+
+[INFO] 10:25:57 (AbstractDao.java:closeResources:176)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@37593d04: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 10:25:57 (AbstractDao.java:closeResources:181)Closed resource --com.mysql.jdbc.JDBC4Connection@2640a43d 
+
+[INFO] 10:25:57 (LoginFormExecution.java:execute:40)log in admin with login Vladiolus 
+
+[INFO] 10:26:09 (DefaultServlet.java:process:44)Form with command: ADD_NEW_PRODUCT_FORM 
+
+[INFO] 10:26:09 (AddNewProductByAdminExecution.java:execute:46)File being uploaded  
+
+[INFO] 10:57:44 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 10:57:44 (LoginFormExecution.java:execute:38)Validated inputs successful Vladiolus -- Forester18 
+
+[INFO] 10:57:44 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@1a27801d 
+
+[INFO] 10:57:44 (AbstractDao.java:closeResources:171)Closed resource --com.mysql.jdbc.JDBC42ResultSet@73a8a71a 
+
+[INFO] 10:57:44 (AbstractDao.java:closeResources:176)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@7f8d6a26: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 10:57:44 (AbstractDao.java:closeResources:181)Closed resource --com.mysql.jdbc.JDBC4Connection@1a27801d 
+
+[INFO] 10:57:44 (LoginFormExecution.java:execute:40)log in admin with login Vladiolus 
+
+[INFO] 11:45:32 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 11:45:32 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 11:45:32 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@457a4c52 
+
+[INFO] 11:45:32 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@13f7d12e 
+
+[INFO] 11:45:32 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@7af33ec1 
+
+[INFO] 11:45:32 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@23eb098 
+
+[INFO] 11:45:32 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 11:45:32 (LoginFormExecution.java:execute:38)Validated inputs successful Vladiolus -- Forester18 
+
+[INFO] 11:45:33 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@793ddf6a 
+
+[INFO] 11:45:33 (AbstractDao.java:closeResources:173)Closed resource --com.mysql.jdbc.JDBC42ResultSet@48054bf7 
+
+[INFO] 11:45:33 (AbstractDao.java:closeResources:178)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@28a53776: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 11:45:33 (AbstractDao.java:closeResources:183)Closed resource --com.mysql.jdbc.JDBC4Connection@793ddf6a 
+
+[INFO] 11:45:33 (LoginFormExecution.java:execute:40)log in admin with login Vladiolus 
+
+[INFO] 11:46:30 (DefaultServlet.java:process:44)Form with command: ADD_NEW_PRODUCT_FORM 
+
+[INFO] 11:46:31 (AddNewProductByAdminExecution.java:downloadImage:64)File being uploaded  
+
+[INFO] 11:47:09 (DefaultServlet.java:process:44)Form with command: ADD_NEW_PRODUCT_FORM 
+
+[INFO] 11:47:09 (AddNewProductByAdminExecution.java:downloadImage:64)File being uploaded  
+
+[INFO] 11:50:37 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 11:50:37 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 11:50:37 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1e9f59cb 
+
+[INFO] 11:50:37 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4d0290c7 
+
+[INFO] 11:50:37 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@6ed02dc0 
+
+[INFO] 11:50:37 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@17117b73 
+
+[INFO] 11:50:37 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 11:50:37 (LoginFormExecution.java:execute:38)Validated inputs successful Vladiolus -- Forester18 
+
+[INFO] 11:50:37 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@7a4c6c47 
+
+[INFO] 11:50:37 (AbstractDao.java:closeResources:173)Closed resource --com.mysql.jdbc.JDBC42ResultSet@230cfdc4 
+
+[INFO] 11:50:37 (AbstractDao.java:closeResources:178)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@6de15eb9: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 11:50:37 (AbstractDao.java:closeResources:183)Closed resource --com.mysql.jdbc.JDBC4Connection@7a4c6c47 
+
+[INFO] 11:50:37 (LoginFormExecution.java:execute:40)log in admin with login Vladiolus 
+
+[INFO] 11:51:19 (DefaultServlet.java:process:44)Form with command: ADD_NEW_PRODUCT_FORM 
+
+[INFO] 11:51:19 (AddNewProductByAdminExecution.java:downloadImage:63)File being uploaded  
+
+[INFO] 11:51:19 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@1b3b6b73 
+
+[ERROR] 11:51:19 (AbstractDao.java:insert:76)error in inserting of objectjava.sql.SQLException: No value specified for parameter 1 
+
+[INFO] 11:51:19 (AbstractDao.java:closeResources:194)Closed resource --com.mysql.jdbc.JDBC42PreparedStatement@7608ef61: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 11:51:19 (AbstractDao.java:closeResources:199)Closed resource --com.mysql.jdbc.JDBC4Connection@1b3b6b73 
+
+[INFO] 11:51:19 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@2033f9ca 
+
+[ERROR] 11:51:19 (AbstractDao.java:insert:76)error in inserting of objectjava.sql.SQLException: No value specified for parameter 1 
+
+[INFO] 11:51:19 (AbstractDao.java:closeResources:194)Closed resource --com.mysql.jdbc.JDBC42PreparedStatement@49869d4: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 11:51:19 (AbstractDao.java:closeResources:199)Closed resource --com.mysql.jdbc.JDBC4Connection@2033f9ca 
+
+[INFO] 01:05:51 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 01:05:51 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 01:05:51 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2e3b9885 
+
+[INFO] 01:05:51 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4f33a74f 
+
+[INFO] 01:05:51 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@42b009e0 
+
+[INFO] 01:05:51 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@438497eb 
+
+[INFO] 01:05:51 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 01:05:51 (LoginFormExecution.java:execute:38)Validated inputs successful Vladiolus -- Forester18 
+
+[INFO] 01:05:52 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@72e90ab0 
+
+[INFO] 01:05:52 (AbstractDao.java:closeResources:172)Closed resource --com.mysql.jdbc.JDBC42ResultSet@42621589 
+
+[INFO] 01:05:52 (AbstractDao.java:closeResources:177)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@25d0a29f: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 01:05:52 (AbstractDao.java:closeResources:182)Closed resource --com.mysql.jdbc.JDBC4Connection@72e90ab0 
+
+[INFO] 01:05:52 (LoginFormExecution.java:execute:40)log in admin with login Vladiolus 
+
+[INFO] 01:06:40 (DefaultServlet.java:process:44)Form with command: ADD_NEW_PRODUCT_FORM 
+
+[INFO] 01:06:40 (AddNewProductByAdminExecution.java:downloadImage:63)File being uploaded  
+
+[INFO] 01:06:40 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@7f419cc4 
+
+[INFO] 01:06:42 (AbstractDao.java:insert:71)Insert into db new object Image{path='C:\Program Files\Apache Software Foundation\Tomcat 8.5\temp', data='returns.jpg'} 
+
+[INFO] 01:06:42 (AbstractDao.java:closeResources:193)Closed resource --com.mysql.jdbc.JDBC42PreparedStatement@2ae24991: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 01:06:42 (AbstractDao.java:closeResources:198)Closed resource --com.mysql.jdbc.JDBC4Connection@7f419cc4 
+
+[INFO] 01:06:42 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@4e07b55e 
+
+[ERROR] 01:06:42 (AbstractDao.java:insert:75)error in inserting of objectjava.sql.SQLException: SQL String can not be NULL 
+
+[INFO] 01:06:42 (AbstractDao.java:closeResources:198)Closed resource --com.mysql.jdbc.JDBC4Connection@4e07b55e 
+
+[INFO] 12:09:42 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 12:09:42 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 12:09:42 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@6b8c41cf 
+
+[INFO] 12:09:42 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@6fb63a2c 
+
+[INFO] 12:09:42 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@440e7178 
+
+[INFO] 12:09:42 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@5cd939b6 
+
+[INFO] 12:09:42 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 12:09:42 (LoginFormExecution.java:execute:38)Validated inputs successful Vladiolus -- Forester18 
+
+[INFO] 12:09:45 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@196485f7 
+
+[INFO] 12:09:46 (AbstractDao.java:closeResources:173)Closed resource --com.mysql.jdbc.JDBC42ResultSet@7a91dd32 
+
+[INFO] 12:09:46 (AbstractDao.java:closeResources:178)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@18161768: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 12:09:46 (AbstractDao.java:closeResources:183)Closed resource --com.mysql.jdbc.JDBC4Connection@196485f7 
+
+[INFO] 12:09:46 (LoginFormExecution.java:execute:40)log in admin with login Vladiolus 
+
+[INFO] 12:10:18 (DefaultServlet.java:process:44)Form with command: ADD_NEW_PRODUCT_FORM 
+
+[INFO] 12:10:18 (AddNewProductByAdminExecution.java:downloadImage:63)File being uploaded  
+
+[INFO] 01:02:55 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 01:02:55 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 01:02:55 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@6cd5aa95 
+
+[INFO] 01:02:55 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@26be6ad8 
+
+[INFO] 01:02:55 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@79705671 
+
+[INFO] 01:02:55 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@650440ed 
+
+[INFO] 01:02:55 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 01:02:55 (LoginFormExecution.java:execute:38)Validated inputs successful Vladiolus -- Forester18 
+
+[INFO] 01:02:56 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@322602eb 
+
+[INFO] 01:02:56 (AbstractDao.java:closeResources:173)Closed resource --com.mysql.jdbc.JDBC42ResultSet@788dd38 
+
+[INFO] 01:02:56 (AbstractDao.java:closeResources:178)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@d6da096: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 01:02:56 (AbstractDao.java:closeResources:183)Closed resource --com.mysql.jdbc.JDBC4Connection@322602eb 
+
+[INFO] 01:02:56 (LoginFormExecution.java:execute:40)log in admin with login Vladiolus 
+
+[INFO] 01:03:13 (DefaultServlet.java:process:44)Form with command: ADD_NEW_PRODUCT_FORM 
+
+[INFO] 01:03:13 (AddNewProductByAdminExecution.java:downloadImage:63)File being uploaded  
+
+[INFO] 01:03:13 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@772520c1 
+
+[INFO] 01:03:14 (AbstractDao.java:insert:72)Insert into db new object Image{path='C:\Program Files\Apache Software Foundation\Tomcat 8.5\temp', data='ornaments_texture1105.jpg'} 
+
+[INFO] 01:03:14 (AbstractDao.java:closeResources:194)Closed resource --com.mysql.jdbc.JDBC42PreparedStatement@7b46783e: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 01:03:14 (AbstractDao.java:closeResources:199)Closed resource --com.mysql.jdbc.JDBC4Connection@772520c1 
+
+[INFO] 01:03:14 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@3b4effa2 
+
+[ERROR] 01:03:14 (AbstractDao.java:insert:76)error in inserting of objectjava.sql.SQLException: SQL String can not be NULL 
+
+[INFO] 01:03:14 (AbstractDao.java:closeResources:199)Closed resource --com.mysql.jdbc.JDBC4Connection@3b4effa2 
+
+[INFO] 01:26:55 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 01:26:55 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 01:26:55 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4668701e 
+
+[INFO] 01:26:55 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@7bb1b6a0 
+
+[INFO] 01:26:55 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@531bedb6 
+
+[INFO] 01:26:55 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@38460369 
+
+[INFO] 01:26:55 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 01:26:55 (LoginFormExecution.java:execute:38)Validated inputs successful Vladiolus -- Forester18 
+
+[INFO] 01:26:56 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@7a7b4ccf 
+
+[INFO] 01:26:56 (AbstractDao.java:closeResources:173)Closed resource --com.mysql.jdbc.JDBC42ResultSet@133b20ba 
+
+[INFO] 01:26:56 (AbstractDao.java:closeResources:178)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@1f055406: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 01:26:56 (AbstractDao.java:closeResources:183)Closed resource --com.mysql.jdbc.JDBC4Connection@7a7b4ccf 
+
+[INFO] 01:26:56 (LoginFormExecution.java:execute:40)log in admin with login Vladiolus 
+
+[INFO] 01:27:16 (DefaultServlet.java:process:44)Form with command: ADD_NEW_PRODUCT_FORM 
+
+[INFO] 01:27:16 (AddNewProductByAdminExecution.java:downloadImage:63)File being uploaded  
+
+[INFO] 01:27:16 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@6487853a 
+
+[INFO] 01:27:17 (AbstractDao.java:insert:72)Insert into db new object Image{path='C:\Program Files\Apache Software Foundation\Tomcat 8.5\temp', data='1449146235_youloveit_ru_multfilm_2016_ballerina010.jpg'} 
+
+[INFO] 01:27:17 (AbstractDao.java:closeResources:194)Closed resource --com.mysql.jdbc.JDBC42PreparedStatement@1834e05c: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 01:27:17 (AbstractDao.java:closeResources:199)Closed resource --com.mysql.jdbc.JDBC4Connection@6487853a 
+
+[INFO] 01:27:17 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@50bb9b5d 
+
+[ERROR] 01:27:17 (AbstractDao.java:insert:76)error in inserting of objectjava.sql.SQLException: No value specified for parameter 1 
+
+[INFO] 01:27:17 (AbstractDao.java:closeResources:194)Closed resource --com.mysql.jdbc.JDBC42PreparedStatement@42875cd0: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 01:27:17 (AbstractDao.java:closeResources:199)Closed resource --com.mysql.jdbc.JDBC4Connection@50bb9b5d 
+
+[INFO] 05:04:00 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 05:04:00 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 05:04:00 (AbstractDao.java:<init>:21)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@15317451 
+
+[INFO] 05:04:00 (AbstractDao.java:<init>:21)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@38e2a978 
+
+[INFO] 05:04:00 (AbstractDao.java:<init>:21)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@5b048d93 
+
+[INFO] 05:04:00 (AbstractDao.java:<init>:21)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@2c494c1b 
+
+[INFO] 05:04:00 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 05:04:00 (LoginFormExecution.java:execute:38)Validated inputs successful Vladiolus -- Forester18 
+
+[INFO] 05:04:01 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@2c472750 
+
+[INFO] 05:04:01 (AbstractDao.java:closeResources:174)Closed resource --com.mysql.jdbc.JDBC42ResultSet@67cfa46e 
+
+[INFO] 05:04:01 (AbstractDao.java:closeResources:179)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@66d02166: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 05:04:01 (AbstractDao.java:closeResources:184)Closed resource --com.mysql.jdbc.JDBC4Connection@2c472750 
+
+[INFO] 05:04:01 (LoginFormExecution.java:execute:40)log in admin with login Vladiolus 
+
+[INFO] 05:04:20 (DefaultServlet.java:process:44)Form with command: ADD_NEW_PRODUCT_FORM 
+
+[INFO] 05:04:20 (AddNewProductByAdminExecution.java:downloadImage:63)File being uploaded  
+
+[INFO] 05:04:20 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@6645bd80 
+
+[INFO] 05:04:20 (AbstractDao.java:insert:70)Insert into db new object Image{path='C:\Program Files\Apache Software Foundation\Tomcat 8.5\temp', data='saucony_2108_518_39_5_images_172570957.jpg'} 
+
+[INFO] 05:04:20 (AbstractDao.java:closeResources:174)Closed resource --com.mysql.jdbc.JDBC42ResultSet@2d3837d4 
+
+[INFO] 05:04:20 (AbstractDao.java:closeResources:179)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@5164ef0b: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 05:04:20 (AbstractDao.java:closeResources:184)Closed resource --com.mysql.jdbc.JDBC4Connection@6645bd80 
+
+[INFO] 05:04:20 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5744532f 
+
+[INFO] 05:04:20 (AbstractDao.java:closeResources:179)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@6b37f413: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 05:04:20 (AbstractDao.java:closeResources:184)Closed resource --com.mysql.jdbc.JDBC4Connection@5744532f 
+
+[INFO] 06:17:57 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 06:17:58 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 06:17:58 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@3d04a311 
+
+[INFO] 06:17:59 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@75bd9247 
+
+[INFO] 06:17:59 (AbstractDao.java:closeResources:176)Closed resource --com.mysql.jdbc.JDBC42ResultSet@2d209079 
+
+[INFO] 06:17:59 (AbstractDao.java:closeResources:181)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@6b71769e: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 06:17:59 (AbstractDao.java:closeResources:186)Closed resource --com.mysql.jdbc.JDBC4Connection@75bd9247 
+
+[INFO] 07:11:00 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 07:11:00 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 07:11:00 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@1c6b6478 
+
+[INFO] 07:11:00 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@67f89fa3 
+
+[INFO] 07:11:00 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@6debcae2 
+
+[INFO] 07:11:00 (AbstractDao.java:closeResources:176)Closed resource --com.mysql.jdbc.JDBC42ResultSet@1134affc 
+
+[INFO] 07:11:00 (AbstractDao.java:closeResources:181)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@129a8472: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 07:11:00 (AbstractDao.java:closeResources:186)Closed resource --com.mysql.jdbc.JDBC4Connection@6debcae2 
+
+[INFO] 07:11:00 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@36d64342 
+
+[INFO] 07:11:00 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5b464ce8 
+
+[INFO] 07:12:54 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 07:12:54 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 07:12:54 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@1c6b6478 
+
+[INFO] 07:12:54 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@67f89fa3 
+
+[INFO] 07:12:55 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@6debcae2 
+
+[INFO] 07:12:55 (AbstractDao.java:closeResources:177)Closed resource --com.mysql.jdbc.JDBC42ResultSet@1134affc 
+
+[INFO] 07:12:55 (AbstractDao.java:closeResources:182)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@129a8472: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 07:12:55 (AbstractDao.java:closeResources:187)Closed resource --com.mysql.jdbc.JDBC4Connection@6debcae2 
+
+[INFO] 07:12:55 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@36d64342 
+
+[INFO] 07:12:55 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5b464ce8 
+
+[INFO] 07:15:16 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 07:15:16 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 07:15:16 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@1c6b6478 
+
+[INFO] 07:15:16 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@67f89fa3 
+
+[INFO] 07:15:17 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@6debcae2 
+
+[INFO] 07:15:17 (AbstractDao.java:closeResources:177)Closed resource --com.mysql.jdbc.JDBC42ResultSet@1134affc 
+
+[INFO] 07:15:17 (AbstractDao.java:closeResources:182)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@129a8472: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 07:15:17 (AbstractDao.java:closeResources:187)Closed resource --com.mysql.jdbc.JDBC4Connection@6debcae2 
+
+[INFO] 07:15:17 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@36d64342 
+
+[INFO] 07:15:17 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5b464ce8 
+
+[INFO] 07:16:16 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 07:16:16 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 07:16:16 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@1c6b6478 
+
+[INFO] 07:16:16 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@67f89fa3 
+
+[INFO] 07:16:17 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@6debcae2 
+
+[INFO] 07:16:17 (AbstractDao.java:closeResources:177)Closed resource --com.mysql.jdbc.JDBC42ResultSet@1134affc 
+
+[INFO] 07:16:17 (AbstractDao.java:closeResources:182)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@129a8472: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 07:16:17 (AbstractDao.java:closeResources:187)Closed resource --com.mysql.jdbc.JDBC4Connection@6debcae2 
+
+[INFO] 07:16:17 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@36d64342 
+
+[INFO] 07:16:17 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@19dfb72a 
+
+[INFO] 07:17:53 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 07:17:53 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 07:17:53 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@1c6b6478 
+
+[INFO] 07:17:53 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@67f89fa3 
+
+[INFO] 07:17:54 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@6debcae2 
+
+[INFO] 07:17:54 (AbstractDao.java:closeResources:177)Closed resource --com.mysql.jdbc.JDBC42ResultSet@1134affc 
+
+[INFO] 07:17:54 (AbstractDao.java:closeResources:182)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@129a8472: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 07:17:54 (AbstractDao.java:closeResources:187)Closed resource --com.mysql.jdbc.JDBC4Connection@6debcae2 
+
+[INFO] 07:17:54 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@36d64342 
+
+[INFO] 07:17:54 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5b464ce8 
+
+[INFO] 07:18:37 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 07:18:37 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 07:18:37 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@1c6b6478 
+
+[INFO] 07:18:37 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@67f89fa3 
+
+[INFO] 07:18:38 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@6debcae2 
+
+[INFO] 07:18:38 (AbstractDao.java:closeResources:177)Closed resource --com.mysql.jdbc.JDBC42ResultSet@1134affc 
+
+[INFO] 07:18:38 (AbstractDao.java:closeResources:182)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@129a8472: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 07:18:38 (AbstractDao.java:closeResources:187)Closed resource --com.mysql.jdbc.JDBC4Connection@6debcae2 
+
+[INFO] 07:18:38 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@36d64342 
+
+[INFO] 07:18:38 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5b464ce8 
+
+[INFO] 07:22:22 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 07:22:22 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 07:22:22 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@1c6b6478 
+
+[INFO] 07:22:22 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@67f89fa3 
+
+[INFO] 07:22:22 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@6debcae2 
+
+[INFO] 07:22:22 (AbstractDao.java:closeResources:177)Closed resource --com.mysql.jdbc.JDBC42ResultSet@1134affc 
+
+[INFO] 07:22:22 (AbstractDao.java:closeResources:182)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@129a8472: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 07:22:22 (AbstractDao.java:closeResources:187)Closed resource --com.mysql.jdbc.JDBC4Connection@6debcae2 
+
+[INFO] 07:22:22 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@36d64342 
+
+[INFO] 07:22:23 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5b464ce8 
+
+[INFO] 07:53:40 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+
+[INFO] 07:53:40 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+
+[INFO] 07:53:40 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@37a57b77 
+
+[INFO] 07:53:40 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5395de49 
+
+[INFO] 07:53:40 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@674eaa2f 
+
+[INFO] 07:53:40 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ImageDAO@3f4eb129 
+
+[INFO] 07:53:40 (DefaultServlet.java:process:44)Form with command: null 
+
+[INFO] 07:53:52 (DefaultServlet.java:process:44)Form with command: LOGIN_FORM 
+
+[INFO] 07:53:52 (LoginFormExecution.java:execute:38)Validated inputs successful Vladiolus -- Forester18 
+
+[INFO] 07:53:53 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@2f522a7b 
+
+[INFO] 07:53:53 (AbstractDao.java:closeResources:177)Closed resource --com.mysql.jdbc.JDBC42ResultSet@460d1b4d 
+
+[INFO] 07:53:53 (AbstractDao.java:closeResources:182)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@1686dd6a: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 07:53:53 (AbstractDao.java:closeResources:187)Closed resource --com.mysql.jdbc.JDBC4Connection@2f522a7b 
+
+[INFO] 07:53:53 (LoginFormExecution.java:execute:40)log in admin with login Vladiolus 
+
+[INFO] 07:56:53 (DefaultServlet.java:process:44)Form with command: ADD_NEW_PRODUCT_FORM 
+
+[INFO] 07:56:53 (AddNewProductByAdminExecution.java:downloadImage:63)File being uploaded  
+
+[INFO] 07:56:53 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5d5b32a9 
+
+[INFO] 07:56:53 (AbstractDao.java:closeResources:177)Closed resource --com.mysql.jdbc.JDBC42ResultSet@5c52d0c 
+
+[INFO] 07:56:53 (AbstractDao.java:closeResources:182)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@5d41c976: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+
+[INFO] 07:56:53 (AbstractDao.java:closeResources:187)Closed resource --com.mysql.jdbc.JDBC4Connection@5d5b32a9 
+
+[INFO] 07:56:53 (AddNewProductByAdminExecution.java:execute:42)Admin added new product Sneakers successful 
 
