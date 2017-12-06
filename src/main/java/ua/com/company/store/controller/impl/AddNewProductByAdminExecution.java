@@ -9,6 +9,7 @@ import ua.com.company.store.model.entity.Product;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import java.io.*;
 
@@ -34,6 +35,16 @@ public class AddNewProductByAdminExecution implements CommandTypical {
         String title = req.getParameter("title");
         String description= req.getParameter("description");
         String price = req.getParameter("price");
+
+        String userID;
+        HttpSession session = req.getSession(false);
+        if (session !=null){
+            userID =session.getAttribute("userID").toString();
+        }else {
+            logger.info("In servlet " + this.toString() + "session ==null");
+            resp.sendRedirect("index.jsp");
+            return;
+        }
 
 
         Image image = new Image(0,imageInformation[0],imageInformation[1]);

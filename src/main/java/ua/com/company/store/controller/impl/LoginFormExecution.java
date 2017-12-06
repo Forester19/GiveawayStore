@@ -11,6 +11,7 @@ import ua.com.company.store.validation.registration.PasswordValidator;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -29,6 +30,8 @@ public class LoginFormExecution implements CommandTypical {
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         boolean isValid = false;
 
+        HttpSession session = req.getSession(true);
+
         String login = req.getParameter("login");
         String pass = req.getParameter("password");
 
@@ -38,13 +41,20 @@ public class LoginFormExecution implements CommandTypical {
             logger.info("Validated inputs successful " + login + " -- " + pass);
             if (validationOnAdmin(login, pass)) {
                 logger.info("log in admin with login " + login);
+                session.setAttribute("adminID", login);
+                logger.info("Created session "+ session.toString()+" by user " + login);
                 req.setAttribute("admin", login);
+                req.setAttribute("userID",session.getAttribute("userID"));
                 req.getRequestDispatcher("view/AdminPage.jsp").forward(req, resp);
 
             } else {
                 if (validationOnUser(login, pass)) {
                     logger.info("log in user with login " + login);
                     req.setAttribute("user", login);
+                    session.setAttribute("userID", login);
+
+                    req.setAttribute("userID",session.getAttribute("userID"));
+                    logger.info("Created session "+ session.toString()+" by user " + login);
                     req.getRequestDispatcher("view/UserPage.jsp").forward(req, resp);
                 } else {
                     logger.info("log in unknown information  " + login);

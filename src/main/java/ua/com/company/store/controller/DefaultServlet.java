@@ -11,11 +11,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Date;
+
 /**
  * Created by Владислав on 22.11.2017.
  */
-@WebServlet(name = "default servlet ", urlPatterns = {"/loginForm","/signUpForm","/newProductForm"})
+@WebServlet(name = "default servlet ", urlPatterns = {"/loginForm","/signUpForm","/newProductForm","/removeSession"})
 @MultipartConfig
 public class DefaultServlet extends HttpServlet {
     private Logger logger = Logger.getRootLogger();
@@ -36,14 +39,15 @@ public class DefaultServlet extends HttpServlet {
     process(req,resp);
     }
     private void process(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String COMMAND = "command";
+       String COMMAND = "command";
         String commandName = req.getParameter(COMMAND);
         if (commandName == null) {
             commandName = (String) req.getAttribute(COMMAND);
-           }
-           logger.info("Form with command: " + commandName);
+        }
+        logger.info("Form with command: " + commandName);
         CommandTypical commandTypical = commandInvoker.getCommand(commandName);
-        commandTypical.execute(req,resp);
+        commandTypical.execute(req, resp);
+
     }
 
 }

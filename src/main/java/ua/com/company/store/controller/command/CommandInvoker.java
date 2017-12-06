@@ -2,6 +2,7 @@ package ua.com.company.store.controller.command;
 
 import ua.com.company.store.controller.impl.AddNewProductByAdminExecution;
 import ua.com.company.store.controller.impl.LoginFormExecution;
+import ua.com.company.store.controller.impl.RemoveSession;
 import ua.com.company.store.controller.impl.SignUpFormExecution;
 import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
 import ua.com.company.store.model.dao.daoAbstract.AbstractDao;
@@ -27,6 +28,7 @@ public class CommandInvoker {
         commands.put(CommandEnum.SIGNUP_FORM, new SignUpFormExecution((AbstractDao) factoryDAO.getDao(User.class,jdbcConnectionPool)));
         commands.put(CommandEnum.ADD_NEW_PRODUCT_FORM, new AddNewProductByAdminExecution((AbstractDao) factoryDAO.getDao(Product.class,jdbcConnectionPool),
                 (AbstractDao) factoryDAO.getDao(Image.class,jdbcConnectionPool)));
+        commands.put(CommandEnum.DELETE_SESSION_FORM,new RemoveSession());
     }
 
     public CommandTypical getCommand(String nameCommand) {

@@ -21,10 +21,19 @@
           </div>
 
         </td>
-        <td>           </td>
+        <td>
+          <form action="removeSession" method="get">
+            <input type="hidden" name="command" value="DELETE_SESSION_FORM">
+            <div class="userID">
+              ${userID}
+
+              <input type="submit" name="log out" value="LogOut">
+            </div>
+          </form>
+        </td>
         <td>
           <div class ="existUserText">
-    ${existUser}
+            ${existUser}
           </div>
         </td>
       </tr>

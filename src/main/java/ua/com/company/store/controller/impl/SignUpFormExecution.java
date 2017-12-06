@@ -12,6 +12,7 @@ import ua.com.company.store.validation.signup.EmailValidator;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -21,6 +22,7 @@ import java.util.List;
 public class SignUpFormExecution implements CommandTypical{
     private AbstractDao abstractDao;
     private Logger logger = Logger.getRootLogger();
+    private HttpSession session;
 
     public SignUpFormExecution(AbstractDao abstractDao) {
         this.abstractDao = abstractDao;
@@ -31,6 +33,8 @@ public class SignUpFormExecution implements CommandTypical{
         String login = req.getParameter("login");
         String pass = req.getParameter("password");
         String email = req.getParameter("email");
+
+        session = req.getSession(true);
         User user = new User(0,login,pass,email,false,false);
         if (doValidationInputs(login,pass,email)){
             logger.info("Successful validated inputs signUp");
@@ -60,7 +64,8 @@ public class SignUpFormExecution implements CommandTypical{
         if (isExistUser) {
             logger.info("Successful added user " + user.getNickname());
             abstractDao.insert(user);
-             req.getRequestDispatcher("view/SuccessfulRegistrationByUser.jsp").forward(req,resp);
+            session.setAttribute("userID", user.getNickname());
+            req.getRequestDispatcher("view/SuccessfulRegistrationByUser.jsp").forward(req,resp);
         }else {
             StringBuilder sb = new StringBuilder();
             sb.append("<h3>User with email " );
