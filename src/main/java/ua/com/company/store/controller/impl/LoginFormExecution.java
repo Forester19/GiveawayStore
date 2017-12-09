@@ -5,8 +5,8 @@ import ua.com.company.store.controller.command.CommandTypical;
 import ua.com.company.store.model.dao.daoAbstract.AbstractDao;
 import ua.com.company.store.model.entity.User;
 import ua.com.company.store.validation.ValidatorAbstract;
-import ua.com.company.store.validation.registration.LoginValidator;
-import ua.com.company.store.validation.registration.PasswordValidator;
+import ua.com.company.store.validation.signup.LoginValidator;
+import ua.com.company.store.validation.signup.PasswordValidator;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -27,7 +27,7 @@ public class LoginFormExecution implements CommandTypical {
     }
 
     @Override
-    public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         boolean isValid = false;
 
         HttpSession session = req.getSession(true);
@@ -69,7 +69,7 @@ public class LoginFormExecution implements CommandTypical {
             req.getRequestDispatcher("view/ErrorInput.jsp").forward(req, resp);
 
         }
-
+return null;
     }
 
     private boolean validationOnAdmin(String login, String password) {

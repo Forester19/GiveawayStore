@@ -17,7 +17,7 @@ import java.util.Date;
 public class RemoveSession implements CommandTypical {
     private Logger logger = Logger.getRootLogger();
     @Override
-    public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession(false);
         String userID = null;
         Date createTime = null;
@@ -27,7 +27,7 @@ public class RemoveSession implements CommandTypical {
         if (session.getAttribute("userID") == null || session.getAttribute("adminID") == null){
             PrintWriter printWriter = resp.getWriter();
             printWriter.print("Session is null");
-            return;
+            return null;
         }
 
         userID = session.getAttribute("userID").toString();
@@ -35,6 +35,7 @@ public class RemoveSession implements CommandTypical {
         lastAccessTime =
                 new Date(session.getLastAccessedTime());
         session.invalidate();
-        logger.info("Removed session with ID " + userID + "\n" + "Time online " + (lastAccessTime.getMinutes()-createTime.getMinutes()));
+        logger.info("Removed session with ID " + userID + "\n" + "Time online " + (lastAccessTime.getMinutes()-createTime.getMinutes()) + " min.");
+    return null;
     }
 }

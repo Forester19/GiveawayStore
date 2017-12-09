@@ -29,7 +29,7 @@ public class AddNewProductByAdminExecution implements CommandTypical {
     }
 
     @Override
-    public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String[] imageInformation = downloadImage(req,resp);
         String title = req.getParameter("title");
@@ -43,7 +43,7 @@ public class AddNewProductByAdminExecution implements CommandTypical {
         }else {
             logger.info("In servlet " + this.toString() + "session ==null");
             resp.sendRedirect("index.jsp");
-            return;
+            return null;
         }
 
 
@@ -53,6 +53,7 @@ public class AddNewProductByAdminExecution implements CommandTypical {
         logger.info("Admin added new product " +product.getTitle()+ " successful");
         req.setAttribute("successfulMuve","Successful added new product");
         req.getRequestDispatcher("view/AdminPage.jsp").include(req,resp);
+    return  null;
     }
     private String[] downloadImage(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         final String path = "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\temp";

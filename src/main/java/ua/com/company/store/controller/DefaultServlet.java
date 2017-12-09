@@ -1,53 +1,81 @@
 package ua.com.company.store.controller;
 
 import org.apache.log4j.Logger;
-import ua.com.company.store.controller.command.CommandInvoker;
+import ua.com.company.store.controller.command.CommandFactory;
 import ua.com.company.store.controller.command.CommandTypical;
+import ua.com.company.store.controller.utils.CommandKeyGenerator;
+import ua.com.company.store.controller.utils.RedirectionManager;
+import ua.com.company.store.controller.utils.ServletWrapper;
+import ua.com.company.store.exceptions.ServiceException;
+import ua.com.company.store.locale.AppLocale;
 import ua.com.company.store.model.dao.exceptions.PersistException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.Date;
+import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Владислав on 22.11.2017.
  */
-@WebServlet(name = "default servlet ", urlPatterns = {"/loginForm","/signUpForm","/newProductForm","/removeSession"})
+@WebServlet(name = "default servlet ", urlPatterns = {"/store/*"}, loadOnStartup = 1)
 @MultipartConfig
 public class DefaultServlet extends HttpServlet {
     private Logger logger = Logger.getRootLogger();
-    private CommandInvoker commandInvoker = new CommandInvoker();
 
     public DefaultServlet() throws PersistException {
 
     }
 
+    @Override
+    public void init() throws ServletException {
+        super.init();
+        getServletContext().setAttribute("locales", AppLocale.getAppLocales());
+        logger.info("Initialized default servlet  " + this.toString());
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    process(req,resp);
+        process(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    process(req,resp);
+        process(req, resp);
     }
+
     private void process(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       String COMMAND = "command";
-        String commandName = req.getParameter(COMMAND);
-        if (commandName == null) {
-            commandName = (String) req.getAttribute(COMMAND);
-        }
-        logger.info("Form with command: " + commandName);
-        CommandTypical commandTypical = commandInvoker.getCommand(commandName);
-        commandTypical.execute(req, resp);
+        String key = CommandKeyGenerator.generateCommandKeyByRequest(req);
+        logger.info("Query with url: " + key);
+        CommandTypical commandTypical = CommandFactory.getCommand(key);
+        logger.info("Command key execution: " +commandTypical.toString());
+        String redirectionPath = commandTypical.execute(req,resp);
+
+        logger.info("Redirection path: " +redirectionPath);
+        getServletContext().getRequestDispatcher(redirectionPath).forward(req,resp);
 
     }
 
+    private void forwardToCommandResultPage(ServletWrapper servletWrapper, String commandRes) throws ServletException, IOException {
+        if (!commandRes.contains(RedirectionManager.REDIRECTION)) {
+            servletWrapper.getRequest().getRequestDispatcher(commandRes).forward(servletWrapper.getRequest(), servletWrapper.getResponse());
+        }
+    }
+
+    private void redirectToHomePageWithErrorMessage(ServletWrapper servletWrapper, ServiceException se) {
+        Map<String, String> urlParams = new HashMap<>();
+        urlParams.put("error", se.getMessage());
+        try {
+            RedirectionManager.getRediractionManger().redirectWithParams(servletWrapper, "main.jsp", urlParams);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+    }
 }

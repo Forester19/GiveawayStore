@@ -12,5 +12,5 @@ import java.io.IOException;
  * Created by Владислав on 22.11.2017.
  */
 public interface CommandTypical {
-    void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException;
+    String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException;
 }
