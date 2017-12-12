@@ -13,11 +13,8 @@ import java.io.IOException;
 public class LoginValidator extends ValidatorAbstract {
 
     @Override
-    public boolean validateInput(String ... inputText){
-        boolean result = true;
-        if (inputText[0].isEmpty()||inputText[0].contains("<script>")){
-        result = false;
-        }
-        return result;
+    public boolean validateInput(String... inputText) {
+        String input = inputText[0];
+        return !(input.isEmpty() || input.contains("<script>"));
     }
 }

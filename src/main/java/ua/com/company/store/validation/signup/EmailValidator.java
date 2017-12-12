@@ -8,8 +8,9 @@ import ua.com.company.store.validation.ValidatorAbstract;
 public class EmailValidator extends ValidatorAbstract {
     @Override
     public boolean validateInput(String... inputText) {
+        String input = inputText[2];
         boolean result = true;
-        if (inputText[2].isEmpty()||inputText[0].contains("<script>")){
+        if (input.isEmpty() || input.contains("<script>")){
             result = false;
         }
         return result;

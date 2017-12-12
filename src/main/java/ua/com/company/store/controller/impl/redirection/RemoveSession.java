@@ -1,7 +1,8 @@
-package ua.com.company.store.controller.impl;
+package ua.com.company.store.controller.impl.redirection;
 
 import org.apache.log4j.Logger;
 import ua.com.company.store.controller.command.CommandTypical;
+import ua.com.company.store.model.entity.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -19,23 +20,24 @@ public class RemoveSession implements CommandTypical {
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession(false);
-        String userID = null;
+       User user = null;
         Date createTime = null;
         // Get last access time of this web page.
         Date lastAccessTime = null;
 
-        if (session.getAttribute("userID") == null || session.getAttribute("adminID") == null){
+        if (session.equals(null) || session.getAttribute("user").equals(null) ){
             PrintWriter printWriter = resp.getWriter();
             printWriter.print("Session is null");
             return null;
         }
 
-        userID = session.getAttribute("userID").toString();
+        user = (User) session.getAttribute("user");
+        req.setAttribute("user",null);
         createTime = new Date(session.getCreationTime());
         lastAccessTime =
                 new Date(session.getLastAccessedTime());
         session.invalidate();
-        logger.info("Removed session with ID " + userID + "\n" + "Time online " + (lastAccessTime.getMinutes()-createTime.getMinutes()) + " min.");
-    return null;
+        logger.info("Removed session with ID " + user.getNickname() + "\n" + "Time online " + (lastAccessTime.getMinutes()-createTime.getMinutes()) + " min.");
+    return "/main.jsp";
     }
 }

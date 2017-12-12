@@ -13,7 +13,7 @@ public final class MessageLocale {
     }
 
     //Default locale
-    private static ResourceBundle resourceBundle = ResourceBundle.getBundle(BUNDLE_NAME, new Locale("uk", "UA"));
+    public static ResourceBundle resourceBundle = ResourceBundle.getBundle(BUNDLE_NAME, new Locale("uk", "UA"));
 
     public static void setResourceBundleLocale(Locale locale) {
         resourceBundle = ResourceBundle.getBundle(BUNDLE_NAME, locale);

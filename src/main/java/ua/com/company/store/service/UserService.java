@@ -46,4 +46,10 @@ public class UserService {
         }
         return false;
     }
+    public List<User> getAllUsers(){
+        return genericDAO.getAll();
+    }
+    public User getUserByNickName(String nickname){
+        return (User) genericDAO.getByParameter(nickname);
+    }
 }

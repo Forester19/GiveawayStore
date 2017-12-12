@@ -1,9 +1,11 @@
 package ua.com.company.store.model.dao.impl;
 
+import org.apache.log4j.Logger;
 import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
 import ua.com.company.store.model.dao.daoAbstract.AbstractDao;
 import ua.com.company.store.model.entity.User;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,6 +16,7 @@ import java.util.List;
  * Created by Владислав on 22.11.2017.
  */
 public class UserDAO extends AbstractDao<User> {
+    private Logger logger = Logger.getRootLogger();
     public UserDAO(JDBCConnectionPool jdbcConnectionPool) {
 
         super(jdbcConnectionPool);
@@ -87,5 +90,32 @@ public class UserDAO extends AbstractDao<User> {
     @Override
     protected void prepareStatemantForDelete(PreparedStatement statement, User object) {
 
+    }
+
+    @Override
+    public User getByParameter(String nickname) {
+       List<User> list = null;
+        String query = getSelectQuery() + "where nickname = ?";
+        Connection connection= null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try {
+            connection = getConnectionFromPool();
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1,nickname);
+            resultSet = preparedStatement.executeQuery();
+            list = parseResultSet(resultSet);
+            if (list ==null || list.size()>1){
+                logger.error("Cant search users with nickname " + nickname);
+                return null;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            logger.error("Cant get all admins " + e);
+        }
+        finally {
+            closeResources(resultSet,preparedStatement,connection);
+        }
+        return list.get(0);
     }
 }

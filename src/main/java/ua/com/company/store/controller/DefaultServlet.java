@@ -59,7 +59,7 @@ public class DefaultServlet extends HttpServlet {
         String redirectionPath = commandTypical.execute(req,resp);
 
         logger.info("Redirection path: " +redirectionPath);
-        getServletContext().getRequestDispatcher(redirectionPath).forward(req,resp);
+        forwardToCommandResultPage(new ServletWrapper(req,resp),redirectionPath);
 
     }
 

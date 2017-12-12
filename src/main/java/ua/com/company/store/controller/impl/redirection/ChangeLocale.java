@@ -1,4 +1,4 @@
-package ua.com.company.store.controller.impl;
+package ua.com.company.store.controller.impl.redirection;
 
 import org.apache.log4j.Logger;
 import ua.com.company.store.controller.command.CommandTypical;

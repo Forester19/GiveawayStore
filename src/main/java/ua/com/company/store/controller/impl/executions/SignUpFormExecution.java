@@ -1,7 +1,11 @@
-package ua.com.company.store.controller.impl;
+package ua.com.company.store.controller.impl.executions;
 
 import org.apache.log4j.Logger;
 import ua.com.company.store.controller.command.CommandTypical;
+import ua.com.company.store.controller.utils.RedirectionManager;
+import ua.com.company.store.controller.utils.ServletWrapper;
+import ua.com.company.store.controller.utils.SessionManager;
+import ua.com.company.store.model.dto.SignUpDto;
 import ua.com.company.store.model.entity.User;
 import ua.com.company.store.service.UserService;
 import ua.com.company.store.validation.ValidatorAbstract;
@@ -33,18 +37,30 @@ public class SignUpFormExecution implements CommandTypical{
         String pass = req.getParameter("password");
         String email = req.getParameter("email");
 
+
+
         session = req.getSession(true);
 
-        User user = new User(0,login,pass,email,false,false);
+        SignUpDto signUpDto = getUserInput(login,email,pass);
+        User user = null;
 
-        if (doValidationInputs(login,pass,email)){
+
+
+        if (doValidationInputs(signUpDto)){
             logger.info("Successful validated inputs signUp");
-           if (userService.validationUserOnBeforeExist(user)){
+            user = new User(0,login,pass,email,false,false);
+            if (userService.validationUserOnBeforeExist(user)){
                logger.info("Validation on existing user is fallen");
                req.setAttribute("userEmail", user.getEmail());
                return "/view/existUserError.jsp";
            }
            else {
+               if(SessionManager.getSessionManager().isUserLoggedIn(session)){
+                   RedirectionManager.getRediractionManger().redirect(new ServletWrapper(req,resp),"/main.jsp");
+                   return RedirectionManager.REDIRECTION;
+               }
+               session.setAttribute("user",user);
+               req.setAttribute("user",user);
                 userService.addUser(user);
                return "/main.jsp";
            }
@@ -54,13 +70,16 @@ public class SignUpFormExecution implements CommandTypical{
           return "/view/someErrorsByInputs.jsp";
         }
     }
-    private boolean doValidationInputs(String login, String pass, String email){
+    private SignUpDto getUserInput(String login, String email, String password ){
+          return new SignUpDto(login,email,password);
+    }
+    private boolean doValidationInputs(SignUpDto signUpDto){
         ValidatorAbstract validatorAbstractLogin = new LoginValidator();
         ValidatorAbstract validatorAbstractPassword = new PasswordValidator();
         ValidatorAbstract validatorAbstractEmail = new EmailValidator();
         validatorAbstractLogin.setNextValidator(validatorAbstractPassword);
         validatorAbstractPassword.setNextValidator(validatorAbstractEmail);
-        return validatorAbstractLogin.validate(login,pass,email);
+        return validatorAbstractLogin.validate(signUpDto.getLogin(),signUpDto.getEmail(),signUpDto.getPassword());
     }
 
 

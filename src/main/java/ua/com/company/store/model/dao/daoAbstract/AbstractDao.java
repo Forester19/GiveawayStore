@@ -134,6 +134,7 @@ public abstract class AbstractDao<T> implements GenericDAO<T> {
         }
         return list;
     }
+    public abstract T getByParameter(String parameter);
 
     /**
      * Method which persist object

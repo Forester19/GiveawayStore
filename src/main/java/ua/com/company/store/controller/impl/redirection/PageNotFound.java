@@ -1,4 +1,4 @@
-package ua.com.company.store.controller.impl;
+package ua.com.company.store.controller.impl.redirection;
 
 import ua.com.company.store.controller.command.CommandTypical;
 

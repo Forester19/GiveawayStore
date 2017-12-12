@@ -14,4 +14,6 @@ public interface GenericDAO<T> {
 
     List<T> getAll();
 
+    T getByParameter(String parameter);
+
 }

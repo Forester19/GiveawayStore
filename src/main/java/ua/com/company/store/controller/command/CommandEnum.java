@@ -1,12 +1,8 @@
 package ua.com.company.store.controller.command;
 
-import org.apache.log4j.Logger;
-import ua.com.company.store.controller.impl.*;
-import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
-import ua.com.company.store.model.dao.daoAbstract.AbstractDao;
-import ua.com.company.store.model.dao.exceptions.PersistException;
-import ua.com.company.store.model.dao.factory.MySqlDaoFactory;
-import ua.com.company.store.model.entity.User;
+import ua.com.company.store.controller.impl.executions.LoginFormExecution;
+import ua.com.company.store.controller.impl.executions.SignUpFormExecution;
+import ua.com.company.store.controller.impl.redirection.*;
 import ua.com.company.store.service.UserService;
 
 /**
@@ -30,9 +26,24 @@ public enum CommandEnum {
         this.command = new ChangeLocale();
     }
     },
+    SIGNUP_PAGE {{
+        this.key = "GET:/store/signUp";
+        this.command = new SignUpPage();
+
+    }},
     LOGIN_PAGE {{
         this.key = "GET:/store/login";
         this.command = new LoginPage();
+
+    }},
+    LOGIN_FORM {{
+        this.key = "GET:/store/loginForm";
+        this.command = new LoginFormExecution(UserService.getInstance());
+
+    }},
+    LOGOUT_FORM {{
+        this.key = "GET:/store/logout";
+        this.command = new RemoveSession();
 
     }},
     SIGNUP_FORM {{

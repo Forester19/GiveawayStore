@@ -72,4 +72,9 @@ public class ImageDAO extends AbstractDao<Image> {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public Image getByParameter(String parameter) {
+        return null;
+    }
 }

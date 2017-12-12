@@ -3,8 +3,10 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="udt" uri="customtags"%>
 
 <c:set var="lang" scope="session" value="${empty sessionScope.locale ? 'en_US' : sessionScope.locale}"/>
+
 <fmt:setLocale value="${lang}" scope="session"/>
 <fmt:setBundle basename="/locale/messages" var="rb"/>
 <html lang="${lang}">
@@ -35,7 +37,8 @@
             </li>
         <li>
             <c:if test="${not empty user}">
-                <c:if test="${user.idRole() eq true}">
+
+                <c:if test="${user.isRole() eq true}">
                     <fmt:message key="store.adminPage" bundle="${rb}"/>
                 </c:if>
             </c:if>
@@ -63,12 +66,19 @@
                     <fmt:message key="store.login" bundle="${rb}"/>
                         </a>
                     </li>
+                    <li>
+                        <a href="${pageContext.request.contextPath}/store/signUp">
+                            <span class="glyphicon glyphicon-log-out"></span>
+                            <fmt:message key="store.signUp" bundle="${rb}"/>
+                        </a>
+                    </li>
                 </c:when>
                 <c:otherwise>
                    <li>
                        <a href="${pageContext.request.contextPath}/store/logout">
                            <span class="glyphicon glyphicon-log-out"></span>
                            <fmt:message key="store.logout" bundle="${rb}"/>
+                           <c:out value="${user.getNickname()}"/>
                        </a>
                    </li>
                 </c:otherwise>

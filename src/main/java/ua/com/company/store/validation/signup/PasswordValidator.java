@@ -13,10 +13,7 @@ import java.io.IOException;
 public class PasswordValidator extends ValidatorAbstract {
     @Override
     public boolean validateInput(String ...  inputText) {
-        boolean result = true;
-        if (inputText[1].isEmpty()||inputText[0].contains("<script>")){
-            result = false;
-        }
-        return result;
+        String input = inputText[1];
+        return !(input.isEmpty() || input.contains("<script>"));
     }
 }

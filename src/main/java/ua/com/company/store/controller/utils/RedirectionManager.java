@@ -1,14 +1,11 @@
 package ua.com.company.store.controller.utils;
-
-import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import javax.servlet.http.HttpServletRequest;
+
 import java.net.URLEncoder;
 import java.util.Map;
 
-/**
- * Created by Владислав on 08.12.2017.
- */
 public class RedirectionManager {
     public static String REDIRECTION = "REDIRECTION";
     public static String MESSAGE_ENCODING = "UTF-8";
@@ -17,11 +14,11 @@ public class RedirectionManager {
     }
 
     private static final class Holder {
-        static final RedirectionManager INSTANSE = new RedirectionManager();
+        static final RedirectionManager INSTANCE = new RedirectionManager();
     }
 
     public static RedirectionManager getRediractionManger() {
-        return Holder.INSTANSE;
+        return Holder.INSTANCE;
     }
 
     public void redirectWithParams(ServletWrapper servletWrapper, String redirectionPath, Map<String, String> urlParams) throws UnsupportedEncodingException {

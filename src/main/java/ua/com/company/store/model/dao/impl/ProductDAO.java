@@ -75,6 +75,11 @@ public class ProductDAO extends AbstractDao<Product> {
     }
 
     @Override
+    public Product getByParameter(String parameter) {
+        return null;
+    }
+
+    @Override
     public int[] insertImageAndProduct(Image image, Product product) {
         Connection connection = null;
         ResultSet resultSetImage = null;
