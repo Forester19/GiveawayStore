@@ -79,7 +79,7 @@ public class SignUpFormExecution implements CommandTypical{
         ValidatorAbstract validatorAbstractEmail = new EmailValidator();
         validatorAbstractLogin.setNextValidator(validatorAbstractPassword);
         validatorAbstractPassword.setNextValidator(validatorAbstractEmail);
-        return validatorAbstractLogin.validate(signUpDto.getLogin(),signUpDto.getEmail(),signUpDto.getPassword());
+        return validatorAbstractLogin.validate(signUpDto.getLogin(),signUpDto.getPassword(),signUpDto.getEmail());
     }
 
 

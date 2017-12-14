@@ -21,7 +21,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="container main-container">
+<div class="container">
     <nav class="navbar navbar-inverse">
         <div class="navbar-header">
             <a class="navbar-brand" href="${pageContext.request.contextPath}/store">
@@ -35,14 +35,19 @@
                     <fmt:message key="store.products" bundle="${rb}"/>
                 </a>
             </li>
-        <li>
-            <c:if test="${not empty user}">
-
+            <li>
                 <c:if test="${user.isRole() eq true}">
+                <a href="${pageContext.request.contextPath}/store/adminPage">
                     <fmt:message key="store.adminPage" bundle="${rb}"/>
-                </c:if>
+                </a>
             </c:if>
-        </li>
+                <c:if test="${user.isRole() eq false}">
+                <a href="${pageContext.request.contextPath}/store/personalPage">
+                    <fmt:message key="store.personalPage" bundle="${rb}"/>
+                </a>
+            </c:if>
+            </li>
+
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                     <i class="fa fa-globe" aria-hidden="true"></i>

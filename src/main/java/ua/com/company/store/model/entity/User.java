@@ -24,6 +24,29 @@ public class User extends Entity{
 
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        User user = (User) o;
+
+        if (role != user.role) return false;
+        if (isDefaulter != user.isDefaulter) return false;
+        if (nickname != null ? !nickname.equals(user.nickname) : user.nickname != null) return false;
+        if (password != null ? !password.equals(user.password) : user.password != null) return false;
+        return email != null ? email.equals(user.email) : user.email == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = nickname != null ? nickname.hashCode() : 0;
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (role ? 1 : 0);
+        result = 31 * result + (isDefaulter ? 1 : 0);
+        return result;
+    }
 
     public String getNickname() {
         return nickname;
@@ -63,5 +86,10 @@ public class User extends Entity{
 
     public void setDefaulter(boolean defaulter) {
         isDefaulter = defaulter;
+    }
+
+    @Override
+    public String toString() {
+        return "User:"+ nickname + " "+ password + " "+ email + " "+ role +" "+ isDefaulter;
     }
 }

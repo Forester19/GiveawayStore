@@ -33,27 +33,28 @@ public class LoginFormExecution implements CommandTypical {
 
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        boolean isValid = false;
 
-        HttpSession session = req.getSession();
-        User user = null;
+        String login = req.getParameter("login");
+        String password = req.getParameter("password");
+        HttpSession session = req.getSession(true);
+        User user;
 
-        LoginDto loginDto = new LoginDto(
-                req.getParameter("login"), req.getParameter("password"));
+        LoginDto loginDto = getLoginInputs(login, password);
+
         if (doValidationInputs(loginDto)) {
             user = userService.getUserByNickName(loginDto.getLogin());
-            if (validationOnUser(user)) {
-                if (SessionManager.getSessionManager().isUserLoggedIn(session)) {
-                    RedirectionManager.getRediractionManger().redirect(new ServletWrapper(req, resp), "/main.jsp");
-                    return RedirectionManager.REDIRECTION;
-                }
-                session.setAttribute("user", user);
-                req.setAttribute("user", user);
-                return "/main.jsp";
-            }else {
-                req.setAttribute("userEmail",user.getEmail());
-                return "/view/existUserError.jsp";
+            System.out.println(user.toString());
+
+            logger.info("Successful validated --" + user.getNickname());
+            if (SessionManager.getSessionManager().isUserLoggedIn(session)) {
+                logger.info("redirection because user in session is already exist ");
+                RedirectionManager.getRediractionManger().redirect(new ServletWrapper(req, resp), "/main.jsp");
+                return RedirectionManager.REDIRECTION;
             }
+            session.setAttribute("user", user);
+            req.setAttribute("user", user);
+            return "/main.jsp";
+
         } else {
             logger.info("Validated inputs unsuccessful " + loginDto.getLogin() + " -- " + loginDto.getPassword());
             req.setAttribute("error", " NUll inputs!!!");
@@ -69,15 +70,20 @@ public class LoginFormExecution implements CommandTypical {
         return validatorAbstractLogin.validate(loginDto.getLogin(), loginDto.getPassword());
     }
 
+    private LoginDto getLoginInputs(String login, String password) {
+        return new LoginDto(login, password);
+    }
+
     private boolean validationOnUser(User user) {
+        boolean isUser = false;
         List<User> userList = userService.getAllUsers();
         for (User user1 : userList) {
             if (user.equals(user1)) {
-                return true;
+                isUser = true;
             } else {
-                return false;
+                isUser = false;
             }
         }
-        return false;
+        return isUser;
     }
 }

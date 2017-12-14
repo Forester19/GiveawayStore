@@ -1,6 +1,6 @@
-<footer class="footer">
+<div class="modal-footer">
     <p>&copy; 2017 Store</p>
-</footer>
+</div>
 </div>
 
 </body>

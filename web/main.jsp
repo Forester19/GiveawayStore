@@ -2,4 +2,7 @@
 
 
 <h1>MainPage</h1>
+
+
+
 <%@include file="view/footer.jsp"%>

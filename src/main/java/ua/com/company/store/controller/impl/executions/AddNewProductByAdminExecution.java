@@ -3,8 +3,19 @@ package ua.com.company.store.controller.impl.executions;
 import org.apache.log4j.Logger;
 import ua.com.company.store.controller.command.CommandTypical;
 import ua.com.company.store.model.dao.daoAbstract.AbstractDao;
+import ua.com.company.store.model.dao.daoAbstract.GenericDAO;
+import ua.com.company.store.model.dto.LoginDto;
+import ua.com.company.store.model.dto.ProductDto;
 import ua.com.company.store.model.entity.Image;
 import ua.com.company.store.model.entity.Product;
+import ua.com.company.store.service.ImageService;
+import ua.com.company.store.service.ProductService;
+import ua.com.company.store.validation.ValidatorAbstract;
+import ua.com.company.store.validation.products.DescriptionValidator;
+import ua.com.company.store.validation.products.ImageInformValidator;
+import ua.com.company.store.validation.products.TitleValidator;
+import ua.com.company.store.validation.signup.LoginValidator;
+import ua.com.company.store.validation.signup.PasswordValidator;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -17,44 +28,55 @@ import java.io.*;
  * Created by Владислав on 03.12.2017.
  */
 public class AddNewProductByAdminExecution implements CommandTypical {
-    private AbstractDao productDao;
-    private AbstractDao imagesDao;
+
+    private ProductService productService;
 
 
     private Logger logger = Logger.getRootLogger();
 
-    public AddNewProductByAdminExecution(AbstractDao productDao, AbstractDao imagesDao) {
-        this.productDao = productDao;
-        this.imagesDao = imagesDao;
+    public AddNewProductByAdminExecution(ProductService productService) {
+        this.productService = productService;
     }
 
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        ProductDto productDto = getNewProductInputs(req.getParameter("title"),req.getParameter("description"),Integer.parseInt(req.getParameter("price")),downloadImage(req, resp));
+        if (doValidationInputs(productDto)){
+            Image image = new Image(0,productDto.getImageInformation()[0],productDto.getImageInformation()[1]);
+            Product product = new Product(0, productDto.getTitle(),productDto.getDescription(),productDto.getPrice(),0);
 
-        String[] imageInformation = downloadImage(req,resp);
-        String title = req.getParameter("title");
-        String description= req.getParameter("description");
-        String price = req.getParameter("price");
-
-        String userID;
-        HttpSession session = req.getSession(false);
-        if (session !=null){
-            userID =session.getAttribute("userID").toString();
+            productService.addProductAndImage(product,image);
+            req.setAttribute("successful", "Successful added new product: " + product.getTitle());
+            return "/view/adminPage.jsp";
         }else {
-            logger.info("In servlet " + this.toString() + "session ==null");
-            resp.sendRedirect("index.jsp");
-            return null;
+            req.setAttribute("error", " NUll inputs!!!");
+            return "/view/someErrorsByInputs.jsp";
         }
-
-
-        Image image = new Image(0,imageInformation[0],imageInformation[1]);
-        Product product = new Product(0,title,description,Integer.parseInt(price),0);
-        productDao.insertImageAndProduct(image,product);
-        logger.info("Admin added new product " +product.getTitle()+ " successful");
-        req.setAttribute("successfulMuve","Successful added new product");
-        req.getRequestDispatcher("view/AdminPage.jsp").include(req,resp);
-    return  null;
     }
+
+
+
+
+
+
+
+
+    private ProductDto getNewProductInputs(String title, String desc, int price,String[] imgInform){
+  return new ProductDto(title,desc,price,imgInform);
+    }
+    private boolean doValidationInputs(ProductDto productDto) {
+        ValidatorAbstract validatorAbstractTitle = new TitleValidator();
+        ValidatorAbstract validatorAbstractDescription = new DescriptionValidator();
+        ValidatorAbstract validatorAbstractPrice = new DescriptionValidator();
+        ValidatorAbstract validatorAbstractImageInform = new ImageInformValidator();
+
+        validatorAbstractTitle.setNextValidator(validatorAbstractDescription);
+        validatorAbstractDescription.setNextValidator(validatorAbstractPrice);
+        validatorAbstractPrice.setNextValidator(validatorAbstractImageInform);
+
+        return validatorAbstractTitle.validate(productDto.getTitle(),productDto.getDescription(),String.valueOf(productDto.getPrice()),productDto.getImageInformation()[0],productDto.getImageInformation()[1]);
+    }
+
     private String[] downloadImage(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         final String path = "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\temp";
         final Part filePart = req.getPart("file");
@@ -85,11 +107,11 @@ public class AddNewProductByAdminExecution implements CommandTypical {
             }
         }
 
-return new String[] {path,fileName};
+        return new String[]{path, fileName};
     }
 
     private String getFileName(final Part part) {
-         for (String content : part.getHeader("content-disposition").split(";")) {
+        for (String content : part.getHeader("content-disposition").split(";")) {
             if (content.trim().startsWith("filename")) {
                 return content.substring(content.indexOf('=') + 1).trim().replace("\"", "");
             }

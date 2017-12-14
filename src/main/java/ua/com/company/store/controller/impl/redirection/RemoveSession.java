@@ -25,7 +25,7 @@ public class RemoveSession implements CommandTypical {
         // Get last access time of this web page.
         Date lastAccessTime = null;
 
-        if (session.equals(null) || session.getAttribute("user").equals(null) ){
+        if (session == null || session.getAttribute("user") == null ){
             PrintWriter printWriter = resp.getWriter();
             printWriter.print("Session is null");
             return null;

@@ -11,7 +11,8 @@ public class CommandKeyGenerator {
     public static String generateCommandKeyByRequest(HttpServletRequest request) {
         String method = request.getMethod().toUpperCase();
         String path = request.getRequestURI();
+        String[] normalPath = path.split("/ | ?",2);
 
-        return method + ":" + path;
+        return method + ":" + normalPath[0] + normalPath[1];
     }
 }

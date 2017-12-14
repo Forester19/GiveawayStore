@@ -44,7 +44,7 @@ public class UserDAO extends AbstractDao<User> {
 
     @Override
     public String getDeleteQuery() {
-        return null;
+        return "delete from onlinestoreproject.users where id = ? ";
     }
 
     @Override
@@ -89,7 +89,11 @@ public class UserDAO extends AbstractDao<User> {
 
     @Override
     protected void prepareStatemantForDelete(PreparedStatement statement, User object) {
-
+        try {
+            statement.setInt(1,object.getId());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
