@@ -1,14 +1,13 @@
 package ua.com.company.store.controller.command;
 
-import ua.com.company.store.controller.impl.executions.AddNewProductByAdminExecution;
-import ua.com.company.store.controller.impl.executions.DeleteUserExecution;
-import ua.com.company.store.controller.impl.executions.LoginFormExecution;
-import ua.com.company.store.controller.impl.executions.SignUpFormExecution;
+import ua.com.company.store.controller.impl.executions.*;
 import ua.com.company.store.controller.impl.redirection.*;
+import ua.com.company.store.hashing.PasswordHashing;
+import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
+import ua.com.company.store.service.OrderService;
+import ua.com.company.store.service.ProductImageService;
 import ua.com.company.store.service.ProductService;
 import ua.com.company.store.service.UserService;
-
-import javax.jws.soap.SOAPBinding;
 
 /**
  * Created by Владислав on 22.11.2017.
@@ -17,64 +16,74 @@ public enum CommandEnum {
     PAGE_NOT_FOUND {
         {
             this.key = "GET:pageNotFound";
-            this.command = new PageNotFound();
+            this.command = new CommandPageNotFound();
         }
     },
     HOME {{
         this.key = "GET:/store";
-        this.command = new HomePageCommand();
+        this.command = new CommandHomePageCommand(UserService.getInstance());
     }
     },
     CHANGE_LOCALE {{
 
         this.key = "GET:/store/locale";
-        this.command = new ChangeLocale();
+        this.command = new CommandChangeLocale();
     }
     },
     SIGNUP_PAGE {{
         this.key = "GET:/store/signUp";
-        this.command = new SignUpPage();
+        this.command = new CommandSignUpPage();
 
     }},
     DELETE_USER{{
         this.key = "GET:/store/deleteUser";
-        this.command = new DeleteUserExecution(UserService.getInstance());
+        this.command = new CommandDeleteUserExecution(UserService.getInstance());
+
+    }},
+    MARK_USER_AS_DEFAULTER{{
+        this.key = "GET:/store/markAsDefaulter";
+        this.command = new CommandMarkUserAsDefaulterExecution(UserService.getInstance());
 
     }},
     ADMIN_PAGE{{
         this.key = "GET:/store/adminPage";
-        this.command = new AdminPage(UserService.getInstance());
+        this.command = new CommandAdminPage(UserService.getInstance());
 
     }},
     LOGIN_PAGE {{
         this.key = "GET:/store/login";
-        this.command = new LoginPage();
+        this.command = new CommandLoginPage();
 
     }},
     LOGIN_FORM {{
         this.key = "POST:/store/loginForm";
-        this.command = new LoginFormExecution(UserService.getInstance());
+        this.command = new CommandLoginFormExecution(UserService.getInstance(),PasswordHashing.getInstance());
 
     }},
     ADD_NEW_PRODUCT_FORM {{
         this.key = "POST:/store/addNewProduct";
-        this.command = new AddNewProductByAdminExecution(ProductService.getInstance());
+        this.command = new CommandAddNewProductByAdminExecution(ProductImageService.getInstance());
 
     }},
     LOGOUT_FORM {{
         this.key = "GET:/store/logout";
-        this.command = new RemoveSession();
+        this.command = new CommandRemoveSession();
+
+    }},
+    CREATING_NEW_ORDER{{
+        this.key = "GET:/store/createOrder";
+        this.command = new CommandCreatingNewOrder(OrderService.getInstance(),ProductService.getInstance());
 
     }},
     SIGNUP_FORM {{
         this.key = "POST:/store/signUpForm";
-        this.command = new SignUpFormExecution(UserService.getInstance());
+        this.command = new CommandSignUpFormExecution(UserService.getInstance(), PasswordHashing.getInstance());
 
     }};
 
     String key;
     CommandTypical command;
-
+    JDBCConnectionPool jdbcConnectionPool = JDBCConnectionPool.getInstanceConnectionPool();
     public String getKey() {
         return key;
     }

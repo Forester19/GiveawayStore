@@ -12,10 +12,10 @@ import java.io.IOException;
 /**
  * Created by Владислав on 13.12.2017.
  */
-public class AdminPage implements CommandTypical {
+public class CommandAdminPage implements CommandTypical {
     private UserService userService;
 
-    public AdminPage(UserService userService) {
+    public CommandAdminPage(UserService userService) {
         this.userService = userService;
     }
 

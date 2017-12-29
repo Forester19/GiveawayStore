@@ -27,8 +27,7 @@ public class UserDAOTest {
 
     @Test
     public void getByParameter() throws Exception {
-        Assert.assertNotNull(userDAO.getByParameter("Vladiolus"));
-        Assert.assertEquals("Forester18",userDAO.getByParameter("Vladiolus").getPassword());
+        Assert.assertNotNull(userDAO.getByParameter("Vlad"));
     }
 
 }

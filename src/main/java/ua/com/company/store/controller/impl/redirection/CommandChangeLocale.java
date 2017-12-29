@@ -14,7 +14,7 @@ import java.util.Locale;
 /**
  * Created by Владислав on 07.12.2017.
  */
-public class ChangeLocale implements CommandTypical {
+public class CommandChangeLocale implements CommandTypical {
     private Logger logger = Logger.getRootLogger();
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

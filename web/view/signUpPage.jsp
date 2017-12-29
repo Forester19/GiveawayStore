@@ -18,7 +18,7 @@
             </div>
             <div class="form-check">
                 <label class="form-check-label">
-                    <input type="checkbox" name="checkMeOut" class="form-check-input">
+                    <input type="checkbox" name="checkMeOut" value="OK" class="form-check-input">
                     <fmt:message key="store.checkMeOut" bundle="${rb}"/>
 
                 </label>

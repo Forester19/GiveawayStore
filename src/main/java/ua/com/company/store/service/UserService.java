@@ -1,5 +1,6 @@
 package ua.com.company.store.service;
 
+import ua.com.company.store.controller.DefaultServlet;
 import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
 import ua.com.company.store.model.dao.daoAbstract.AbstractDao;
 import ua.com.company.store.model.dao.daoAbstract.GenericDAO;
@@ -27,7 +28,7 @@ public class UserService {
 
         static {
             try {
-                INSTANCE = new UserService(new MySqlDaoFactory().getDao(User.class, getInstanceConnectionPool()));
+                INSTANCE = new UserService(new MySqlDaoFactory(DefaultServlet.jdbcConnectionPoolManager.getJdbcConnectionPool()).getDao(User.class));
             } catch (PersistException e) {
                 e.printStackTrace();
             }
@@ -38,8 +39,8 @@ public class UserService {
         return Holder.INSTANCE;
     }
 
-    public void addUser(User user) {
-        genericDAO.insert(user);
+    public int addUser(User user) {
+        return genericDAO.insert(user);
     }
 
     public boolean validationUserOnBeforeExist(User user) {
@@ -69,4 +70,10 @@ public class UserService {
     public User getUserByNickName(String nickname) {
         return (User) genericDAO.getByParameter(nickname);
     }
+
+    public void markUserAsDefaulter(User user) {
+        AbstractDao abstractDao = (AbstractDao) genericDAO;
+        abstractDao.markUserAsDefaulter(user);
+    }
+
 }

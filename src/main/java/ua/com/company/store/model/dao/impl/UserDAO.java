@@ -39,7 +39,7 @@ public class UserDAO extends AbstractDao<User> {
 
     @Override
     public String getUpdateQuery() {
-        return null;
+        return "Update onlinestoreproject.users set ";
     }
 
     @Override
@@ -88,6 +88,20 @@ public class UserDAO extends AbstractDao<User> {
     }
 
     @Override
+    public void markUserAsDefaulter(User user) {
+        String query = " is_defaulter = true where id = " + user.getId();
+        String newQuery = getUpdateQuery() + query;
+        PreparedStatement preparedStatement;
+        try(Connection connection = JDBCConnectionPool.getInstanceConnectionPool().getConnection()){
+            preparedStatement = connection.prepareStatement(newQuery);
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
     protected void prepareStatemantForDelete(PreparedStatement statement, User object) {
         try {
             statement.setInt(1,object.getId());
@@ -109,7 +123,7 @@ public class UserDAO extends AbstractDao<User> {
             preparedStatement.setString(1,nickname);
             resultSet = preparedStatement.executeQuery();
             list = parseResultSet(resultSet);
-            if (list ==null || list.size()>1){
+            if (list ==null || list.size()>1 || list.size() == 0){
                 logger.error("Cant search users with nickname " + nickname);
                 return null;
             }

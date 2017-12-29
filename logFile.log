@@ -1,951 +1,507 @@
-[INFO] 10:21:21 (DefaultServlet.java:init:41)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@3141e87a 
+[INFO] 09:16:56 (DefaultServlet.java:init:45)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@4b4592b5 
 
-[INFO] 10:22:38 (DefaultServlet.java:process:56)Query with url: GET:/store 
+[INFO] 09:18:01 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 10:22:38 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+[INFO] 09:18:01 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@601d908c 
 
-[INFO] 10:22:38 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+[INFO] 09:18:01 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductImageDAO@79a0b427 
 
-[INFO] 10:22:38 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@170bc2ea 
+[INFO] 09:18:01 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.OrderDAO@7d01e7b 
 
-[INFO] 10:22:38 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+[INFO] 09:18:01 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@7b2d932a 
 
-[INFO] 10:22:38 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+[INFO] 09:18:01 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 10:22:38 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@47a73b26 
+[INFO] 09:18:10 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5ff8baec 
 
-[INFO] 10:22:38 (DefaultServlet.java:process:58)Command key execution: HomePageCommand{} 
+[ERROR] 09:18:11 (UserDAO.java:getByParameter:127)Cant search users with nickname locale 
 
-[INFO] 10:22:38 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
+[INFO] 09:18:11 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@75189fe0 
 
-[INFO] 10:22:42 (DefaultServlet.java:process:56)Query with url: GET:/store/login 
+[ERROR] 09:18:11 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 10:22:42 (DefaultServlet.java:process:58)Command key execution: LoginPage{} 
+[INFO] 09:18:11 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:22:42 (DefaultServlet.java:process:61)Redirection path: /view/loginPage.jsp 
+[INFO] 09:18:14 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@6e1a9c2b 
 
-[INFO] 10:22:43 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[INFO] 09:25:59 (DefaultServlet.java:process:60)Query with url: GET:/store/signUp 
 
-[INFO] 10:22:43 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 09:25:59 (DefaultServlet.java:process:62)Command key execution: CommandSignUpPage{} 
 
-[INFO] 10:22:43 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 09:25:59 (DefaultServlet.java:process:65)Redirection path: /view/signUpPage.jsp 
 
-[INFO] 10:22:50 (DefaultServlet.java:process:56)Query with url: POST:/store/loginForm 
+[INFO] 09:26:28 (DefaultServlet.java:process:60)Query with url: POST:/store/signUpForm 
 
-[INFO] 10:22:50 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.executions.LoginFormExecution@57a239e4 
+[INFO] 09:26:28 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSignUpFormExecution@12db72a1 
 
-[INFO] 10:22:51 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@22a6a1e1 
+[INFO] 09:26:28 (CommandSignUpFormExecution.java:execute:56)Successful validated inputs signUp 
 
-[INFO] 10:22:51 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@3737cd23 
+[INFO] 09:26:28 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@3d0e7bfe 
 
-[INFO] 10:22:51 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@77d7874: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 09:26:28 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@1fcb172c 
 
-[INFO] 10:22:51 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@22a6a1e1 
+[INFO] 09:26:29 (AbstractDao.java:insert:73)Insert into db new object User:Gaben 5ac115e54c7d27baf7a6cf290d7c127dc088b37d9df7e19df061a973af257bf0 gaben123@mail.ru false false 
 
-[INFO] 10:22:51 (LoginFormExecution.java:execute:48)Successful validated --Vladiolus 
+[INFO] 09:26:29 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5afa5bd4 
 
-[INFO] 10:22:51 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
+[INFO] 09:26:29 (CookiesAction.java:setCookieUserInform:25)Successful added in cookie user Gaben 
 
-[INFO] 10:22:51 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[INFO] 09:26:29 (CommandSignUpFormExecution.java:execute:79)Marked checkbox and added user in cookie successfully 
 
-[INFO] 10:22:51 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 09:26:29 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:22:51 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 09:26:29 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5aae0916 
 
-[INFO] 10:22:52 (DefaultServlet.java:process:56)Query with url: GET:/store/adminPage 
+[INFO] 09:26:44 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 10:22:52 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.redirection.AdminPage@60dfd808 
+[INFO] 09:26:44 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 10:22:52 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@a33c8fb 
+[INFO] 09:26:44 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@26aee2ad 
 
-[INFO] 10:22:52 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@45f2b538 
+[ERROR] 09:26:44 (UserDAO.java:getByParameter:127)Cant search users with nickname locale 
 
-[INFO] 10:22:52 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@30cace8: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 09:26:44 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@6a56b42a 
 
-[INFO] 10:22:52 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@a33c8fb 
+[INFO] 09:26:45 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@702b7f15 
 
-[INFO] 10:22:52 (DefaultServlet.java:process:61)Redirection path: /view/adminPage.jsp 
+[ERROR] 09:26:45 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 10:22:53 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[INFO] 09:26:45 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@14319ed0 
 
-[INFO] 10:22:53 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[ERROR] 09:26:45 (UserDAO.java:getByParameter:127)Cant search users with nickname locale 
 
-[INFO] 10:22:53 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 09:26:45 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@71b08899 
 
-[INFO] 10:24:44 (DefaultServlet.java:init:41)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@60afd628 
+[INFO] 09:26:45 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@75456116 
 
-[INFO] 10:26:10 (DefaultServlet.java:process:56)Query with url: GET:/store 
+[ERROR] 09:26:45 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 10:26:10 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+[INFO] 09:26:45 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:26:10 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+[INFO] 09:26:45 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@16db9b 
 
-[INFO] 10:26:10 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@18f59d30 
+[INFO] 09:39:21 (DefaultServlet.java:process:60)Query with url: GET:/store/createOrder 
 
-[INFO] 10:26:10 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+[INFO] 09:39:21 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandCreatingNewOrder@6cbecdfd 
 
-[INFO] 10:26:10 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+[INFO] 09:39:21 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@159de37 
 
-[INFO] 10:26:10 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@410df52a 
+[INFO] 09:39:21 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@259b5fd 
 
-[INFO] 10:26:10 (DefaultServlet.java:process:58)Command key execution: HomePageCommand{} 
+[INFO] 09:39:22 (AbstractDao.java:insert:73)Insert into db new object Order{productId=17, entityId=25, date=2017-12-28} 
 
-[INFO] 10:26:10 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
+[INFO] 09:39:22 (CommandCreatingNewOrder.java:execute:49)Successful added Order{productId=17, entityId=25, date=2017-12-28} 
 
-[INFO] 10:26:14 (DefaultServlet.java:process:56)Query with url: GET:/store/login 
+[INFO] 09:39:22 (DefaultServlet.java:process:65)Redirection path: /view/successfulCreatedOrder.jsp 
 
-[INFO] 10:26:14 (DefaultServlet.java:process:58)Command key execution: LoginPage{} 
+[INFO] 09:43:30 (DefaultServlet.java:process:60)Query with url: GET:/store/logout 
 
-[INFO] 10:26:14 (DefaultServlet.java:process:61)Redirection path: /view/loginPage.jsp 
+[INFO] 09:43:30 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandRemoveSession@2bdb1bf0 
 
-[INFO] 10:26:14 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[INFO] 09:43:30 (CommandRemoveSession.java:execute:36)Removed cookies [Ljavax.servlet.http.Cookie;@63348201 
 
-[INFO] 10:26:14 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 09:43:30 (CommandRemoveSession.java:execute:45)Removed session with ID Gaben
+Time online 21 min. 
 
-[INFO] 10:26:14 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 09:43:30 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:26:22 (DefaultServlet.java:process:56)Query with url: POST:/store/loginForm 
+[INFO] 09:43:30 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@42aa7220 
 
-[INFO] 10:26:22 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.executions.LoginFormExecution@35f28da7 
+[INFO] 09:43:32 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 10:26:23 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5c75e755 
+[INFO] 09:43:32 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 10:26:23 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@20f7528f 
+[INFO] 09:43:32 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5e11f747 
 
-[INFO] 10:26:23 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@1700980d: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 09:43:32 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@2dd471be 
 
-[INFO] 10:26:23 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@5c75e755 
+[ERROR] 09:43:32 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 10:26:23 (LoginFormExecution.java:execute:48)Successful validated --Vladiolus 
+[INFO] 09:43:33 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@2c242e74 
 
-[INFO] 10:26:23 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
+[INFO] 09:43:33 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@2aabadd5 
 
-[INFO] 10:26:23 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[ERROR] 09:43:33 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 10:26:23 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 09:43:33 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:26:23 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 09:43:33 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@32a2f743 
 
-[INFO] 10:26:24 (DefaultServlet.java:process:56)Query with url: GET:/store/adminPage 
+[INFO] 09:43:37 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 10:26:24 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.redirection.AdminPage@5972b43a 
+[INFO] 09:43:37 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 10:26:24 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5a97eed0 
+[INFO] 09:43:37 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@1c62dec 
 
-[INFO] 10:26:24 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@27543a87 
+[INFO] 09:43:37 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@4bf7c050 
 
-[INFO] 10:26:24 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@22a1c1a8: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[ERROR] 09:43:37 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 10:26:24 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@5a97eed0 
+[INFO] 09:43:37 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@7d986756 
 
-[INFO] 10:26:24 (DefaultServlet.java:process:61)Redirection path: /view/adminPage.jsp 
+[INFO] 09:43:37 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@3f19d264 
 
-[INFO] 10:26:25 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[ERROR] 09:43:37 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 10:26:25 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 09:43:37 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:26:25 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 09:43:37 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5443552a 
 
-[INFO] 10:26:29 (DefaultServlet.java:process:56)Query with url: GET:/store/deleteUser 
+[INFO] 09:46:25 (DefaultServlet.java:process:60)Query with url: GET:/store/logout 
 
-[INFO] 10:26:29 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 09:46:25 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandRemoveSession@2bdb1bf0 
 
-[INFO] 10:26:29 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 09:46:25 (CommandRemoveSession.java:execute:36)Removed cookies [Ljavax.servlet.http.Cookie;@65b950f6 
 
-[INFO] 10:26:29 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[INFO] 09:46:25 (CommandRemoveSession.java:execute:45)Removed session with ID Gaben
+Time online 0 min. 
 
-[INFO] 10:26:29 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 09:46:25 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:26:29 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 09:46:25 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@6bb818aa 
 
-[INFO] 10:32:41 (DefaultServlet.java:init:41)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@3ed055f6 
+[INFO] 09:46:28 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 10:32:49 (DefaultServlet.java:process:56)Query with url: GET:/store 
+[INFO] 09:46:28 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 10:32:49 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+[INFO] 09:46:28 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@2238720e 
 
-[INFO] 10:32:49 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+[ERROR] 09:46:28 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 10:32:49 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1f4d1bc6 
+[INFO] 09:46:28 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:32:49 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+[INFO] 09:46:28 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@2c02ff91 
 
-[INFO] 10:32:49 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+[INFO] 09:46:29 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 10:32:49 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@4537d80 
+[INFO] 09:46:29 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 10:32:49 (DefaultServlet.java:process:58)Command key execution: HomePageCommand{} 
+[INFO] 09:46:29 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@340ffd93 
 
-[INFO] 10:32:49 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
+[ERROR] 09:46:29 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 10:32:54 (DefaultServlet.java:process:56)Query with url: GET:/store/login 
+[INFO] 09:46:29 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:32:54 (DefaultServlet.java:process:58)Command key execution: LoginPage{} 
+[INFO] 09:46:29 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@39a58a16 
 
-[INFO] 10:32:54 (DefaultServlet.java:process:61)Redirection path: /view/loginPage.jsp 
+[INFO] 09:46:30 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 10:32:54 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[INFO] 09:46:30 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 10:32:54 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 09:46:30 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@ce4e065 
 
-[INFO] 10:32:54 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[ERROR] 09:46:30 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 10:33:07 (DefaultServlet.java:process:56)Query with url: GET:/store 
+[INFO] 09:46:30 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:33:07 (DefaultServlet.java:process:58)Command key execution: HomePageCommand{} 
+[INFO] 09:46:30 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@65795200 
 
-[INFO] 10:33:07 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
+[INFO] 09:46:34 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 10:33:31 (DefaultServlet.java:init:41)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@6d7d151d 
+[INFO] 09:46:34 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 10:34:32 (DefaultServlet.java:process:56)Query with url: GET:/store 
+[INFO] 09:46:35 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@28f4363c 
 
-[INFO] 10:34:32 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+[ERROR] 09:46:35 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 10:34:32 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+[INFO] 09:46:35 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:34:32 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5afa5bd4 
+[INFO] 09:46:36 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@451075c6 
 
-[INFO] 10:34:32 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
+[INFO] 11:17:14 (DefaultServlet.java:init:45)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@4bf5d520 
 
-[INFO] 10:34:32 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
+[INFO] 11:18:20 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 10:34:32 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@7c832369 
+[INFO] 11:18:20 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@72e9ae06 
 
-[INFO] 10:34:32 (DefaultServlet.java:process:58)Command key execution: HomePageCommand{} 
+[INFO] 11:18:20 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductImageDAO@46e481db 
 
-[INFO] 10:34:32 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
+[INFO] 11:18:20 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.OrderDAO@1e34bc5f 
 
-[INFO] 10:34:35 (DefaultServlet.java:process:56)Query with url: GET:/store/login 
+[INFO] 11:18:20 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@7c3c0c1b 
 
-[INFO] 10:34:35 (DefaultServlet.java:process:58)Command key execution: LoginPage{} 
+[INFO] 11:18:20 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 10:34:35 (DefaultServlet.java:process:61)Redirection path: /view/loginPage.jsp 
+[INFO] 11:18:21 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@4d75fd6 
 
-[INFO] 10:34:36 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[ERROR] 11:18:21 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 10:34:36 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 11:18:21 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:34:36 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 11:18:26 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@773f8dda 
 
-[INFO] 10:34:46 (DefaultServlet.java:process:56)Query with url: POST:/store/loginForm 
+[INFO] 11:18:26 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@2ac4eb4d 
 
-[INFO] 10:34:46 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.executions.LoginFormExecution@2b8dad0f 
+[INFO] 11:19:46 (DefaultServlet.java:process:60)Query with url: GET:/store/signUp 
 
-[INFO] 10:34:47 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@3d247669 
+[INFO] 11:19:46 (DefaultServlet.java:process:62)Command key execution: CommandSignUpPage{} 
 
-[INFO] 10:34:47 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@465e742e 
+[INFO] 11:19:46 (DefaultServlet.java:process:65)Redirection path: /view/signUpPage.jsp 
 
-[INFO] 10:34:47 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@678d9f72: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 11:19:56 (DefaultServlet.java:process:60)Query with url: POST:/store/signUpForm 
 
-[INFO] 10:34:47 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@3d247669 
+[INFO] 11:19:56 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSignUpFormExecution@df5841c 
 
-[INFO] 10:34:47 (LoginFormExecution.java:execute:48)Successful validated --Vladiolus 
+[INFO] 11:19:56 (CommandSignUpFormExecution.java:execute:56)Successful validated inputs signUp 
 
-[INFO] 10:34:47 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
+[INFO] 11:19:56 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@2bd43fe7 
 
-[INFO] 10:34:47 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[INFO] 11:19:57 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@f6d231d 
 
-[INFO] 10:34:47 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 11:19:57 (AbstractDao.java:insert:73)Insert into db new object User:fewfwe 00aefdc15dd925d7d750b494709493eef5bf2d331f9c6f716411c35869d91755 weff@fewfw.wef false false 
 
-[INFO] 10:34:47 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 11:19:57 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@53abaec4 
 
-[INFO] 10:34:51 (DefaultServlet.java:process:56)Query with url: GET:/store/adminPage 
+[INFO] 11:19:57 (CommandSignUpFormExecution.java:execute:81)Continue execution without adding in cookie  
 
-[INFO] 10:34:51 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.redirection.AdminPage@4b868a1a 
+[INFO] 11:19:57 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:34:51 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@7bd5ebee 
+[INFO] 11:19:57 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@51b53c74 
 
-[INFO] 10:34:51 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@35b2f023 
+[INFO] 11:19:59 (DefaultServlet.java:process:60)Query with url: GET:/store/createOrder 
 
-[INFO] 10:34:51 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@3f1324e: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 11:19:59 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandCreatingNewOrder@12db72a1 
 
-[INFO] 10:34:51 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@7bd5ebee 
+[INFO] 11:19:59 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@3d0e7bfe 
 
-[INFO] 10:34:51 (DefaultServlet.java:process:61)Redirection path: /view/adminPage.jsp 
+[INFO] 11:19:59 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@74884991 
 
-[INFO] 10:34:52 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[INFO] 11:19:59 (AbstractDao.java:insert:73)Insert into db new object Order{productId=15, entityId=26, date=2017-12-28} 
 
-[INFO] 10:34:52 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 11:19:59 (CommandCreatingNewOrder.java:execute:49)Successful added Order{productId=15, entityId=26, date=2017-12-28} 
 
-[INFO] 10:34:52 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 11:19:59 (DefaultServlet.java:process:65)Redirection path: /view/successfulCreatedOrder.jsp 
 
-[INFO] 10:34:53 (DefaultServlet.java:process:56)Query with url: GET:/store/deleteUser 
+[INFO] 11:28:40 (DefaultServlet.java:init:45)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@2e6eaaa4 
 
-[INFO] 10:34:53 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.executions.DeleteUserExecution@43f2da43 
+[INFO] 11:29:16 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 10:34:53 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@7dd6a185 
+[INFO] 11:29:16 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1e69fe83 
 
-[INFO] 10:34:54 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@503d9c00 
+[INFO] 11:29:16 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductImageDAO@c4604a4 
 
-[INFO] 10:34:54 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@3571fa3a: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 11:29:16 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.OrderDAO@7dfaaa8b 
 
-[INFO] 10:34:54 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@7dd6a185 
+[INFO] 11:29:16 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@4125e2b4 
 
-[INFO] 10:34:54 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@4939b6b4 
+[INFO] 11:29:16 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 10:34:54 (DeleteUserExecution.java:execute:31)Successful deleted user User:BorisG 123BORIS boria123@gmail.com false false 
+[INFO] 11:29:17 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@7e6b2aa0 
 
-[INFO] 10:34:54 (DefaultServlet.java:process:61)Redirection path: /view/adminPage.jsp 
+[ERROR] 11:29:17 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 10:34:54 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[INFO] 11:29:17 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:34:54 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 11:29:19 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@2df48c66 
 
-[INFO] 10:34:54 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 11:29:20 (DefaultServlet.java:process:60)Query with url: GET:/store/signUp 
 
-[INFO] 10:37:06 (DefaultServlet.java:process:56)Query with url: GET:/store/adminPage 
+[INFO] 11:29:20 (DefaultServlet.java:process:62)Command key execution: CommandSignUpPage{} 
 
-[INFO] 10:37:06 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.redirection.AdminPage@4b868a1a 
+[INFO] 11:29:20 (DefaultServlet.java:process:65)Redirection path: /view/signUpPage.jsp 
 
-[INFO] 10:37:06 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@79b3d7c4 
+[INFO] 11:29:33 (DefaultServlet.java:process:60)Query with url: POST:/store/signUpForm 
 
-[INFO] 10:37:06 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@238a9a71 
+[INFO] 11:29:33 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSignUpFormExecution@4b868a1a 
 
-[INFO] 10:37:06 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@58306b17: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 11:29:33 (CommandSignUpFormExecution.java:execute:56)Successful validated inputs signUp 
 
-[INFO] 10:37:06 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@79b3d7c4 
+[INFO] 11:29:34 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@601d908c 
 
-[INFO] 10:37:06 (DefaultServlet.java:process:61)Redirection path: /view/adminPage.jsp 
+[INFO] 11:29:34 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@4a1ca647 
 
-[INFO] 10:37:06 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[INFO] 11:29:34 (AbstractDao.java:insert:73)Insert into db new object User:aaaa 3d37f5644e61b2c354fa25a4822b0b3a647d69071323b1ba8ffb03bfbb6ec487 aaaa@aa.a false false 
 
-[INFO] 10:37:06 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 11:29:34 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@595e1b34 
 
-[INFO] 10:37:06 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 11:29:34 (CommandSignUpFormExecution.java:execute:81)Continue execution without adding in cookie  
 
-[INFO] 10:37:18 (DefaultServlet.java:process:56)Query with url: GET:/store/deleteUser 
+[INFO] 11:29:34 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:37:18 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.executions.DeleteUserExecution@43f2da43 
+[INFO] 11:29:34 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@65baa2fc 
 
-[INFO] 10:37:18 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@45f2b538 
+[INFO] 11:29:37 (DefaultServlet.java:process:60)Query with url: GET:/store/createOrder 
 
-[INFO] 10:37:18 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@30cace8 
+[INFO] 11:29:37 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandCreatingNewOrder@62ac83eb 
 
-[INFO] 10:37:18 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@5d7d441: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 11:29:37 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@1c3167dc 
 
-[INFO] 10:37:18 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@45f2b538 
+[INFO] 11:29:37 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@621e25d3 
 
-[INFO] 10:37:18 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@1cffae23 
+[INFO] 11:29:37 (AbstractDao.java:insert:73)Insert into db new object Order{productId=16, entityId=27, date=2017-12-28} 
 
-[INFO] 10:37:18 (DeleteUserExecution.java:execute:31)Successful deleted user User:gerge fwefe greg@fwef.wefe false false 
+[INFO] 11:29:37 (CommandCreatingNewOrder.java:execute:49)Successful added Order{productId=16, entityId=27, date=2017-12-28} 
 
-[INFO] 10:37:18 (DefaultServlet.java:process:61)Redirection path: /view/adminPage.jsp 
+[INFO] 11:29:37 (DefaultServlet.java:process:65)Redirection path: /view/successfulCreatedOrder.jsp 
 
-[INFO] 10:37:18 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[INFO] 11:45:43 (DefaultServlet.java:init:45)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@652da5f3 
 
-[INFO] 10:37:18 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 11:45:51 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 10:37:18 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 11:45:51 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4acc345 
 
-[INFO] 10:37:23 (DefaultServlet.java:process:56)Query with url: GET:/store/deleteUser 
+[INFO] 11:45:51 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductImageDAO@3ca3d909 
 
-[INFO] 10:37:23 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.executions.DeleteUserExecution@43f2da43 
+[INFO] 11:45:51 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.OrderDAO@2e761241 
 
-[INFO] 10:37:23 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@53bb46c5 
+[INFO] 11:45:51 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@c3fed17 
 
-[INFO] 10:37:23 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@11271533 
+[INFO] 11:45:51 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 10:37:23 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@37fd1278: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 11:45:52 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@f118ef3 
 
-[INFO] 10:37:23 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@53bb46c5 
+[ERROR] 11:45:52 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 10:37:30 (DefaultServlet.java:process:56)Query with url: GET:/store/adminPage 
+[INFO] 11:45:52 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:37:30 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.redirection.AdminPage@4b868a1a 
+[INFO] 11:45:54 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@ecc73d0 
 
-[INFO] 10:37:30 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@221293c2 
+[INFO] 11:46:02 (DefaultServlet.java:process:60)Query with url: GET:/store/signUp 
 
-[INFO] 10:37:30 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@c85f47e 
+[INFO] 11:46:02 (DefaultServlet.java:process:62)Command key execution: CommandSignUpPage{} 
 
-[INFO] 10:37:30 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@13fa5446: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 11:46:02 (DefaultServlet.java:process:65)Redirection path: /view/signUpPage.jsp 
 
-[INFO] 10:37:30 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@221293c2 
+[INFO] 11:46:36 (DefaultServlet.java:process:60)Query with url: POST:/store/signUpForm 
 
-[INFO] 10:37:30 (DefaultServlet.java:process:61)Redirection path: /view/adminPage.jsp 
+[INFO] 11:46:36 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSignUpFormExecution@762c34a8 
 
-[INFO] 10:37:30 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[INFO] 11:46:36 (CommandSignUpFormExecution.java:execute:56)Successful validated inputs signUp 
 
-[INFO] 10:37:30 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 11:46:37 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5db79c31 
 
-[INFO] 10:37:30 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 11:46:37 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@3b5ae0b2 
 
-[INFO] 10:38:24 (DefaultServlet.java:process:56)Query with url: GET:/store/deleteUser 
+[INFO] 11:46:37 (AbstractDao.java:insert:73)Insert into db new object User:Poprushko ef5977dd9a1369d697d79c56c59aff650143f0b11f9916f205a17779c96c7cfc ppp@pp.pp false false 
 
-[INFO] 10:38:24 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.executions.DeleteUserExecution@43f2da43 
+[INFO] 11:46:37 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@76f0e9b3 
 
-[INFO] 10:38:24 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@36aae7f1 
+[INFO] 11:46:37 (CommandSignUpFormExecution.java:execute:81)Continue execution without adding in cookie  
 
-[INFO] 10:38:24 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@7f41b989 
+[INFO] 11:46:37 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:38:24 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@63d5a893: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 11:46:37 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@48d38b42 
 
-[INFO] 10:38:24 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@36aae7f1 
+[INFO] 11:46:40 (DefaultServlet.java:process:60)Query with url: GET:/store/createOrder 
 
-[INFO] 10:38:24 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@5b9f75ad 
+[INFO] 11:46:40 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandCreatingNewOrder@3f0ae6d7 
 
-[INFO] 10:38:25 (DeleteUserExecution.java:execute:31)Successful deleted user User:Fara fara123 fara@gmail.com false false 
+[INFO] 11:46:40 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@1a27801d 
 
-[INFO] 10:38:25 (DefaultServlet.java:process:61)Redirection path: /view/adminPage.jsp 
+[INFO] 11:46:40 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@4125af43 
 
-[INFO] 10:38:25 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[INFO] 11:46:40 (AbstractDao.java:insert:73)Insert into db new object Order{productId=19, entityId=28, date=2017-12-28} 
 
-[INFO] 10:38:25 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 11:46:40 (CommandCreatingNewOrder.java:execute:51)Successful added Order{productId=19, entityId=28, date=2017-12-28} 
 
-[INFO] 10:38:25 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 11:46:40 (DefaultServlet.java:process:65)Redirection path: /view/successfulCreatedOrder.jsp 
 
-[INFO] 10:42:08 (DefaultServlet.java:process:56)Query with url: GET:/store/deleteUser 
+[INFO] 11:46:59 (DefaultServlet.java:process:60)Query with url: GET:/store/logout 
 
-[INFO] 10:42:08 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.executions.DeleteUserExecution@43f2da43 
+[INFO] 11:46:59 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandRemoveSession@4b868a1a 
 
-[INFO] 10:42:08 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@1dfff4d 
+[INFO] 11:46:59 (CommandRemoveSession.java:execute:36)Removed cookies [Ljavax.servlet.http.Cookie;@45417d1a 
 
-[INFO] 10:42:08 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@225c78a9 
-
-[INFO] 10:42:08 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@16f9fab3: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
-
-[INFO] 10:42:08 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@1dfff4d 
-
-[INFO] 10:42:18 (DefaultServlet.java:process:56)Query with url: GET:/store/deleteUser 
-
-[INFO] 10:42:18 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.executions.DeleteUserExecution@43f2da43 
-
-[INFO] 10:42:18 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@1a72d2bd 
-
-[INFO] 10:42:18 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@2099a5b1 
-
-[INFO] 10:42:18 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@363dc98b: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
-
-[INFO] 10:42:18 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@1a72d2bd 
-
-[INFO] 10:42:21 (DefaultServlet.java:process:56)Query with url: GET:/store 
-
-[INFO] 10:42:21 (DefaultServlet.java:process:58)Command key execution: HomePageCommand{} 
-
-[INFO] 10:42:21 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
-
-[INFO] 10:42:23 (DefaultServlet.java:process:56)Query with url: GET:/store/logout 
-
-[INFO] 10:42:23 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.redirection.RemoveSession@65dd01b1 
-
-[INFO] 10:42:23 (RemoveSession.java:execute:40)Removed session with ID Vladiolus
-Time online 8 min. 
-
-[INFO] 10:42:23 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
-
-[INFO] 10:42:23 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
-
-[INFO] 10:42:23 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
-
-[INFO] 10:42:23 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
-
-[INFO] 10:42:25 (DefaultServlet.java:process:56)Query with url: GET:/store/signUp 
-
-[INFO] 10:42:25 (DefaultServlet.java:process:58)Command key execution: SignUpPage{} 
-
-[INFO] 10:42:25 (DefaultServlet.java:process:61)Redirection path: /view/signUpPage.jsp 
-
-[INFO] 10:42:25 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
-
-[INFO] 10:42:25 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
-
-[INFO] 10:42:25 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
-
-[INFO] 10:42:57 (DefaultServlet.java:process:56)Query with url: POST:/store/signUpForm 
-
-[INFO] 10:42:57 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.executions.SignUpFormExecution@7db958e9 
-
-[INFO] 10:42:57 (SignUpFormExecution.java:execute:50)Successful validated inputs signUp 
-
-[INFO] 10:42:57 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@3f3424c7 
-
-[INFO] 10:42:57 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@47bbd946 
-
-[INFO] 10:42:57 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@39c9fe91: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
-
-[INFO] 10:42:57 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@3f3424c7 
-
-[INFO] 10:42:57 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@2aa0db05 
-
-[INFO] 10:42:57 (AbstractDao.java:insert:72)Insert into db new object User:Grek Grek123 grek@mail.com false false 
-
-[INFO] 10:42:57 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@97af9d5 
-
-[INFO] 10:42:57 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@544ff212: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
-
-[INFO] 10:42:57 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@2aa0db05 
-
-[INFO] 10:42:57 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
-
-[INFO] 10:42:57 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
-
-[INFO] 10:42:57 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
-
-[INFO] 10:42:57 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
-
-[INFO] 10:43:01 (DefaultServlet.java:process:56)Query with url: GET:/store/personalPage 
-
-[INFO] 10:43:01 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
-
-[INFO] 10:43:01 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
-
-[INFO] 10:43:01 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
-
-[INFO] 10:43:01 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
-
-[INFO] 10:43:01 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
-
-[INFO] 10:43:04 (DefaultServlet.java:process:56)Query with url: GET:/store/logout 
-
-[INFO] 10:43:04 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.redirection.RemoveSession@65dd01b1 
-
-[INFO] 10:43:04 (RemoveSession.java:execute:40)Removed session with ID Grek
+[INFO] 11:46:59 (CommandRemoveSession.java:execute:45)Removed session with ID Poprushko
 Time online 1 min. 
 
-[INFO] 10:43:04 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
+[INFO] 11:46:59 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:43:04 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[INFO] 11:46:59 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@6f830270 
 
-[INFO] 10:43:04 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 11:47:00 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 10:43:04 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 11:47:00 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 10:43:07 (DefaultServlet.java:process:56)Query with url: GET:/store/login 
+[INFO] 11:47:00 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@17c46c0b 
 
-[INFO] 10:43:07 (DefaultServlet.java:process:58)Command key execution: LoginPage{} 
+[ERROR] 11:47:00 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 10:43:07 (DefaultServlet.java:process:61)Redirection path: /view/loginPage.jsp 
+[INFO] 11:47:00 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:43:07 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[INFO] 11:47:00 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@22d47061 
 
-[INFO] 10:43:07 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 11:47:01 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 10:43:07 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 11:47:01 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 10:43:13 (DefaultServlet.java:process:56)Query with url: POST:/store/loginForm 
+[INFO] 11:47:01 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@608908f6 
 
-[INFO] 10:43:13 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.executions.LoginFormExecution@2b8dad0f 
+[ERROR] 11:47:01 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 10:43:13 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@207cbf71 
+[INFO] 11:47:01 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:43:13 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@387af205 
+[INFO] 11:47:01 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@11719516 
 
-[INFO] 10:43:13 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@5f173c5: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 11:47:02 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
 
-[INFO] 10:43:13 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@207cbf71 
+[INFO] 11:47:02 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
 
-[INFO] 10:43:13 (LoginFormExecution.java:execute:48)Successful validated --Vladiolus 
+[INFO] 11:47:02 (DefaultServlet.java:process:65)Redirection path: /view/loginPage.jsp 
 
-[INFO] 10:43:13 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
+[INFO] 11:47:11 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
 
-[INFO] 10:43:13 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[INFO] 11:47:11 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@504cea23 
 
-[INFO] 10:43:13 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 11:47:11 (CommandLoginFormExecution.java:execute:54)Successful validation inputs 
 
-[INFO] 10:43:13 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 11:47:11 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@630a648e 
 
-[INFO] 10:43:15 (DefaultServlet.java:process:56)Query with url: GET:/store/adminPage 
+[ERROR] 11:47:11 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 10:43:15 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.redirection.AdminPage@4b868a1a 
+[INFO] 11:47:11 (CommandLoginFormExecution.java:execute:56)User don't exist in cookie(successful) 
 
-[INFO] 10:43:15 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@c429ef1 
+[INFO] 11:47:11 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@2ce42332 
 
-[INFO] 10:43:15 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@706878a8 
+[INFO] 11:47:11 (CommandLoginFormExecution.java:execute:63)Successful validated --Vlad 
 
-[INFO] 10:43:15 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@5e2208e3: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 11:47:11 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@672d6526 
 
-[INFO] 10:43:15 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@c429ef1 
+[INFO] 11:47:11 (CommandLoginFormExecution.java:execute:70)Successful validation on registered before user 
 
-[INFO] 10:43:15 (DefaultServlet.java:process:61)Redirection path: /view/adminPage.jsp 
+[INFO] 11:47:11 (CommandLoginFormExecution.java:execute:78)Continue execution without adding in cookie  
 
-[INFO] 10:43:15 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[INFO] 11:47:11 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 10:43:15 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 11:47:11 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@3c60b003 
 
-[INFO] 10:43:15 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 11:47:13 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
 
-[INFO] 10:45:33 (DefaultServlet.java:process:56)Query with url: GET:/store/deleteUser 
+[INFO] 11:47:13 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@4ee247e1 
 
-[INFO] 10:45:33 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.executions.DeleteUserExecution@43f2da43 
+[INFO] 11:47:13 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@346668d1 
 
-[INFO] 10:45:33 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@51ea617d 
+[INFO] 11:47:13 (DefaultServlet.java:process:65)Redirection path: /view/adminPage.jsp 
 
-[INFO] 10:45:33 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@183fe538 
+[INFO] 11:47:14 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@25bb2b 
 
-[INFO] 10:45:33 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@5f6025f3: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 11:47:14 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@2dedac30 
 
-[INFO] 10:45:33 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@51ea617d 
+[INFO] 11:47:14 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@310f0b81 
 
-[INFO] 10:45:33 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@1a63fa57 
+[INFO] 11:47:14 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@2df397cc 
 
-[INFO] 10:45:33 (DeleteUserExecution.java:execute:31)Successful deleted user User:Grek Grek123 grek@mail.com false false 
+[INFO] 11:47:14 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@392d4375 
 
-[INFO] 10:45:33 (DefaultServlet.java:process:61)Redirection path: /view/adminPage.jsp 
+[INFO] 11:47:14 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@656953a4 
 
-[INFO] 10:45:33 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
+[INFO] 11:47:14 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@bacdd8b 
 
-[INFO] 10:45:33 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
+[INFO] 11:47:14 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@6bd16345 
 
-[INFO] 10:45:33 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 11:47:14 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@6434aab2 
 
-[INFO] 10:45:52 (DefaultServlet.java:process:56)Query with url: GET:/store/deleteUser 
+[INFO] 11:47:14 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@4556aa42 
 
-[INFO] 10:45:52 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.executions.DeleteUserExecution@43f2da43 
+[INFO] 11:47:14 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@595a3f7 
 
-[INFO] 10:45:52 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@3ed6e210 
+[INFO] 11:47:14 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@7c773e9b 
 
-[INFO] 10:45:52 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@6302e67 
+[INFO] 11:47:14 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@7d5ad15 
 
-[INFO] 10:45:52 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@65ead908: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
+[INFO] 11:47:14 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@6bca05aa 
 
-[INFO] 10:45:52 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@3ed6e210 
+[INFO] 11:47:14 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@38cc0d0b 
 
-[INFO] 10:45:58 (DefaultServlet.java:process:56)Query with url: GET:/store/adminPage 
-
-[INFO] 10:45:58 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.redirection.AdminPage@4b868a1a 
-
-[INFO] 10:45:58 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@48d38b42 
-
-[INFO] 10:45:58 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@24e27ef7 
-
-[INFO] 10:45:58 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@5cbf2b30: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
-
-[INFO] 10:45:58 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@48d38b42 
-
-[INFO] 10:45:58 (DefaultServlet.java:process:61)Redirection path: /view/adminPage.jsp 
-
-[INFO] 10:45:58 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
-
-[INFO] 10:45:58 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
-
-[INFO] 10:45:58 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
-
-[INFO] 10:49:15 (DefaultServlet.java:init:41)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@7e123bf6 
-
-[INFO] 10:49:29 (DefaultServlet.java:process:56)Query with url: GET:/store 
-
-[INFO] 10:49:29 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
-
-[INFO] 10:49:29 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
-
-[INFO] 10:49:29 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@20487e2e 
-
-[INFO] 10:49:29 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
-
-[INFO] 10:49:29 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
-
-[INFO] 10:49:29 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@7d7cf5c2 
-
-[INFO] 10:49:29 (DefaultServlet.java:process:58)Command key execution: HomePageCommand{} 
-
-[INFO] 10:49:29 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
-
-[INFO] 10:50:08 (DefaultServlet.java:init:41)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@2e86e795 
-
-[INFO] 10:50:19 (DefaultServlet.java:process:56)Query with url: GET:/store 
-
-[INFO] 10:50:19 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
-
-[INFO] 10:50:19 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
-
-[INFO] 10:50:19 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@78c88b7d 
-
-[INFO] 10:50:20 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
-
-[INFO] 10:50:20 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
-
-[INFO] 10:50:20 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@59e0011d 
-
-[INFO] 10:50:20 (DefaultServlet.java:process:58)Command key execution: HomePageCommand{} 
-
-[INFO] 10:50:20 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
-
-[INFO] 10:51:39 (DefaultServlet.java:init:41)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@52dbd588 
-
-[INFO] 10:52:21 (DefaultServlet.java:process:56)Query with url: GET:/store 
-
-[INFO] 10:52:21 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
-
-[INFO] 10:52:21 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
-
-[INFO] 10:52:21 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4cfeb251 
-
-[INFO] 10:52:21 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
-
-[INFO] 10:52:21 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
-
-[INFO] 10:52:21 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@7223e11c 
-
-[INFO] 10:52:21 (DefaultServlet.java:process:58)Command key execution: HomePageCommand{} 
-
-[INFO] 10:52:21 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
-
-[INFO] 10:52:31 (DefaultServlet.java:process:56)Query with url: GET:/store/login 
-
-[INFO] 10:52:31 (DefaultServlet.java:process:58)Command key execution: LoginPage{} 
-
-[INFO] 10:52:31 (DefaultServlet.java:process:61)Redirection path: /view/loginPage.jsp 
-
-[INFO] 10:52:32 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
-
-[INFO] 10:52:32 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
-
-[INFO] 10:52:32 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
-
-[INFO] 10:52:51 (DefaultServlet.java:process:56)Query with url: POST:/store/loginForm 
-
-[INFO] 10:52:51 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.executions.LoginFormExecution@15fba49 
-
-[INFO] 10:52:52 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@b2d0fbe 
-
-[INFO] 10:52:52 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@24042e53 
-
-[INFO] 10:52:52 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@7cf6c5e7: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
-
-[INFO] 10:52:52 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@b2d0fbe 
-
-[INFO] 10:52:52 (LoginFormExecution.java:execute:48)Successful validated --Vladiolus 
-
-[INFO] 10:52:52 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
-
-[INFO] 10:52:52 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
-
-[INFO] 10:52:52 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
-
-[INFO] 10:52:52 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
-
-[INFO] 10:52:56 (DefaultServlet.java:process:56)Query with url: GET:/store/adminPage 
-
-[INFO] 10:52:56 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.redirection.AdminPage@2a09327e 
-
-[INFO] 10:52:56 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@68a8776 
-
-[INFO] 10:52:56 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@54dc3249 
-
-[INFO] 10:52:56 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@7e4f38f5: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
-
-[INFO] 10:52:56 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@68a8776 
-
-[INFO] 10:52:56 (DefaultServlet.java:process:61)Redirection path: /view/adminPage.jsp 
-
-[INFO] 10:52:57 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
-
-[INFO] 10:52:57 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
-
-[INFO] 10:52:57 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
-
-[INFO] 10:54:03 (DefaultServlet.java:init:41)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@27fd19db 
-
-[INFO] 10:54:24 (DefaultServlet.java:process:56)Query with url: GET:/store 
-
-[INFO] 10:54:24 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
-
-[INFO] 10:54:24 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
-
-[INFO] 10:54:24 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@78c88b7d 
-
-[INFO] 10:54:24 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
-
-[INFO] 10:54:24 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
-
-[INFO] 10:54:24 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@59e0011d 
-
-[INFO] 10:54:24 (DefaultServlet.java:process:58)Command key execution: HomePageCommand{} 
-
-[INFO] 10:54:24 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
-
-[INFO] 10:55:05 (DefaultServlet.java:init:41)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@44e2acec 
-
-[INFO] 10:55:11 (DefaultServlet.java:process:56)Query with url: GET:/store 
-
-[INFO] 10:55:11 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
-
-[INFO] 10:55:11 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
-
-[INFO] 10:55:11 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1218b1c1 
-
-[INFO] 10:55:11 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
-
-[INFO] 10:55:11 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
-
-[INFO] 10:55:11 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@21437f05 
-
-[INFO] 10:55:11 (DefaultServlet.java:process:58)Command key execution: HomePageCommand{} 
-
-[INFO] 10:55:11 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
-
-[INFO] 10:55:18 (DefaultServlet.java:process:56)Query with url: GET:/store/login 
-
-[INFO] 10:55:18 (DefaultServlet.java:process:58)Command key execution: LoginPage{} 
-
-[INFO] 10:55:18 (DefaultServlet.java:process:61)Redirection path: /view/loginPage.jsp 
-
-[INFO] 10:55:18 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
-
-[INFO] 10:55:18 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
-
-[INFO] 10:55:18 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
-
-[INFO] 10:56:05 (DefaultServlet.java:init:41)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@73b55d54 
-
-[INFO] 10:56:55 (DefaultServlet.java:init:41)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@79521954 
-
-[INFO] 10:57:11 (DefaultServlet.java:process:56)Query with url: GET:/store 
-
-[INFO] 10:57:11 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
-
-[INFO] 10:57:11 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
-
-[INFO] 10:57:11 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1f4d1bc6 
-
-[INFO] 10:57:11 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
-
-[INFO] 10:57:11 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
-
-[INFO] 10:57:11 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@4537d80 
-
-[INFO] 10:57:11 (DefaultServlet.java:process:58)Command key execution: HomePageCommand{} 
-
-[INFO] 10:57:11 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
-
-[INFO] 10:58:23 (DefaultServlet.java:init:41)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@1cac4393 
-
-[INFO] 10:58:45 (DefaultServlet.java:process:56)Query with url: GET:/store 
-
-[INFO] 10:58:45 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
-
-[INFO] 10:58:45 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
-
-[INFO] 10:58:45 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2a1766d3 
-
-[INFO] 10:58:45 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
-
-[INFO] 10:58:45 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
-
-[INFO] 10:58:45 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@321e6509 
-
-[INFO] 10:58:45 (DefaultServlet.java:process:58)Command key execution: HomePageCommand{} 
-
-[INFO] 10:58:45 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
-
-[INFO] 10:59:36 (DefaultServlet.java:init:41)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@45d58bf2 
-
-[INFO] 10:59:57 (DefaultServlet.java:process:56)Query with url: GET:/store 
-
-[INFO] 10:59:57 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
-
-[INFO] 10:59:57 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
-
-[INFO] 10:59:57 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@56059b37 
-
-[INFO] 10:59:57 (JDBCConnectionPool.java:loadDrivers:117)Downloaded mysql.jdbc.Driver. 
-
-[INFO] 10:59:57 (JDBCConnectionPool.java:loadDrivers:129)Driver registered in Driver Manager. 
-
-[INFO] 10:59:57 (AbstractDao.java:<init>:23)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@36d83c45 
-
-[INFO] 10:59:57 (DefaultServlet.java:process:58)Command key execution: HomePageCommand{} 
-
-[INFO] 10:59:57 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
-
-[INFO] 11:00:02 (DefaultServlet.java:process:56)Query with url: GET:/store/login 
-
-[INFO] 11:00:02 (DefaultServlet.java:process:58)Command key execution: LoginPage{} 
-
-[INFO] 11:00:02 (DefaultServlet.java:process:61)Redirection path: /view/loginPage.jsp 
-
-[INFO] 11:00:03 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
-
-[INFO] 11:00:03 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
-
-[INFO] 11:00:03 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
-
-[INFO] 11:00:12 (DefaultServlet.java:process:56)Query with url: POST:/store/loginForm 
-
-[INFO] 11:00:12 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.executions.LoginFormExecution@472fb604 
-
-[INFO] 11:00:12 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@226864bd 
-
-[INFO] 11:00:12 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@52aa0663 
-
-[INFO] 11:00:12 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@71461f0: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
-
-[INFO] 11:00:12 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@226864bd 
-
-[INFO] 11:00:12 (LoginFormExecution.java:execute:48)Successful validated --Vladiolus 
-
-[INFO] 11:00:12 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
-
-[INFO] 11:00:12 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
-
-[INFO] 11:00:12 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
-
-[INFO] 11:00:12 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
-
-[INFO] 11:00:14 (DefaultServlet.java:process:56)Query with url: GET:/store/adminPage 
-
-[INFO] 11:00:14 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.redirection.AdminPage@6854e89b 
-
-[INFO] 11:00:14 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@53ee54f1 
-
-[INFO] 11:00:14 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@4d7994ba 
-
-[INFO] 11:00:14 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@7e9aa304: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
-
-[INFO] 11:00:14 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@53ee54f1 
-
-[INFO] 11:00:14 (DefaultServlet.java:process:61)Redirection path: /view/adminPage.jsp 
-
-[INFO] 11:00:14 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
-
-[INFO] 11:00:14 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
-
-[INFO] 11:00:14 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
-
-[INFO] 11:00:17 (DefaultServlet.java:process:56)Query with url: GET:/store/deleteUser 
-
-[INFO] 11:00:17 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.executions.DeleteUserExecution@1fb5aa93 
-
-[INFO] 11:00:17 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@fbc49dd 
-
-[INFO] 11:00:17 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@17b19f15 
-
-[INFO] 11:00:17 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@5f58762c: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
-
-[INFO] 11:00:17 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@fbc49dd 
-
-[INFO] 11:00:17 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@74a0abde 
-
-[INFO] 11:00:17 (DeleteUserExecution.java:execute:31)Successful deleted user User:Poprushko Popr1234 Popru@ukr.net false false 
-
-[INFO] 11:00:17 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@11334a12 
-
-[INFO] 11:00:17 (AbstractDao.java:closeResources:178)Closed resource --com.mysql.jdbc.JDBC42ResultSet@1a82a09e 
-
-[INFO] 11:00:17 (AbstractDao.java:closeResources:183)Closed  resource --com.mysql.jdbc.JDBC42PreparedStatement@1615c5e9: EXCEPTION: java.sql.SQLException: No operations allowed after statement closed. 
-
-[INFO] 11:00:17 (AbstractDao.java:closeResources:188)Closed resource --com.mysql.jdbc.JDBC4Connection@11334a12 
-
-[INFO] 11:00:17 (DefaultServlet.java:process:61)Redirection path: /view/adminPage.jsp 
-
-[INFO] 11:00:17 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
-
-[INFO] 11:00:17 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
-
-[INFO] 11:00:17 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
-
-[INFO] 11:00:27 (DefaultServlet.java:process:56)Query with url: GET:/store/logout 
-
-[INFO] 11:00:27 (DefaultServlet.java:process:58)Command key execution: ua.com.company.store.controller.impl.redirection.RemoveSession@6e218b5b 
-
-[INFO] 11:00:27 (RemoveSession.java:execute:40)Removed session with ID Vladiolus
-Time online -59 min. 
-
-[INFO] 11:00:27 (DefaultServlet.java:process:61)Redirection path: /main.jsp 
-
-[INFO] 11:00:28 (DefaultServlet.java:process:56)Query with url: GET:/store/resources/css/custom/styles.css 
-
-[INFO] 11:00:28 (DefaultServlet.java:process:58)Command key execution: PageNotFound{} 
-
-[INFO] 11:00:28 (DefaultServlet.java:process:61)Redirection path: /view/pageNotFound.jsp 
+[INFO] 11:47:14 (JDBCConnectionPool.java:newConnection:77)Created new connection com.mysql.jdbc.JDBC4Connection@1098de50 
 

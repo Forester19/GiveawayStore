@@ -4,8 +4,11 @@ import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
 import ua.com.company.store.model.dao.daoAbstract.AbstractDao;
 import ua.com.company.store.model.entity.Image;
 import ua.com.company.store.model.entity.Product;
+import ua.com.company.store.model.entity.User;
+import ua.com.company.store.model.entity.additional.ProductImage;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,7 +26,7 @@ public class ProductDAO extends AbstractDao<Product> {
 
     @Override
     public String getSelectQuery() {
-        return null;
+        return "select * from onlinestoreproject.products ";
     }
 
     @Override
@@ -48,7 +51,22 @@ public class ProductDAO extends AbstractDao<Product> {
 
     @Override
     protected List<Product> parseResultSet(ResultSet rs) {
-        return null;
+        List<Product> list = new ArrayList<>();
+        try {
+            while (rs.next()){
+                Product product = new Product();
+                product.setId(rs.getInt("id"));
+                product.setTitle(rs.getString("title"));
+                product.setDescription(rs.getString("description"));
+                product.setPrice(rs.getInt("price"));
+                product.setImageId(rs.getInt("image_id"));
+                list.add(product);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 
     @Override
@@ -56,7 +74,7 @@ public class ProductDAO extends AbstractDao<Product> {
         try {
             statement.setInt(1, 0);
             statement.setString(2, object.getTitle());
-            statement.setString(3,object.getDescription());
+            statement.setString(3, object.getDescription());
             statement.setInt(4, object.getPrice());
 
         } catch (SQLException e) {
@@ -76,63 +94,37 @@ public class ProductDAO extends AbstractDao<Product> {
 
     @Override
     public Product getByParameter(String parameter) {
+        for (Product product: getAllProducts()){
+            if (product.getId() == Integer.parseInt(parameter)){
+                return product;
+            }
+            else {
+                return null;
+            }
+        }
         return null;
     }
 
-    @Override
-    public int[] insertImageAndProduct(Image image, Product product) {
-        Connection connection = null;
-        ResultSet resultSetImage = null;
-        ResultSet resultSetProduct = null;
-        PreparedStatement preparedStatementImageInsert = null;
-        PreparedStatement preparedStatementProductInsert = null;
-        String imageInser = "insert into onlinestoreproject.images( id, path, data) VALUES (?,?,?)";
-        int rowAffected = 0;
-        int imageId = 0;
-        int productId = 0;
-        try {
-            connection = getConnectionFromPool();
-            connection.setAutoCommit(false);
-            preparedStatementImageInsert = connection.prepareStatement(imageInser, Statement.RETURN_GENERATED_KEYS);
-            preparedStatementImageInsert.setInt(1, 0);
-            preparedStatementImageInsert.setString(2, image.getPath());
-            preparedStatementImageInsert.setString(3, image.getData());
-            rowAffected = preparedStatementImageInsert.executeUpdate();
-            resultSetImage = preparedStatementImageInsert.getGeneratedKeys();
-            if (resultSetImage.next()) {
-                imageId = resultSetImage.getInt(1);
-            }
-            if (rowAffected != 1) {
-                connection.rollback();
-            }
-            preparedStatementProductInsert = connection.prepareStatement(getInsertQuery(), Statement.RETURN_GENERATED_KEYS);
-            prepareStatemantForInsert(preparedStatementProductInsert,product);
-            preparedStatementProductInsert.setInt(5, imageId);
-            preparedStatementProductInsert.executeUpdate();
-            resultSetProduct = preparedStatementProductInsert.getGeneratedKeys();
-            if (resultSetProduct.next()) {
-                productId = resultSetProduct.getInt(1);
-            }
-
-            connection.commit();
+    public List<Product> getAllProducts() {
+        List<Product> productImageList = new ArrayList<>();
+        String query = getSelectQuery();
+        PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        try (Connection connection = JDBCConnectionPool.getInstanceConnectionPool().getConnection()) {
+            preparedStatement = connection.prepareStatement(query);
+            resultSet = preparedStatement.executeQuery();
+            productImageList = parseResultSet(resultSet);
 
         } catch (SQLException e) {
-            try {
-                if (connection != null)
-                    connection.rollback();
-            } catch (SQLException e1) {
-                e1.printStackTrace();
-            }
             e.printStackTrace();
-        } finally {
-            closeResources(resultSetImage, preparedStatementImageInsert, connection);
-            try {
-                preparedStatementProductInsert.close();
-                resultSetProduct.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
-        return new int[]{imageId, productId};
+
+        return productImageList;
     }
+
+
+
+
+
+
 }

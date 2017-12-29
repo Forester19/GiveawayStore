@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by Владислав on 08.12.2017.
+ * Created by Владислав on 12.12.2017.
  */
-public class SignUpPage implements CommandTypical {
+public class CommandLoginPage implements CommandTypical {
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        return "/view/signUpPage.jsp";
+        return "/view/loginPage.jsp";
     }
 
     @Override
     public String toString() {
-        return "SignUpPage{}";
+        return "CommandLoginPage{}";
     }
 }

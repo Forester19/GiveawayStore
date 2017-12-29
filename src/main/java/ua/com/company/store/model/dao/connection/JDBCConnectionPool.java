@@ -101,8 +101,7 @@ public class JDBCConnectionPool {
 
             try {
                 connection.close();
-                log.info("Closed connection" + connection.toString());
-            } catch (SQLException e) {
+               } catch (SQLException e) {
                 log.error("Cant close connection");
             }
         }
@@ -114,7 +113,7 @@ public class JDBCConnectionPool {
     private void loadDrivers() {
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-            log.info("Downloaded mysql.jdbc.Driver.");
+
         } catch (InstantiationException e) {
             log.error("Error in downloading mysql driver " + e.getMessage());
             e.printStackTrace();
@@ -126,8 +125,7 @@ public class JDBCConnectionPool {
         try {
             Driver driver = new com.mysql.jdbc.Driver();
             DriverManager.registerDriver(driver);
-            log.info("Driver registered in Driver Manager.");
-        } catch (Exception e) {
+            } catch (Exception e) {
             log.error("Cant register jdbc driver.");
         }
     }

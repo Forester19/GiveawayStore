@@ -1,9 +1,15 @@
+<%@ page import="ua.com.company.store.model.entity.Order" %>
+<%@ page import="java.util.List" %>
+<%@ page import="ua.com.company.store.service.OrderService" %>
+<%@ page import="ua.com.company.store.model.entity.User" %>
+<%@ page import="ua.com.company.store.service.UserService" %>
+<%@ page import="ua.com.company.store.model.entity.additional.UserProduct" %>
 <%@include file="header.jsp"%>
 
 <div class="container">
-   <div class="row">
-    <div class="col-sm">
-        <form name="LoginForm" action="/store/addNewProduct" method="post" enctype="multipart/form-data">
+    <div class="row">
+    <div class="active">
+        <form class="px-4 py-3" name="LoginForm" action="/store/addNewProduct" method="post" enctype="multipart/form-data">
             <table class="table" bgcolor="#ffe4c4" border="1">
                <thead>
                 <tr>
@@ -56,11 +62,41 @@
             </table>
         </form>
     </div>
+    </div>
+
+    <div class="active">
+        <% List<UserProduct> listOrders = OrderService.getInstance().getOrderWithInformation();%>
+        <table class="table table-dark table-condensed">
+            <caption><fmt:message key="store.order" bundle="${rb}"/>  </caption>
+            <thead>
+            <tr>
+                <th scope="col"><fmt:message key="store.user.id" bundle="${rb}"/> </th>
+                <th scope="col"><fmt:message key="store.user.nickname" bundle="${rb}"/></th>
+                <th scope="col"><fmt:message key="store.product.title" bundle="${rb}"/></th>
+                <th scope="col"><fmt:message key="store.order.date" bundle="${rb}"/> </th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:forEach var="listO" items="<%=listOrders%>">
+                <tr>
+                    <th scope="row">#</th>
+                    <td>${listO.userName}</td>
+                    <td>${listO.productTitle}</td>
+                    <td>${listO.date}</td>
+                </tr>
+            </c:forEach>
+
+            </tbody>
+        </table>
+
+    </div>
 
 
-    <div class="col-sm">
+    <div class="active">
+       <div class="table-responsive">
 
-        <table class="table table-bordered table-dark">
+        <table class="table table table-hover table-dark">
+            <caption><fmt:message key="store.user" bundle="${rb}"/> </caption>
             <thead>
             <tr>
                 <th scope="col"><fmt:message key="store.user.id" bundle="${rb}"/> </th>
@@ -70,11 +106,13 @@
                 <th scope="col"><fmt:message key="store.user.role" bundle="${rb}"/></th>
                 <th scope="col"><fmt:message key="store.user.defaulter" bundle="${rb}"/></th>
                 <th scope="col"><fmt:message key="store.admin.deleteUser" bundle="${rb}"/></th>
+                <th scope="col"><fmt:message key="store.admin.markUserAsDefaulter" bundle="${rb}"/></th>
             </tr>
             </thead>
             <tbody>
+            <% List<User> userList = UserService.getInstance().getAllUsers();%>
 
-            <c:forEach items="${listOfUsers}" var="user">
+            <c:forEach items="<%=userList%>" var="user">
                 <tr>
                     <th scope="row">${user.id}</th>
                     <td>${user.nickname}</td>
@@ -87,13 +125,17 @@
                     <fmt:message key="store.admin.deleteUser" bundle="${rb}"/>
                         </a>
                     </td>
+                    <td>
+                        <a href="${pageContext.request.contextPath}/store/markAsDefaulter?id=${user.id}">
+                            <fmt:message key="store.admin.markUser" bundle="${rb}"/>
+                        </a>
+                    </td>
                 </tr>
             </c:forEach>
             </tbody>
         </table>
     </div>
-</div>
-
+    </div>
 </div>
 
 

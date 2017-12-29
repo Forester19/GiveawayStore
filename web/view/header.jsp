@@ -14,8 +14,7 @@
     <title>Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" type="text/css" href="resources/css/custom/styles.css">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
@@ -30,11 +29,16 @@
         </div>
 
         <ul class="nav navbar-nav">
-            <li>
+            <table class="border-light">
+                <tr>
+            <td>
+                    <li>
                 <a href="${pageContext.request.contextPath}/products">
                     <fmt:message key="store.products" bundle="${rb}"/>
                 </a>
             </li>
+            </td>
+                    <td>
             <li>
                 <c:if test="${user.isRole() eq true}">
                 <a href="${pageContext.request.contextPath}/store/adminPage">
@@ -47,6 +51,8 @@
                 </a>
             </c:if>
             </li>
+                    </td>
+                    <td>
 
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -63,22 +69,28 @@
                     </c:forEach>
                 </ul>
             </li>
+                    </td>
             <c:choose>
                 <c:when test="${empty user}">
+                    <td>
                     <li>
                         <a href="${pageContext.request.contextPath}/store/login">
                             <span class="glyphicon glyphicon-log-out"></span>
                     <fmt:message key="store.login" bundle="${rb}"/>
                         </a>
                     </li>
+                    </td>
+                    <td>
                     <li>
                         <a href="${pageContext.request.contextPath}/store/signUp">
                             <span class="glyphicon glyphicon-log-out"></span>
                             <fmt:message key="store.signUp" bundle="${rb}"/>
                         </a>
                     </li>
+                    </td>
                 </c:when>
                 <c:otherwise>
+                    <td>
                    <li>
                        <a href="${pageContext.request.contextPath}/store/logout">
                            <span class="glyphicon glyphicon-log-out"></span>
@@ -86,8 +98,11 @@
                            <c:out value="${user.getNickname()}"/>
                        </a>
                    </li>
+                    </td>
                 </c:otherwise>
             </c:choose>
+                </tr>
+            </table>
         </ul>
 
 

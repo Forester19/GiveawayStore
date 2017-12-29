@@ -2,6 +2,7 @@ package ua.com.company.store.controller.impl.redirection;
 
 import org.apache.log4j.Logger;
 import ua.com.company.store.controller.command.CommandTypical;
+import ua.com.company.store.controller.utils.CookiesAction;
 import ua.com.company.store.model.entity.User;
 
 import javax.servlet.ServletException;
@@ -15,7 +16,7 @@ import java.util.Date;
 /**
  * Created by Владислав on 06.12.2017.
  */
-public class RemoveSession implements CommandTypical {
+public class CommandRemoveSession implements CommandTypical {
     private Logger logger = Logger.getRootLogger();
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -29,6 +30,10 @@ public class RemoveSession implements CommandTypical {
             PrintWriter printWriter = resp.getWriter();
             printWriter.print("Session is null");
             return null;
+        }
+        if (req.getCookies() != null){
+            CookiesAction.removeCookie(req,resp);
+            logger.info("Removed cookies " + req.getCookies().toString());
         }
 
         user = (User) session.getAttribute("user");

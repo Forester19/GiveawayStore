@@ -5,6 +5,7 @@ import ua.com.company.store.model.dao.connection.ConnectionPoolDataSource;
 import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
 import ua.com.company.store.model.entity.Image;
 import ua.com.company.store.model.entity.Product;
+import ua.com.company.store.model.entity.User;
 
 import java.sql.*;
 import java.util.List;
@@ -85,7 +86,9 @@ public abstract class AbstractDao<T> implements GenericDAO<T> {
         return id;
     }
 
+  public void markUserAsDefaulter(User user){
 
+  }
     @Override
     public T getById(int key) {
         List<T> list = null;
@@ -175,18 +178,13 @@ public abstract class AbstractDao<T> implements GenericDAO<T> {
             if(resultSet != null){
                 resultSet.close();
 
-                logger.info("Closed resource --" +resultSet.toString() );
             }
             if (preparedStatement != null) {
                 preparedStatement.close();
-
-                logger.info("Closed  resource --" +preparedStatement.toString() );
-            }
+   }
             if (connection !=null) {
                 connection.close();
-
-                logger.info("Closed resource --" +connection.toString() );
-            }
+   }
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -196,13 +194,10 @@ public abstract class AbstractDao<T> implements GenericDAO<T> {
         try {
             if (preparedStatement !=null) {
                 preparedStatement.close();
-                logger.info("Closed resource --" +preparedStatement.toString() );
             }
             if (connection != null) {
                 connection.close();
-
-                logger.info("Closed resource --" +connection.toString() );
-            }
+  }
         } catch (SQLException e) {
             e.printStackTrace();
         }

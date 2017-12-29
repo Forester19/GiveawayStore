@@ -4,10 +4,12 @@ import org.apache.log4j.Logger;
 import ua.com.company.store.controller.command.CommandFactory;
 import ua.com.company.store.controller.command.CommandTypical;
 import ua.com.company.store.controller.utils.CommandKeyGenerator;
+import ua.com.company.store.controller.utils.JDBCConnectionPoolManager;
 import ua.com.company.store.controller.utils.RedirectionManager;
 import ua.com.company.store.controller.utils.ServletWrapper;
 import ua.com.company.store.exceptions.ServiceException;
 import ua.com.company.store.locale.AppLocale;
+import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
 import ua.com.company.store.model.dao.exceptions.PersistException;
 
 import javax.servlet.RequestDispatcher;
@@ -29,6 +31,7 @@ import java.util.Map;
 @MultipartConfig
 public class DefaultServlet extends HttpServlet {
     private Logger logger = Logger.getRootLogger();
+    public static JDBCConnectionPoolManager jdbcConnectionPoolManager = new JDBCConnectionPoolManager();
 
     public DefaultServlet() throws PersistException {
 
@@ -37,6 +40,7 @@ public class DefaultServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
+        jdbcConnectionPoolManager.setJdbcConnectionPool(JDBCConnectionPool.getInstanceConnectionPool());
         getServletContext().setAttribute("locales", AppLocale.getAppLocales());
         logger.info("Initialized default servlet  " + this.toString());
     }
@@ -55,17 +59,17 @@ public class DefaultServlet extends HttpServlet {
         String key = CommandKeyGenerator.generateCommandKeyByRequest(req);
         logger.info("Query with url: " + key);
         CommandTypical commandTypical = CommandFactory.getCommand(key);
-        logger.info("Command key execution: " +commandTypical.toString());
-        String redirectionPath = commandTypical.execute(req,resp);
+        logger.info("Command key execution: " + commandTypical.toString());
+        String redirectionPath = commandTypical.execute(req, resp);
 
-        logger.info("Redirection path: " +redirectionPath);
-        forwardToCommandResultPage(new ServletWrapper(req,resp),redirectionPath);
+        logger.info("Redirection path: " + redirectionPath);
+        forwardToCommandResultPage(new ServletWrapper(req, resp), redirectionPath);
 
     }
 
     private void forwardToCommandResultPage(ServletWrapper servletWrapper, String commandRes) throws ServletException, IOException {
         if (!commandRes.contains(RedirectionManager.REDIRECTION)) {
-            servletWrapper.getRequest().getRequestDispatcher(commandRes).forward(servletWrapper.getRequest(), servletWrapper.getResponse());
+            servletWrapper.getResponse().sendRedirect(commandRes);
         }
     }
 

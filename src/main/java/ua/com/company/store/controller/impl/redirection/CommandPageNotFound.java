@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by Владислав on 12.12.2017.
+ * Created by Владислав on 07.12.2017.
  */
-public class LoginPage implements CommandTypical {
+public class CommandPageNotFound implements CommandTypical {
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        return "/view/loginPage.jsp";
+    return "/view/pageNotFound.jsp";
     }
 
     @Override
     public String toString() {
-        return "LoginPage{}";
+        return "CommandPageNotFound{}";
     }
 }

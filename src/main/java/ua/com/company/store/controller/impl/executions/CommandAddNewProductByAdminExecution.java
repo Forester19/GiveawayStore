@@ -9,6 +9,7 @@ import ua.com.company.store.model.dto.ProductDto;
 import ua.com.company.store.model.entity.Image;
 import ua.com.company.store.model.entity.Product;
 import ua.com.company.store.service.ImageService;
+import ua.com.company.store.service.ProductImageService;
 import ua.com.company.store.service.ProductService;
 import ua.com.company.store.validation.ValidatorAbstract;
 import ua.com.company.store.validation.products.DescriptionValidator;
@@ -27,14 +28,14 @@ import java.io.*;
 /**
  * Created by Владислав on 03.12.2017.
  */
-public class AddNewProductByAdminExecution implements CommandTypical {
+public class CommandAddNewProductByAdminExecution implements CommandTypical {
 
-    private ProductService productService;
+    private ProductImageService productService;
 
 
     private Logger logger = Logger.getRootLogger();
 
-    public AddNewProductByAdminExecution(ProductService productService) {
+    public CommandAddNewProductByAdminExecution(ProductImageService productService) {
         this.productService = productService;
     }
 
@@ -78,7 +79,7 @@ public class AddNewProductByAdminExecution implements CommandTypical {
     }
 
     private String[] downloadImage(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        final String path = "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\temp";
+        final String path = "G:\\JAVA\\EPAM\\GiveawayStore\\web\\resources\\images";
         final Part filePart = req.getPart("file");
         final String fileName = getFileName(filePart);
 

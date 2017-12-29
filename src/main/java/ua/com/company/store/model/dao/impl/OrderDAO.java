@@ -1,0 +1,111 @@
+package ua.com.company.store.model.dao.impl;
+
+import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
+import ua.com.company.store.model.dao.daoAbstract.AbstractDao;
+import ua.com.company.store.model.entity.Order;
+import ua.com.company.store.model.entity.User;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by Владислав on 19.12.2017.
+ */
+public class OrderDAO extends AbstractDao<Order> {
+
+    public OrderDAO(JDBCConnectionPool jdbcConnectionPool) {
+        super(jdbcConnectionPool);
+    }
+
+    @Override
+    public Order update() {
+        return null;
+    }
+
+    @Override
+    public String getSelectQuery() {
+        return "select * from onlinestoreproject.orders";
+    }
+
+    @Override
+    public String getCreateQuery() {
+        return null;
+    }
+
+    @Override
+    public String getUpdateQuery() {
+        return null;
+    }
+
+    @Override
+    public String getDeleteQuery() {
+        return null;
+    }
+
+    @Override
+    public String getInsertQuery() {
+        return "insert into onlinestoreproject.orders(id,product_id,entity_id,date) VALUES (?,?,?,?)";
+    }
+
+    @Override
+    protected List<Order> parseResultSet(ResultSet rs) {
+        List<Order> list = new ArrayList<>();
+        try {
+            while (rs.next()){
+                Order order = new Order(rs.getInt("id"),
+                        rs.getInt("product_id"),
+                        rs.getInt("entity_id"),
+                        rs.getDate("date"));
+                list.add(order);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    @Override
+    protected void prepareStatemantForInsert(PreparedStatement statement, Order object) {
+        try {
+            statement.setInt(1,object.getId());
+            statement.setInt(2,object.getProductId());
+            statement.setInt(3,object.getEntityId());
+            statement.setDate(4, (Date) object.getDate());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    protected void prepareStatemantForDelete(PreparedStatement statement, Order object) {
+
+    }
+
+    @Override
+    public Order getByParameter(String parameter) {
+        List<Order> list = null;
+        String query = getSelectQuery() + "where id = ?";
+        Connection connection= null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+       /* try {
+            connection = getConnectionFromPool();
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1,nickname);
+            resultSet = preparedStatement.executeQuery();
+            list = parseResultSet(resultSet);
+            if (list ==null || list.size()>1){
+                logger.error("Cant search users with nickname " + nickname);
+                return null;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            logger.error("Cant get all admins " + e);
+        }
+        finally {
+            closeResources(resultSet,preparedStatement,connection);
+        }*/
+        return list.get(0);
+    }
+}
