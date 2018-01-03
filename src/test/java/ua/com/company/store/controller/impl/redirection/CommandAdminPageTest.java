@@ -25,7 +25,7 @@ import static org.junit.Assert.*;
  * Created by Владислав on 03.01.2018.
  */
 public class CommandAdminPageTest {
-    private UserService userService;
+   private UserService userService;
     private CommandAdminPage commandAdminPage;
     private HttpServletRequest request;
     private HttpServletResponse response;

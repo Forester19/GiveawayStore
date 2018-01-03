@@ -25,7 +25,7 @@ public class JDBCConnectionPool {
     private JDBCConnectionPool() {
         log = Logger.getRootLogger();
 
-        this.url = "jdbc:mysql://localhost:3306/onlinestoreproject?autoReconnect=true&useSSL=false";
+        this.url = "jdbc:mysql://localhost:3306/onlinestoreproject?autoReconnect=true&useSSL=false&useUnicode=true&amp;characterEncoding=utf8";
         this.user = "root";
         this.password = "root";
         this.maxConn = 10;

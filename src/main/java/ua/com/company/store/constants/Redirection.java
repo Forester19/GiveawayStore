@@ -6,4 +6,5 @@ package ua.com.company.store.constants;
 public class Redirection {
     public static String ACCESS_ERROR_PAGE = "/view/accessErrorPage.jsp";
     public static String ADMIN_PAGE = "/view/adminPage.jsp";
+    public static String MAIN_PAGE= "/main.jsp";
 }

@@ -1,5 +1,6 @@
 package ua.com.company.store.controller.impl.executions;
 
+import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
 import ua.com.company.store.model.entity.User;
 import ua.com.company.store.service.UserService;
@@ -36,6 +37,6 @@ public class CommandMarkUserAsDefaulterExecution implements CommandTypical{
         userService.markUserAsDefaulter(user);
 
         req.setAttribute("listOfUsers", userService.getAllUsers());
-        return "/view/adminPage.jsp";
+        return Redirection.ADMIN_PAGE;
     }
 }
