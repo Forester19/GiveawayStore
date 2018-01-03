@@ -1,5 +1,6 @@
 package ua.com.company.store.model.dao.impl;
 
+import org.apache.log4j.Logger;
 import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
 import ua.com.company.store.model.dao.daoAbstract.AbstractDao;
 import ua.com.company.store.model.entity.Order;
@@ -13,7 +14,7 @@ import java.util.List;
  * Created by Владислав on 19.12.2017.
  */
 public class OrderDAO extends AbstractDao<Order> {
-
+private Logger logger = Logger.getRootLogger();
     public OrderDAO(JDBCConnectionPool jdbcConnectionPool) {
         super(jdbcConnectionPool);
     }
@@ -40,7 +41,7 @@ public class OrderDAO extends AbstractDao<Order> {
 
     @Override
     public String getDeleteQuery() {
-        return null;
+        return " delete from onlinestoreproject.orders where id = ? ";
     }
 
     @Override
@@ -79,24 +80,28 @@ public class OrderDAO extends AbstractDao<Order> {
 
     @Override
     protected void prepareStatemantForDelete(PreparedStatement statement, Order object) {
-
+        try {
+            statement.setInt(1,object.getId());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public Order getByParameter(String parameter) {
         List<Order> list = null;
-        String query = getSelectQuery() + "where id = ?";
+        String query = getSelectQuery() + " where entity_id = ?";
         Connection connection= null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
-       /* try {
+       try {
             connection = getConnectionFromPool();
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1,nickname);
+            preparedStatement.setInt(1, Integer.parseInt(parameter));
             resultSet = preparedStatement.executeQuery();
             list = parseResultSet(resultSet);
             if (list ==null || list.size()>1){
-                logger.error("Cant search users with nickname " + nickname);
+                logger.error("Cant search users with nickname " + parameter);
                 return null;
             }
         } catch (SQLException e) {
@@ -105,7 +110,7 @@ public class OrderDAO extends AbstractDao<Order> {
         }
         finally {
             closeResources(resultSet,preparedStatement,connection);
-        }*/
+        }
         return list.get(0);
     }
 }

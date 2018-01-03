@@ -74,8 +74,7 @@ public class JDBCConnectionPool {
             else {
                 connection = (Connection) DriverManager.getConnection(url,user,password);
             }
-            log.info("Created new connection "  +connection.toString());
-        } catch (SQLException e) {
+            } catch (SQLException e) {
             log.error("Cant create connection fo this " + url);
         }
         return connection;

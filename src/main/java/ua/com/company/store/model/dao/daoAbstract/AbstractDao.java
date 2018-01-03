@@ -168,7 +168,7 @@ public abstract class AbstractDao<T> implements GenericDAO<T> {
         }
     }
 
-    protected Connection getConnectionFromPool() throws SQLException{
+    public Connection getConnectionFromPool() throws SQLException{
         return jdbcConnectionPool.getConnection();
 
        }

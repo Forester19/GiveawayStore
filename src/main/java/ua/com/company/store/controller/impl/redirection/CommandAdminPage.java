@@ -1,5 +1,6 @@
 package ua.com.company.store.controller.impl.redirection;
 
+import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
 import ua.com.company.store.model.entity.User;
 import ua.com.company.store.service.UserService;
@@ -28,9 +29,9 @@ public class CommandAdminPage implements CommandTypical {
             user = (User) req.getSession().getAttribute("user");
         }
         if (req.getSession() == null || req.getSession().getAttribute("user") == null || !user.isRole()) {
-          return "/view/accessErrorPage.jsp";
+          return Redirection.ACCESS_ERROR_PAGE;
         }
         req.setAttribute("listOfUsers", userService.getAllUsers());
-        return "/view/adminPage.jsp";
+        return Redirection.ADMIN_PAGE;
     }
 }

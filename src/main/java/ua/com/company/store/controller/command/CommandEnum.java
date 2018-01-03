@@ -75,6 +75,16 @@ public enum CommandEnum {
         this.command = new CommandCreatingNewOrder(OrderService.getInstance(),ProductService.getInstance());
 
     }},
+    DELETE_ORDER {{
+        this.key = "GET:/store/deleteOrder";
+        this.command = new CommandDeleteOrderExec(OrderService.getInstance(),UserService.getInstance());
+
+    }},
+    EXECUTION_ORDER{{
+        this.key = "GET:/store/executeOrder";
+        this.command = new CommandExecuteOrder(OrderService.getInstance(),UserService.getInstance());
+
+    }},
     SIGNUP_FORM {{
         this.key = "POST:/store/signUpForm";
         this.command = new CommandSignUpFormExecution(UserService.getInstance(), PasswordHashing.getInstance());

@@ -54,6 +54,16 @@ public class OrderService {
         OrderDAO orderDAO = (OrderDAO) genericDAO;
         return orderDAO.getAll();
     }
+    public Order getByParameter(User user){
+        OrderDAO orderDAO = (OrderDAO) genericDAO;
+        return orderDAO.getByParameter(String.valueOf(user.getId()));
+    }
+    public boolean deleteOrder(Order order){
+        OrderDAO orderDAO = (OrderDAO) genericDAO;
+        orderDAO.delete(order);
+        return true;
+    }
+
 
     /**
      *

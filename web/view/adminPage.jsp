@@ -7,6 +7,9 @@
 <%@include file="header.jsp"%>
 
 <div class="container">
+    <table>
+        <tr>
+            <th>
     <div class="row">
     <div class="active">
         <form class="px-4 py-3" name="LoginForm" action="/store/addNewProduct" method="post" enctype="multipart/form-data">
@@ -63,33 +66,45 @@
         </form>
     </div>
     </div>
+            </th>
+            <th>
+                <div class="active">
+                    <% List<UserProduct> listOrders = OrderService.getInstance().getOrderWithInformation();%>
+                    <table class="table table-dark table-condensed">
+                        <caption><fmt:message key="store.order" bundle="${rb}"/>  </caption>
+                        <thead>
+                        <tr>
+                            <th scope="col"><fmt:message key="store.user.id" bundle="${rb}"/> </th>
+                            <th scope="col"><fmt:message key="store.user.nickname" bundle="${rb}"/></th>
+                            <th scope="col"><fmt:message key="store.product.title" bundle="${rb}"/></th>
+                            <th scope="col"><fmt:message key="store.order.date" bundle="${rb}"/> </th>
+                            <th scope="col"><fmt:message key="store.admin.deleteUser" bundle="${rb}"/> </th>
+                            <th scope="col"><fmt:message key="store.order.doExecution" bundle="${rb}"/> </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <c:forEach var="listO" items="<%=listOrders%>">
+                            <tr>
+                                <th scope="row">#</th>
+                                <td>${listO.userName}</td>
+                                <td>${listO.productTitle}</td>
+                                <td>${listO.date}</td>
+                                <td><a href="${pageContext.request.contextPath}/store/deleteOrder?userName=${listO.userName}"><fmt:message key="store.admin.deleteUser" bundle="${rb}"/> </a> </td>
+                                <td><a href="${pageContext.request.contextPath}/store/executeOrder?userName=${listO.userName}"><fmt:message key="store.order.Ok" bundle="${rb}"/> </a> </td>
+                            </tr>
+                        </c:forEach>
 
-    <div class="active">
-        <% List<UserProduct> listOrders = OrderService.getInstance().getOrderWithInformation();%>
-        <table class="table table-dark table-condensed">
-            <caption><fmt:message key="store.order" bundle="${rb}"/>  </caption>
-            <thead>
-            <tr>
-                <th scope="col"><fmt:message key="store.user.id" bundle="${rb}"/> </th>
-                <th scope="col"><fmt:message key="store.user.nickname" bundle="${rb}"/></th>
-                <th scope="col"><fmt:message key="store.product.title" bundle="${rb}"/></th>
-                <th scope="col"><fmt:message key="store.order.date" bundle="${rb}"/> </th>
-            </tr>
-            </thead>
-            <tbody>
-            <c:forEach var="listO" items="<%=listOrders%>">
-                <tr>
-                    <th scope="row">#</th>
-                    <td>${listO.userName}</td>
-                    <td>${listO.productTitle}</td>
-                    <td>${listO.date}</td>
-                </tr>
-            </c:forEach>
+                        </tbody>
+                    </table>
 
-            </tbody>
-        </table>
+                </div>
 
-    </div>
+            </th>
+
+        </tr>
+    </table>
+
+
 
 
     <div class="active">
