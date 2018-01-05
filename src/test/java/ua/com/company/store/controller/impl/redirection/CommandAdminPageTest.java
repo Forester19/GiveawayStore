@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import ua.com.company.store.constants.Redirection;
+import ua.com.company.store.controller.utils.RedirectionManager;
 import ua.com.company.store.model.entity.User;
 import ua.com.company.store.service.UserService;
 
@@ -45,7 +46,7 @@ public class CommandAdminPageTest {
     public void noVerifUserInSessionRedirectionTest() throws ServletException, IOException {
         when(request.getAttribute("user")).thenReturn(new User());
 
-        String expectedResultResource = Redirection.ACCESS_ERROR_PAGE;
+        String expectedResultResource = Redirection.ACCESS_ERROR_PAGE+ " " + RedirectionManager.REDIRECTION;
         String actualResult = commandAdminPage.execute(request,response);
 
 
@@ -61,7 +62,7 @@ public class CommandAdminPageTest {
         when(request.getSession().getAttribute("user")).thenReturn(user);
         when(user.isRole()).thenReturn(true);
 
-        String expectedResultResource = Redirection.ADMIN_PAGE;
+        String expectedResultResource = Redirection.ADMIN_PAGE+ " " + RedirectionManager.REDIRECTION;
         String actualResult = commandAdminPage.execute(request,response);
 
 

@@ -3,6 +3,7 @@ package ua.com.company.store.controller.impl.redirection;
 import org.apache.log4j.Logger;
 import ua.com.company.store.controller.command.CommandTypical;
 import ua.com.company.store.controller.utils.CookiesAction;
+import ua.com.company.store.controller.utils.RedirectionManager;
 import ua.com.company.store.model.entity.User;
 
 import javax.servlet.ServletException;
@@ -43,6 +44,6 @@ public class CommandRemoveSession implements CommandTypical {
                 new Date(session.getLastAccessedTime());
         session.invalidate();
         logger.info("Removed session with ID " + user.getNickname() + "\n" + "Time online " + (lastAccessTime.getMinutes()-createTime.getMinutes()) + " min.");
-    return "/main.jsp";
+    return "/main.jsp" + " " + RedirectionManager.REDIRECTION;
     }
 }

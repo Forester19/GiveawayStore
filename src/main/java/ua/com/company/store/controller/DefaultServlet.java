@@ -56,6 +56,7 @@ public class DefaultServlet extends HttpServlet {
     }
 
     private void process(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+       req.setCharacterEncoding("utf-8");
         String key = CommandKeyGenerator.generateCommandKeyByRequest(req);
         logger.info("Query with url: " + key);
         CommandTypical commandTypical = CommandFactory.getCommand(key);
@@ -69,7 +70,10 @@ public class DefaultServlet extends HttpServlet {
 
     private void forwardToCommandResultPage(ServletWrapper servletWrapper, String commandRes) throws ServletException, IOException {
         if (!commandRes.contains(RedirectionManager.REDIRECTION)) {
-            servletWrapper.getResponse().sendRedirect(commandRes);
+            servletWrapper.getRequest().getRequestDispatcher(commandRes).forward(servletWrapper.getRequest(),servletWrapper.getResponse());
+        } else {
+            String[] newCommandRes = commandRes.split(" ");
+            servletWrapper.getResponse().sendRedirect(newCommandRes[0]);
         }
     }
 

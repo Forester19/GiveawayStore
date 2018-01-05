@@ -2,6 +2,7 @@ package ua.com.company.store.controller.impl.redirection;
 
 import org.apache.log4j.Logger;
 import ua.com.company.store.controller.command.CommandTypical;
+import ua.com.company.store.controller.utils.RedirectionManager;
 import ua.com.company.store.locale.AppLocale;
 import ua.com.company.store.locale.MessageLocale;
 
@@ -19,7 +20,7 @@ public class CommandChangeLocale implements CommandTypical {
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         setLocale(req);
-        return "/main.jsp";
+        return "/main.jsp" + " " + RedirectionManager.REDIRECTION;
     }
 
     private void setLocale(HttpServletRequest req) {

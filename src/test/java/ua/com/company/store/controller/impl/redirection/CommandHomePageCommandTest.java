@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.utils.CookiesAction;
+import ua.com.company.store.controller.utils.RedirectionManager;
 import ua.com.company.store.model.entity.User;
 import ua.com.company.store.service.UserService;
 
@@ -50,7 +51,7 @@ public class CommandHomePageCommandTest {
 
 
         String expexted = commandHomePageCommand.execute(request,response);
-        String actual = Redirection.MAIN_PAGE;
+        String actual = Redirection.MAIN_PAGE+ " " + RedirectionManager.REDIRECTION;
 
         assertEquals(expexted,actual);
 
