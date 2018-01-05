@@ -1,4 +1,7 @@
 # GiveawayStore
+
+[![Build Status](https://travis-ci.org/Forester19/GiveawayStore.svg?branch=master)](https://travis-ci.org/Forester19/GiveawayStore)
+
 Построить веб-систему, поддерживающую заданную функциональность:
 1. На основе сущностей предметной области создать классы их
 описывающие.
