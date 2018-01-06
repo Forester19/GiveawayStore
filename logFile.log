@@ -400,3 +400,13 @@
 
 [INFO] 01:48:03 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4b93dd6a 
 
+[INFO] 03:26:14 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@470a696f 
+
+[INFO] 03:26:14 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2cb3d0f7 
+
+[INFO] 03:26:14 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@44e3760b 
+
+[INFO] 03:26:16 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@9a9aa68 
+
+[INFO] 03:26:16 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1537e43 
+
