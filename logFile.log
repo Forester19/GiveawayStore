@@ -390,3 +390,13 @@
 
 [INFO] 06:24:58 (DefaultServlet.java:process:66)Redirection path: /view/signUpPage.jsp REDIRECTION 
 
+[INFO] 01:47:59 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2611b9a3 
+
+[INFO] 01:47:59 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@426b6a74 
+
+[INFO] 01:47:59 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@83298d7 
+
+[INFO] 01:48:03 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@47569167 
+
+[INFO] 01:48:03 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4b93dd6a 
+
