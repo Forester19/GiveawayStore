@@ -410,3 +410,5 @@
 
 [INFO] 03:26:16 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1537e43 
 
+[INFO] 03:39:52 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4c75cab9 
+
