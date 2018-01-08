@@ -41,30 +41,31 @@ public class CommandAddNewProductByAdminExecution implements CommandTypical {
 
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ProductDto productDto = getNewProductInputs(req.getParameter("title"),req.getParameter("description"),Integer.parseInt(req.getParameter("price")),downloadImage(req, resp));
-        if (doValidationInputs(productDto)){
-            Image image = new Image(0,productDto.getImageInformation()[0],productDto.getImageInformation()[1]);
-            Product product = new Product(0, productDto.getTitle(),productDto.getDescription(),productDto.getPrice(),0);
-
-            productService.addProductAndImage(product,image);
+        ProductDto productDto = getNewProductInputs(req.getParameter("title"), req.getParameter("description"), Integer.parseInt(req.getParameter("price")), downloadImage(req, resp));
+        if (doValidationInputs(productDto)) {
+            Image
+                    image = new Image.ImageBuilder().setID(0)
+                    .setPath(productDto.getImageInformation()[0])
+                    .setdata(productDto.getImageInformation()[1]).build();
+            Product product = new Product.ProductBuilder().setId(0)
+                    .setTitle(productDto.getTitle())
+                    .setDescr(productDto.getDescription())
+                    .setPrice(productDto.getPrice())
+                    .setImgId(0).build();
+            productService.addProductAndImage(product, image);
             req.setAttribute("successful", "Successful added new product: " + product.getTitle());
             return "/view/adminPage.jsp";
-        }else {
+        } else {
             req.setAttribute("error", " NUll inputs!!!");
             return "/view/someErrorsByInputs.jsp";
         }
     }
 
 
-
-
-
-
-
-
-    private ProductDto getNewProductInputs(String title, String desc, int price,String[] imgInform){
-  return new ProductDto(title,desc,price,imgInform);
+    private ProductDto getNewProductInputs(String title, String desc, int price, String[] imgInform) {
+        return new ProductDto(title, desc, price, imgInform);
     }
+
     private boolean doValidationInputs(ProductDto productDto) {
         ValidatorAbstract validatorAbstractTitle = new TitleValidator();
         ValidatorAbstract validatorAbstractDescription = new DescriptionValidator();
@@ -75,7 +76,7 @@ public class CommandAddNewProductByAdminExecution implements CommandTypical {
         validatorAbstractDescription.setNextValidator(validatorAbstractPrice);
         validatorAbstractPrice.setNextValidator(validatorAbstractImageInform);
 
-        return validatorAbstractTitle.validate(productDto.getTitle(),productDto.getDescription(),String.valueOf(productDto.getPrice()),productDto.getImageInformation()[0],productDto.getImageInformation()[1]);
+        return validatorAbstractTitle.validate(productDto.getTitle(), productDto.getDescription(), String.valueOf(productDto.getPrice()), productDto.getImageInformation()[0], productDto.getImageInformation()[1]);
     }
 
     private String[] downloadImage(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

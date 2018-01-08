@@ -1,6 +1,7 @@
 package ua.com.company.store.service;
 
 import ua.com.company.store.controller.DefaultServlet;
+import ua.com.company.store.controller.utils.JDBCConnectionPoolManager;
 import ua.com.company.store.model.dao.daoAbstract.AbstractDao;
 import ua.com.company.store.model.dao.daoAbstract.GenericDAO;
 import ua.com.company.store.model.dao.exceptions.PersistException;
@@ -28,7 +29,7 @@ public class ProductService {
         static ProductService INSTANCE;
         static {
             try {
-                INSTANCE = new ProductService(new MySqlDaoFactory(DefaultServlet.jdbcConnectionPoolManager.getJdbcConnectionPool()).getDao(Product.class));
+                INSTANCE = new ProductService(new MySqlDaoFactory(JDBCConnectionPoolManager.getInstance().getJdbcConnectionPool()).getDao(Product.class));
             } catch (PersistException e) {
                 e.printStackTrace();
             }

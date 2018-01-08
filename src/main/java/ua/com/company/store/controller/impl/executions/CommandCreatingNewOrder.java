@@ -46,7 +46,10 @@ public class CommandCreatingNewOrder implements CommandTypical {
         Product product = productService.getByParameter(producrId);
         req.getSession().setAttribute("product",product);
         req.setAttribute("product",product);
-        Order order = new Order(0,Integer.parseInt(producrId),user.getId(),new Date(Calendar.getInstance().getTime().getTime()) );
+        Order order = new Order.OrderBuilder().setId(0)
+                .setProductId(Integer.parseInt(producrId))
+                .setEntityId(user.getId())
+                .setData(new Date(Calendar.getInstance().getTime().getTime())).build();
         orderService.addOrder(order);
         logger.info("Successful added " + order.toString());
 

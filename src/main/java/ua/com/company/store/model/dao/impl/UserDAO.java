@@ -18,8 +18,8 @@ import java.util.List;
 public class UserDAO extends AbstractDao<User> {
     private Logger logger = Logger.getRootLogger();
     public UserDAO(JDBCConnectionPool jdbcConnectionPool) {
-
         super(jdbcConnectionPool);
+        logger.info("Created dao layer + " +  this.toString());
     }
 
     @Override
@@ -57,13 +57,13 @@ public class UserDAO extends AbstractDao<User> {
         List<User> list = new ArrayList<>();
         try {
             while (rs.next()){
-                User user = new User();
-                user.setId(rs.getInt("id"));
-                user.setNickname(rs.getString("nickname"));
-                user.setPassword(rs.getString("password"));
-                user.setEmail(rs.getString("email"));
-                user.setRole(rs.getBoolean("role"));
-                user.setDefaulter(rs.getBoolean("is_defaulter"));
+                User user = new User.UserBuilder().id(rs.getInt("id"))
+                        .nickname(rs.getString("nickname"))
+                        .password(rs.getString("password"))
+                        .email(rs.getString("email"))
+                        .role(rs.getBoolean("role"))
+                        .isDefaulter(rs.getBoolean("is_defaulter"))
+                        .build();
                 list.add(user);
             }
 

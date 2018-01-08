@@ -99,6 +99,12 @@ public class CommandLoginFormExecution implements CommandTypical {
     }
 
 
+    /**
+     * @param loginDto
+     * @return true when input correct
+     * else false
+     * Method using change of responsibility pattern for validating inputs
+     */
     private boolean doValidationInputs(LoginDto loginDto) {
         ValidatorAbstract validatorAbstractLogin = new LoginUpValidator();
         ValidatorAbstract validatorAbstractPassword = new PasswordUpValidator();
@@ -110,6 +116,11 @@ public class CommandLoginFormExecution implements CommandTypical {
         return new LoginDto(login, password);
     }
 
+    /**
+     * @param loginDto
+     * @return true if new user is exist before
+     *
+     */
     private boolean validationOnUser(LoginDto loginDto) {
         for (User user: userService.getAllUsers()){
             try {

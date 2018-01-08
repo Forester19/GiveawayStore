@@ -55,7 +55,8 @@ public class CommandSignUpFormExecution implements CommandTypical {
         if (doValidationInputs(signUpDto)) {
             logger.info("Successful validated inputs signUp");
             try {
-                user = new User(0, signUpDto.getLogin(),passwordHashing.hashingPassword( signUpDto.getPassword()), signUpDto.getEmail(), false, false);
+                user = new User.UserBuilder().id(0).nickname(signUpDto.getLogin()).password(passwordHashing.hashingPassword( signUpDto.getPassword()))
+                        .email(signUpDto.getEmail()).role(false).isDefaulter(false).build();
                 System.out.println(user.toString());
             } catch (NoSuchAlgorithmException e) {
                 e.printStackTrace();

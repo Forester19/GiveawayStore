@@ -54,10 +54,12 @@ private Logger logger = Logger.getRootLogger();
         List<Order> list = new ArrayList<>();
         try {
             while (rs.next()){
-                Order order = new Order(rs.getInt("id"),
-                        rs.getInt("product_id"),
-                        rs.getInt("entity_id"),
-                        rs.getDate("date"));
+                Order order = new Order.OrderBuilder()
+                        .setId(rs.getInt("id"))
+                        .setEntityId(rs.getInt("entity_id"))
+                        .setProductId(rs.getInt("product_id"))
+                        .setData(rs.getDate("date")).build();
+
                 list.add(order);
             }
         } catch (SQLException e) {

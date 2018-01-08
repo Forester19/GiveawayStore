@@ -24,14 +24,13 @@ import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Владислав on 22.11.2017.
- */
+
+
 @WebServlet(name = "default servlet ", urlPatterns = {"/store/*"}, loadOnStartup = 1)
 @MultipartConfig
 public class DefaultServlet extends HttpServlet {
     private Logger logger = Logger.getRootLogger();
-    public static JDBCConnectionPoolManager jdbcConnectionPoolManager = new JDBCConnectionPoolManager();
+   private JDBCConnectionPoolManager  jdbcConnectionPoolManager ;
 
     public DefaultServlet() throws PersistException {
 
@@ -39,7 +38,7 @@ public class DefaultServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        super.init();
+        jdbcConnectionPoolManager = JDBCConnectionPoolManager.getInstance();
         jdbcConnectionPoolManager.setJdbcConnectionPool(JDBCConnectionPool.getInstanceConnectionPool());
         getServletContext().setAttribute("locales", AppLocale.getAppLocales());
         logger.info("Initialized default servlet  " + this.toString());

@@ -1,6 +1,7 @@
 package ua.com.company.store.service;
 
 import ua.com.company.store.controller.DefaultServlet;
+import ua.com.company.store.controller.utils.JDBCConnectionPoolManager;
 import ua.com.company.store.model.dao.daoAbstract.GenericDAO;
 import ua.com.company.store.model.dao.exceptions.PersistException;
 import ua.com.company.store.model.dao.factory.MySqlDaoFactory;
@@ -24,7 +25,7 @@ public class ImageService {
 
         static {
             try {
-                INSTANCE = new UserService(new MySqlDaoFactory(DefaultServlet.jdbcConnectionPoolManager.getJdbcConnectionPool()).getDao(User.class));
+                INSTANCE = new UserService(new MySqlDaoFactory(JDBCConnectionPoolManager.getInstance().getJdbcConnectionPool()).getDao(User.class));
             } catch (PersistException e) {
                 e.printStackTrace();
             }

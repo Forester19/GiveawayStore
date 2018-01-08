@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.Locale;
 
 /**
@@ -19,11 +20,15 @@ public class CommandChangeLocale implements CommandTypical {
     private Logger logger = Logger.getRootLogger();
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        setLocale(req);
+        setLocale(req,resp);
         return "/main.jsp" + " " + RedirectionManager.REDIRECTION;
     }
 
-    private void setLocale(HttpServletRequest req) {
+    private void setLocale(HttpServletRequest req,HttpServletResponse response) {
+
+        response.setCharacterEncoding("cp1251");
+        response.setContentType("text/html;charset=cp1251");
+
         String selectedLang = req.getParameter("lang");
         logger.info("Chosen language " + selectedLang);
         Locale locale = AppLocale.forValue(selectedLang);

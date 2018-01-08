@@ -1,414 +1,76 @@
-[INFO] 02:36:16 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@41ee8cbe 
+[INFO] 11:00:17 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@28b7d998 
 
-[INFO] 02:36:16 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@7c31f920 
+[INFO] 11:00:34 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 04:42:02 (DefaultServlet.java:init:45)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@3043ae5d 
+[INFO] 11:00:34 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@e6ac376 
 
-[INFO] 04:42:41 (DefaultServlet.java:process:60)Query with url: GET:/store 
+[INFO] 11:00:34 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 04:42:42 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4c2d66a9 
+[INFO] 11:00:34 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 04:42:42 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductImageDAO@689fe3c0 
+[ERROR] 11:00:35 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 04:42:42 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.OrderDAO@1d97e918 
+[INFO] 11:00:35 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
 
-[INFO] 04:42:42 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@a018889 
+[INFO] 11:00:40 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
 
-[INFO] 04:42:42 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
+[INFO] 11:00:40 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
 
-[INFO] 04:42:45 (DefaultServlet.java:process:60)Query with url: GET:/store 
+[INFO] 11:00:40 (DefaultServlet.java:process:65)Redirection path: /view/loginPage.jsp REDIRECTION 
 
-[INFO] 04:42:45 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
+[INFO] 11:00:50 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
 
-[ERROR] 04:42:48 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 11:00:50 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@2c2c561 
 
-[INFO] 04:42:48 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
+[INFO] 11:00:50 (CommandLoginFormExecution.java:execute:53)Successful validation inputs 
 
-[ERROR] 04:42:48 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[ERROR] 11:00:50 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 04:42:48 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
+[INFO] 11:00:50 (CommandLoginFormExecution.java:execute:55)User don't exist in cookie(successful) 
 
-[INFO] 04:43:20 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
+[INFO] 11:00:50 (CommandLoginFormExecution.java:execute:62)Successful validated --Vlad 
 
-[INFO] 04:43:20 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
+[INFO] 11:00:50 (CommandLoginFormExecution.java:execute:69)Successful validation on registered before user 
 
-[INFO] 04:43:20 (DefaultServlet.java:process:65)Redirection path: /view/loginPage.jsp 
+[INFO] 11:00:50 (CommandLoginFormExecution.java:execute:77)Continue execution without adding in cookie  
 
-[INFO] 04:54:37 (DefaultServlet.java:init:45)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@3289194d 
+[INFO] 11:00:50 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 04:55:32 (DefaultServlet.java:process:60)Query with url: GET:/store 
+[INFO] 11:01:08 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
 
-[INFO] 04:55:32 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2ac4eb4d 
+[INFO] 11:01:08 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@63a880a1 
 
-[INFO] 04:55:32 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductImageDAO@60f9484d 
+[INFO] 11:01:08 (DefaultServlet.java:process:65)Redirection path: /view/adminPage.jsp REDIRECTION 
 
-[INFO] 04:55:32 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.OrderDAO@1c5a4b2 
+[INFO] 11:01:08 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@28356338 
 
-[INFO] 04:55:32 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@2bd43fe7 
+[INFO] 11:01:08 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 04:55:32 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
+[INFO] 11:01:24 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteUser 
 
-[ERROR] 04:55:33 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 11:01:24 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandDeleteUserExecution@6e2a56ec 
 
-[INFO] 04:55:33 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
+[INFO] 11:01:24 (CommandDeleteUserExecution.java:execute:40)Successful deleted user User:Gumph 6a5e8cc2e17f6ac4464f63bd61ce3cee89f92c612bddeb42c20a72b95d27a614 ggg@gmail.com false false 
 
-[INFO] 04:55:38 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
+[INFO] 11:01:24 (DefaultServlet.java:process:65)Redirection path: /view/adminPage.jsp 
 
-[INFO] 04:55:38 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
+[INFO] 11:01:24 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@53e577ff 
 
-[INFO] 04:55:38 (DefaultServlet.java:process:65)Redirection path: /view/loginPage.jsp REDIRECTION 
+[INFO] 11:01:24 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 04:58:00 (DefaultServlet.java:init:45)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@6a5859d5 
+[INFO] 11:01:30 (DefaultServlet.java:process:60)Query with url: GET:/store/markAsDefaulter 
 
-[INFO] 04:58:40 (DefaultServlet.java:process:60)Query with url: GET:/store 
+[INFO] 11:01:30 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandMarkUserAsDefaulterExecution@3bbc095d 
 
-[INFO] 04:58:41 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@16db9b 
+[INFO] 11:01:30 (DefaultServlet.java:process:65)Redirection path: /view/adminPage.jsp 
 
-[INFO] 04:58:41 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductImageDAO@138d4296 
+[INFO] 11:01:30 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@37089243 
 
-[INFO] 04:58:41 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.OrderDAO@2dd471be 
+[INFO] 11:01:30 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 04:58:41 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@54b40f60 
+[INFO] 11:01:37 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteOrder 
 
-[INFO] 04:58:41 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
+[INFO] 11:01:37 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandDeleteOrderExec@782e4272 
 
-[ERROR] 04:58:41 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 04:58:41 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 04:58:51 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
-
-[INFO] 04:58:51 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
-
-[INFO] 04:58:51 (DefaultServlet.java:process:65)Redirection path: /view/loginPage.jsp REDIRECTION 
-
-[INFO] 04:59:01 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
-
-[INFO] 04:59:01 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@57a239e4 
-
-[INFO] 04:59:01 (CommandLoginFormExecution.java:execute:53)Successful validation inputs 
-
-[ERROR] 04:59:01 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 04:59:01 (CommandLoginFormExecution.java:execute:55)User don't exist in cookie(successful) 
-
-[INFO] 04:59:01 (CommandLoginFormExecution.java:execute:62)Successful validated --Vlad 
-
-[INFO] 04:59:01 (CommandLoginFormExecution.java:execute:69)Successful validation on registered before user 
-
-[INFO] 04:59:01 (CommandLoginFormExecution.java:execute:77)Continue execution without adding in cookie  
-
-[INFO] 04:59:01 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 04:59:03 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
-
-[INFO] 04:59:03 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@51cf90ee 
-
-[INFO] 04:59:03 (DefaultServlet.java:process:65)Redirection path: /view/adminPage.jsp 
-
-[INFO] 04:59:04 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@b3cd39d 
-
-[INFO] 04:59:04 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@4b1e12ee 
-
-[INFO] 05:03:37 (DefaultServlet.java:init:45)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@1d1270f8 
-
-[INFO] 05:08:38 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 05:08:38 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@7c3924ca 
-
-[INFO] 05:08:38 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductImageDAO@9f02851 
-
-[INFO] 05:08:38 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.OrderDAO@3106d507 
-
-[INFO] 05:08:38 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@393cc1d6 
-
-[INFO] 05:08:38 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 05:08:39 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 05:08:39 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 05:08:45 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
-
-[INFO] 05:08:45 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
-
-[INFO] 05:08:45 (DefaultServlet.java:process:65)Redirection path: /view/loginPage.jsp REDIRECTION 
-
-[INFO] 05:08:49 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 05:08:49 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 05:08:49 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 05:08:49 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 05:08:53 (DefaultServlet.java:process:60)Query with url: GET:/store/locale 
-
-[INFO] 05:08:53 (DefaultServlet.java:process:62)Command key execution: ChangeLocale{} 
-
-[INFO] 05:08:53 (CommandChangeLocale.java:setLocale:28)Chosen language uk 
-
-[INFO] 05:08:53 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 05:09:00 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
-
-[INFO] 05:09:00 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
-
-[INFO] 05:09:00 (DefaultServlet.java:process:65)Redirection path: /view/loginPage.jsp REDIRECTION 
-
-[INFO] 05:18:21 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@6d24ffa1 
-
-[INFO] 05:18:21 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@38f57b3d 
-
-[INFO] 05:18:21 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@3ce3db41 
-
-[INFO] 05:18:23 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2bba35ef 
-
-[INFO] 05:18:23 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@19526f1d 
-
-[INFO] 05:18:23 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@7a358613 
-
-[INFO] 05:18:23 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@52621501 
-
-[INFO] 05:18:23 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@164d01ba 
-
-[INFO] 05:18:23 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5ac044ef 
-
-[INFO] 05:18:23 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@14457a95 
-
-[INFO] 05:18:23 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@10e9a5fe 
-
-[INFO] 05:18:23 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1abcd059 
-
-[INFO] 05:29:47 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1433046b 
-
-[INFO] 05:29:47 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@42a9e5d1 
-
-[INFO] 05:29:47 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@773cbf4f 
-
-[INFO] 05:29:48 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@582a3b19 
-
-[INFO] 05:29:48 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2616b618 
-
-[INFO] 05:29:48 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5345dfe8 
-
-[INFO] 05:29:48 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4a1dda83 
-
-[INFO] 05:29:48 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@7a358613 
-
-[INFO] 05:29:48 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@52621501 
-
-[INFO] 05:29:48 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@164d01ba 
-
-[INFO] 05:29:48 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5ac044ef 
-
-[INFO] 05:31:04 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1433046b 
-
-[INFO] 05:31:04 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@42a9e5d1 
-
-[INFO] 05:31:04 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@773cbf4f 
-
-[INFO] 05:31:05 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@582a3b19 
-
-[INFO] 05:31:05 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2616b618 
-
-[INFO] 05:31:05 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5345dfe8 
-
-[INFO] 05:31:05 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4a1dda83 
-
-[INFO] 05:31:05 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@7a358613 
-
-[INFO] 05:31:05 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@52621501 
-
-[INFO] 05:31:05 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@164d01ba 
-
-[INFO] 05:31:05 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5ac044ef 
-
-[INFO] 05:31:51 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1433046b 
-
-[INFO] 05:31:51 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@42a9e5d1 
-
-[INFO] 05:31:51 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@773cbf4f 
-
-[INFO] 05:31:52 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@582a3b19 
-
-[INFO] 05:31:52 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2616b618 
-
-[INFO] 05:31:52 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5345dfe8 
-
-[INFO] 05:31:52 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4a1dda83 
-
-[INFO] 05:31:52 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@7a358613 
-
-[INFO] 05:31:52 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@52621501 
-
-[INFO] 05:31:52 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@164d01ba 
-
-[INFO] 05:31:52 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5ac044ef 
-
-[INFO] 05:34:43 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2611b9a3 
-
-[INFO] 05:34:43 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@426b6a74 
-
-[INFO] 05:34:43 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@83298d7 
-
-[INFO] 05:34:44 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@47569167 
-
-[INFO] 05:34:44 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4b93dd6a 
-
-[INFO] 05:35:02 (DefaultServlet.java:init:45)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@5c7dbf33 
-
-[INFO] 05:39:44 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 05:39:44 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@6e04eba 
-
-[INFO] 05:39:44 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductImageDAO@3f4fc6e0 
-
-[INFO] 05:39:44 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.OrderDAO@6fa97f50 
-
-[INFO] 05:39:44 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@2e90cc83 
-
-[INFO] 05:39:44 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 05:39:44 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 05:39:44 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 05:39:48 (DefaultServlet.java:process:60)Query with url: GET:/store/locale 
-
-[INFO] 05:39:48 (DefaultServlet.java:process:62)Command key execution: ChangeLocale{} 
-
-[INFO] 05:39:48 (CommandChangeLocale.java:setLocale:28)Chosen language uk 
-
-[INFO] 05:39:48 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 06:07:46 (DefaultServlet.java:init:45)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@4fa2fd88 
-
-[INFO] 06:08:12 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 06:08:12 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@28e6336f 
-
-[INFO] 06:08:12 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductImageDAO@7acd5599 
-
-[INFO] 06:08:12 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.OrderDAO@1571fc68 
-
-[INFO] 06:08:12 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@50002c2 
-
-[INFO] 06:08:12 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 06:08:13 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 06:08:13 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 06:08:18 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
-
-[INFO] 06:08:18 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
-
-[INFO] 06:08:18 (DefaultServlet.java:process:65)Redirection path: /view/loginPage.jsp REDIRECTION 
-
-[INFO] 06:08:34 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
-
-[INFO] 06:08:34 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@343f447c 
-
-[INFO] 06:08:34 (CommandLoginFormExecution.java:execute:53)Successful validation inputs 
-
-[ERROR] 06:08:34 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 06:08:34 (CommandLoginFormExecution.java:execute:55)User don't exist in cookie(successful) 
-
-[INFO] 06:08:34 (CommandLoginFormExecution.java:execute:62)Successful validated --Vlad 
-
-[INFO] 06:08:34 (CommandLoginFormExecution.java:execute:69)Successful validation on registered before user 
-
-[INFO] 06:08:34 (CommandLoginFormExecution.java:execute:77)Continue execution without adding in cookie  
-
-[INFO] 06:08:34 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 06:08:36 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
-
-[INFO] 06:08:36 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@697ff837 
-
-[INFO] 06:08:36 (DefaultServlet.java:process:65)Redirection path: /view/adminPage.jsp REDIRECTION 
-
-[INFO] 06:08:36 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@3fb64ef1 
-
-[INFO] 06:08:36 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@ef2c374 
-
-[INFO] 06:08:43 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteOrder 
-
-[INFO] 06:08:43 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandDeleteOrderExec@2e65a9af 
-
-[INFO] 06:08:45 (CommandDeleteOrderExec.java:execute:46)Successful deleted order Order{productId=19, entityId=28, date=2017-12-28} 
-
-[INFO] 06:08:45 (DefaultServlet.java:process:65)Redirection path: /view/adminPage.jsp 
-
-[INFO] 06:08:45 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4697cfbd 
-
-[INFO] 06:08:45 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@5b7c5fe3 
-
-[INFO] 06:08:49 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteUser 
-
-[INFO] 06:08:49 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandDeleteUserExecution@4e395087 
-
-[INFO] 06:08:49 (CommandDeleteUserExecution.java:execute:40)Successful deleted user User:???Л?А?? 7b60f2a9964349d98d45746bb7bca8e0f1c297ab1880c10226f4691d476c9d28 vd2@FREWG.COJ false false 
-
-[INFO] 06:08:49 (DefaultServlet.java:process:65)Redirection path: /view/adminPage.jsp 
-
-[INFO] 06:08:49 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1dc890b2 
-
-[INFO] 06:08:49 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@25f59d97 
-
-[INFO] 06:23:40 (DefaultServlet.java:init:45)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@2796a8d5 
-
-[INFO] 06:23:54 (DefaultServlet.java:process:61)Query with url: GET:/store 
-
-[INFO] 06:23:54 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@28e6336f 
-
-[INFO] 06:23:54 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductImageDAO@7acd5599 
-
-[INFO] 06:23:54 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.OrderDAO@1571fc68 
-
-[INFO] 06:23:54 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.ProductDAO@50002c2 
-
-[INFO] 06:23:54 (DefaultServlet.java:process:63)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 06:23:54 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 06:23:54 (DefaultServlet.java:process:66)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 06:24:01 (DefaultServlet.java:process:61)Query with url: GET:/store/locale 
-
-[INFO] 06:24:01 (DefaultServlet.java:process:63)Command key execution: ChangeLocale{} 
-
-[INFO] 06:24:01 (CommandChangeLocale.java:setLocale:28)Chosen language uk 
-
-[INFO] 06:24:01 (DefaultServlet.java:process:66)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 06:24:58 (DefaultServlet.java:process:61)Query with url: GET:/store/signUp 
-
-[INFO] 06:24:58 (DefaultServlet.java:process:63)Command key execution: CommandSignUpPage{} 
-
-[INFO] 06:24:58 (DefaultServlet.java:process:66)Redirection path: /view/signUpPage.jsp REDIRECTION 
-
-[INFO] 01:47:59 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2611b9a3 
-
-[INFO] 01:47:59 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@426b6a74 
-
-[INFO] 01:47:59 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@83298d7 
-
-[INFO] 01:48:03 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@47569167 
-
-[INFO] 01:48:03 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4b93dd6a 
-
-[INFO] 03:26:14 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@470a696f 
-
-[INFO] 03:26:14 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2cb3d0f7 
-
-[INFO] 03:26:14 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@44e3760b 
-
-[INFO] 03:26:16 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@9a9aa68 
-
-[INFO] 03:26:16 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1537e43 
-
-[INFO] 03:39:52 (AbstractDao.java:<init>:24)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4c75cab9 
+[ERROR] 11:01:37 (UserDAO.java:getByParameter:127)Cant search users with nickname Трыџ 
 

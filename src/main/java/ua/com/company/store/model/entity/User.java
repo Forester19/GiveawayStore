@@ -3,7 +3,7 @@ package ua.com.company.store.model.entity;
 /**
  * Created by Владислав on 17.11.2017.
  */
-public class User extends Entity{
+public class User extends Entity {
 
     private String nickname;
     private String password;
@@ -11,17 +11,76 @@ public class User extends Entity{
     private boolean role;
     private boolean isDefaulter;
 
-    public User(int id, String nickname, String password, String email, boolean role, boolean isDefaulter) {
-        super(id);
-        this.nickname = nickname;
-        this.password = password;
-        this.email = email;
-        this.role = role;
-        this.isDefaulter = isDefaulter;
+    public static class UserBuilder {
+        private int id;
+        private String nickname;
+        private String password;
+        private String email;
+        private boolean role;
+        private boolean isDefaulter;
+
+        public UserBuilder id (final int id){
+            this.id = id;
+            return this;
+        }
+        public UserBuilder nickname (final String nickname){
+            this.nickname = nickname;
+            return this;
+        }
+        public UserBuilder password (final String password){
+            this.password = password;
+            return this;
+        }
+        public UserBuilder email (final String email){
+            this.email = email;
+            return this;
+        }
+        public UserBuilder role (final boolean role){
+            this.role = role;
+            return this;
+        }
+        public UserBuilder isDefaulter (final boolean isDefaulter){
+            this.isDefaulter = isDefaulter;
+            return this;
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        public String getNickname() {
+            return nickname;
+        }
+
+        public String getPassword() {
+            return password;
+        }
+
+        public String getEmail() {
+            return email;
+        }
+
+        public boolean isRole() {
+            return role;
+        }
+
+        public boolean isDefaulter() {
+            return isDefaulter;
+        }
+
+        public User build(){
+            return new User(this);
+        }
+
     }
 
-    public User(){
-
+    private User(UserBuilder userBuilder) {
+        super(userBuilder.getId());
+    this.nickname = userBuilder.getNickname();
+    this.password = userBuilder.getPassword();
+    this.email = userBuilder.getEmail();
+    this.role = userBuilder.isRole();
+    this.isDefaulter = userBuilder.isDefaulter;
     }
 
     @Override
@@ -48,48 +107,31 @@ public class User extends Entity{
         return result;
     }
 
-    public String getNickname() {
-        return nickname;
+    public User() {
     }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
+    @Override
+    public String toString() {
+        return "User:" + nickname + " " + password + " " + email + " " + role + " " + isDefaulter;
+    }
+
+    public String getNickname() {
+        return nickname;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public String getEmail() {
         return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public boolean isRole() {
         return role;
     }
 
-    public void setRole(boolean role) {
-        this.role = role;
-    }
-
     public boolean isDefaulter() {
         return isDefaulter;
-    }
-
-    public void setDefaulter(boolean defaulter) {
-        isDefaulter = defaulter;
-    }
-
-    @Override
-    public String toString() {
-        return "User:"+ nickname + " "+ password + " "+ email + " "+ role +" "+ isDefaulter;
     }
 }

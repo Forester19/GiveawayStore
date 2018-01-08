@@ -1,6 +1,7 @@
 package ua.com.company.store.service;
 
 import ua.com.company.store.controller.DefaultServlet;
+import ua.com.company.store.controller.utils.JDBCConnectionPoolManager;
 import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
 import ua.com.company.store.model.dao.daoAbstract.GenericDAO;
 import ua.com.company.store.model.dao.exceptions.PersistException;
@@ -32,7 +33,7 @@ public class OrderService {
 
         static {
             try {
-                INSTANCE = new OrderService(new MySqlDaoFactory(DefaultServlet.jdbcConnectionPoolManager.getJdbcConnectionPool()).getDao(Order.class));
+                INSTANCE = new OrderService(new MySqlDaoFactory(JDBCConnectionPoolManager.getInstance().getJdbcConnectionPool()).getDao(Order.class));
             } catch (PersistException e) {
                 e.printStackTrace();
             }

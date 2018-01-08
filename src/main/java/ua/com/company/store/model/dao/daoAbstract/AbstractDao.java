@@ -21,8 +21,7 @@ public abstract class AbstractDao<T> implements GenericDAO<T> {
 
     public AbstractDao(JDBCConnectionPool jdbcConnectionPool) {
         this.jdbcConnectionPool = jdbcConnectionPool;
-        logger.info("Created dao layer + " +  this.toString());
-    }
+        }
 
     /**
      * @return returns sql statement as string for getting all elements 'SELECT * FROM [TABLE]'

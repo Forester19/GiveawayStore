@@ -8,6 +8,18 @@ import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
 public class JDBCConnectionPoolManager {
     private JDBCConnectionPool jdbcConnectionPool;
 
+
+    private JDBCConnectionPoolManager() {
+    }
+
+    static class Holder{
+        static JDBCConnectionPoolManager jdbcConnectionPoolManager = new JDBCConnectionPoolManager();
+
+    }
+    public static JDBCConnectionPoolManager getInstance(){
+        return Holder.jdbcConnectionPoolManager;
+    }
+
     public JDBCConnectionPool getJdbcConnectionPool() {
         return jdbcConnectionPool;
     }
@@ -15,4 +27,6 @@ public class JDBCConnectionPoolManager {
     public void setJdbcConnectionPool(JDBCConnectionPool jdbcConnectionPool) {
         this.jdbcConnectionPool = jdbcConnectionPool;
     }
+
+
 }

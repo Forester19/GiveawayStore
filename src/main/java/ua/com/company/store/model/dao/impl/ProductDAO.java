@@ -54,12 +54,12 @@ public class ProductDAO extends AbstractDao<Product> {
         List<Product> list = new ArrayList<>();
         try {
             while (rs.next()){
-                Product product = new Product();
-                product.setId(rs.getInt("id"));
-                product.setTitle(rs.getString("title"));
-                product.setDescription(rs.getString("description"));
-                product.setPrice(rs.getInt("price"));
-                product.setImageId(rs.getInt("image_id"));
+                Product product = new Product.ProductBuilder().setId(rs.getInt("id"))
+                        .setTitle(rs.getString("title"))
+                        .setDescr(rs.getString("description"))
+                        .setPrice(rs.getInt("price"))
+                        .setImgId(rs.getInt("image_id"))
+                        .build();
                 list.add(product);
             }
 

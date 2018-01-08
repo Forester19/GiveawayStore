@@ -30,6 +30,7 @@ public class CookiesAction {
     public static List<User> getUserFromCookie(HttpServletRequest request, UserService userService){
         List<User> userList = new ArrayList<>();
         Cookie[] cookies = request.getCookies();
+        if(cookies.length !=0){
         for (int i=0; i<cookies.length; i++){
             Cookie cookie = cookies[i];
             User user = userService.getUserByNickName(cookie.getName());
@@ -39,6 +40,7 @@ public class CookiesAction {
                 }
             }
 
+        }
         }
         return userList;
 
