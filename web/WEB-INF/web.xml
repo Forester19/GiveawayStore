@@ -15,6 +15,16 @@
         <session-timeout>15</session-timeout>
     </session-config>
 
+
+    <filter>
+        <filter-name>PasswordFilter</filter-name>
+        <filter-class>ua.com.company.store.controller.filters.FilterSecondPassword</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>PasswordFilter</filter-name>
+        <url-pattern>/store/signUpForm</url-pattern>
+    </filter-mapping>
+
     <jsp-config>
         <taglib>
             <taglib-uri>customTag</taglib-uri>

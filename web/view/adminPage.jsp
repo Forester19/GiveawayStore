@@ -1,4 +1,4 @@
-<%@ page import="ua.com.company.store.model.entity.Order" %>
+3<%@ page import="ua.com.company.store.model.entity.Order" %>
 <%@ page import="java.util.List" %>
 <%@ page import="ua.com.company.store.service.OrderService" %>
 <%@ page import="ua.com.company.store.model.entity.User" %>

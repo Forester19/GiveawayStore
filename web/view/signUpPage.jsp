@@ -16,6 +16,10 @@
                 <label for="exampleInputPassword1"><fmt:message key="store.password" bundle="${rb}"/> </label>
                 <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="<fmt:message key="store.password" bundle="${rb}"/> ">
             </div>
+            <div class="form-group">
+                <label for="exampleInputPassword2"><fmt:message key="store.passwordOnceMore" bundle="${rb}"/> </label>
+                <input type="password" name="password2" class="form-control" id="exampleInputPassword2" placeholder="<fmt:message key="store.password" bundle="${rb}"/> ">
+            </div>
             <div class="form-check">
                 <label class="form-check-label">
                     <input type="checkbox" name="checkMeOut" value="OK" class="form-check-input">

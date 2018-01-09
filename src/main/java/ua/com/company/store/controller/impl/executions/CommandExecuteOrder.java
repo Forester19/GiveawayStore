@@ -7,10 +7,7 @@ import ua.com.company.store.model.entity.User;
 import ua.com.company.store.service.OrderService;
 import ua.com.company.store.service.UserService;
 
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Session;
-import javax.mail.Transport;
+import javax.mail.*;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
@@ -49,39 +46,33 @@ public class CommandExecuteOrder implements CommandTypical {
         String userNameByOrder = req.getParameter("userName");
         User user = userService.getUserByNickName(userNameByOrder);
         Order order = orderService.getByParameter(user);
-        sendSessageConfirmOrder();
 
-    //    orderService.deleteOrder(order);
+
         return "/view/adminPage.jsp";
     }
-    private void sendSessageConfirmOrder(){
-        String to = "vd123@@mail.com";
-        String from = "vdvoreckij4@gmail.com";
-        String host = "smtp.gmail.com";
-        String password = "Forester18";
 
-        Properties properties = System.getProperties();
-        properties.setProperty("mail.smtp.host", host);
-        Session session = Session.getDefaultInstance(properties);
+    public void sendMessage(String to, String sub, String msg,final String user,final String pass) throws IOException, MessagingException {
+        final Properties properties = new Properties();
+        properties.put("mail.smtp.host","smtp.gmail.com");
+        properties.put("mail.smtp.port","587");
+        properties.put("mail.smtp.auth","true");
+        properties.put("mail.smtp.starttls.enable","true");
 
+
+
+        Session session = Session.getInstance(properties, new Authenticator() {
+            @Override
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(user,pass);
+            }
+        });
         MimeMessage mimeMessage = new MimeMessage(session);
-        try {
-            mimeMessage.setFrom(new InternetAddress(from));
-            mimeMessage.addRecipient(Message.RecipientType.TO,new InternetAddress(to));
-            mimeMessage.setSubject("Testing message");
-            mimeMessage.setText("Testing test");
+        mimeMessage.setFrom(new InternetAddress(user));
+        mimeMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+        mimeMessage.setSubject(sub);
+        mimeMessage.setText(msg);
 
-            Transport transport = session.getTransport("smtp");
-            transport.connect(host, from, password);
-
-            transport.sendMessage(mimeMessage,mimeMessage.getAllRecipients());
-      logger.info("Successfully sent message to " + to);
-        } catch (MessagingException e) {
-            logger.info("Fail sending");
-            e.printStackTrace();
-
-        }
-
+        Transport.send(mimeMessage);
     }
 
 }
