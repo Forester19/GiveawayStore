@@ -602,3 +602,21 @@
 
 [INFO] 06:43:05 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
 
+[INFO] 12:49:40 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
+
+[INFO] 12:49:40 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@378542de 
+
+[INFO] 12:49:40 (UserService.java:<init>:27)Created User Service 
+
+[INFO] 12:49:42 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@591e58fa 
+
+[INFO] 12:49:42 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@3954d008 
+
+[INFO] 12:49:42 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2f94c4db 
+
+[INFO] 12:49:42 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@593e824f 
+
+[INFO] 12:49:42 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@64bc21ac 
+
+[INFO] 12:50:15 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@6c8ee06f 
+
