@@ -54,7 +54,7 @@ public class CommandAdminPageTest {
 
 
         Assert.assertEquals(expectedResultResource,actualResult);
-        verify(request,times(2)).getAttribute("user");
+        verify(request,times(2)).getAttribute(anyString());
 
 
     }
