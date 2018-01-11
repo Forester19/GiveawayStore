@@ -21,7 +21,8 @@ import java.util.Map;
 public class MySqlDaoFactory implements FactoryDAO {
     private Map<Class, CreatorDao> creators;
     private Logger logger = Logger.getRootLogger();
-    private JDBCConnectionPool jdbcConnectionPool;
+    private static JDBCConnectionPool jdbcConnectionPool;
+    private static MySqlDaoFactory mySqlDaoFactory;
 
     @Override
     public GenericDAO getDao(Class daoClass) throws PersistException {
@@ -33,7 +34,17 @@ public class MySqlDaoFactory implements FactoryDAO {
         return creatorDao.create();
     }
 
-    public MySqlDaoFactory(JDBCConnectionPool jdbcConnectionPool) {
+    public static synchronized MySqlDaoFactory getMysqlDaoFactory(JDBCConnectionPool jdbcConnectionPool){
+        if (mySqlDaoFactory == null){
+            mySqlDaoFactory = new MySqlDaoFactory(jdbcConnectionPool);
+            return mySqlDaoFactory;
+        }else {
+            return mySqlDaoFactory;
+        }
+    }
+
+    private MySqlDaoFactory(JDBCConnectionPool jdbcConnectionPool) {
+        logger.info("Mysql dao factory constur");
         this.jdbcConnectionPool = jdbcConnectionPool;
         creators = new HashMap<>();
         creators.put(User.class, new CreatorDao() {

@@ -28,6 +28,7 @@ public class CommandHomePageCommand implements CommandTypical {
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
+
         if (CookiesAction.getUserFromCookie(req, userService).size() == 0) {
             return Redirection.MAIN_PAGE + " " + RedirectionManager.REDIRECTION;
         }else {

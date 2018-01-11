@@ -32,7 +32,7 @@ public class UserService {
 
         static {
             try {
-                INSTANCE = new UserService(new MySqlDaoFactory(JDBCConnectionPoolManager.getInstance().getJdbcConnectionPool()).getDao(User.class));
+                INSTANCE = new UserService(MySqlDaoFactory.getMysqlDaoFactory(JDBCConnectionPoolManager.getInstance().getJdbcConnectionPool()).getDao(User.class));
             } catch (PersistException e) {
                 e.printStackTrace();
             }

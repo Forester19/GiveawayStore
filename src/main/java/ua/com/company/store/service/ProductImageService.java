@@ -30,7 +30,7 @@ public class ProductImageService {
 
         static {
             try {
-                INSTANCE = new ProductImageService(new MySqlDaoFactory(JDBCConnectionPoolManager.getInstance().getJdbcConnectionPool()).getDao(ProductImage.class));
+                INSTANCE = new ProductImageService(MySqlDaoFactory.getMysqlDaoFactory(JDBCConnectionPoolManager.getInstance().getJdbcConnectionPool()).getDao(ProductImage.class));
             } catch (PersistException e) {
                 e.printStackTrace();
             }

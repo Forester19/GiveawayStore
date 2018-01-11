@@ -19,7 +19,7 @@ public class JDBCConnectionPool {
     private String password;
     private int maxConn;
 
-    public static int connectionCount=0;
+    public static int connectionCount = 0;
 
 
     private JDBCConnectionPool() {
@@ -36,56 +36,56 @@ public class JDBCConnectionPool {
     private static JDBCConnectionPool instance;
     private ArrayList<Connection> freeConnections = new ArrayList<Connection>();
 
-    public static synchronized JDBCConnectionPool getInstanceConnectionPool(){
-        if (instance == null){
+    public static synchronized JDBCConnectionPool getInstanceConnectionPool() {
+        if (instance == null) {
             connectionCount++;
-            return new JDBCConnectionPool();
+            instance = new JDBCConnectionPool();
+            return instance;
         }
-
         connectionCount++;
         return instance;
     }
-    public synchronized Connection getConnection(){
+
+    public synchronized Connection getConnection() {
         Connection connection = null;
-        if (!freeConnections.isEmpty()){
-            connection = freeConnections.get(freeConnections.size()-1);
+        if (!freeConnections.isEmpty()) {
+            connection = freeConnections.get(freeConnections.size() - 1);
             freeConnections.remove(connection);
-            try{
-                if (connection.isClosed()){
+            try {
+                if (connection.isClosed()) {
                     connection = getConnection();
                     log.debug("closed bad connection");
                 }
             } catch (SQLException e) {
                 log.debug("closed bad connection");
                 connection = getConnection();
-            }catch (Exception e) {
+            } catch (Exception e) {
                 log.debug("closed bad connection");
                 connection = getConnection();
             }
-        }else connection = newConnection();
+        } else connection = newConnection();
         return connection;
     }
-    private Connection newConnection(){
+
+    private Connection newConnection() {
         Connection connection = null;
         try {
             if (user == null) {
                 connection = (Connection) DriverManager.getConnection(url);
+            } else {
+                connection = (Connection) DriverManager.getConnection(url, user, password);
             }
-            else {
-                connection = (Connection) DriverManager.getConnection(url,user,password);
-            }
-            } catch (SQLException e) {
+        } catch (SQLException e) {
             log.error("Cant create connection fo this " + url);
         }
         return connection;
     }
 
     /**
-     * @param connection
-    Method put connection to the end of list if its possible;
+     * @param connection Method put connection to the end of list if its possible;
      */
-    public synchronized void freeConnection(Connection connection){
-        if (connection != null && freeConnections.size()<maxConn){
+    public synchronized void freeConnection(Connection connection) {
+        if (connection != null && freeConnections.size() < maxConn) {
             freeConnections.add(connection);
         }
     }
@@ -93,20 +93,19 @@ public class JDBCConnectionPool {
     /**
      * Method use iterator for getting connections and to close everyone;
      */
-    public synchronized void released(){
+    public synchronized void released() {
         Iterator allConnections = freeConnections.iterator();
-        while (allConnections.hasNext()){
+        while (allConnections.hasNext()) {
             Connection connection = (Connection) allConnections.next();
 
             try {
                 connection.close();
-               } catch (SQLException e) {
+            } catch (SQLException e) {
                 log.error("Cant close connection");
             }
         }
         freeConnections.clear();
     }
-
 
 
     private void loadDrivers() {
@@ -124,7 +123,7 @@ public class JDBCConnectionPool {
         try {
             Driver driver = new com.mysql.jdbc.Driver();
             DriverManager.registerDriver(driver);
-            } catch (Exception e) {
+        } catch (Exception e) {
             log.error("Cant register jdbc driver.");
         }
     }

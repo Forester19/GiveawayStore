@@ -30,6 +30,20 @@ public enum CommandEnum {
         this.command = new CommandChangeLocale();
     }
     },
+    SORT_PRODUCTS{{
+
+        this.key = "GET:/store/sortingProducts";
+        this.command = new CommandSortProducts(ProductImageService.getInstance());
+    }
+    },
+
+    SEARCH_PRODUCTS{{
+
+        this.key = "GET:/store/searchProduct";
+        this.command = new CommandSearchProduct(ProductImageService.getInstance());
+    }
+    },
+
     SIGNUP_PAGE {{
         this.key = "GET:/store/signUp";
         this.command = new CommandSignUpPage();

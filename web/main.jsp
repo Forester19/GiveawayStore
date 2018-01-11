@@ -3,10 +3,37 @@
 <%@ page import="java.util.List" %>
 <%@ page import="ua.com.company.store.service.ProductService" %>
 <%@ page import="ua.com.company.store.service.ProductImageService" %>
-<% List<ProductImage> list = ProductImageService.getInstance().getAllProducts(); %>
+<% List list = ProductImageService.getInstance().getAllProducts();
+     if (request.getAttribute("list") != null){
+    list = (List) request.getAttribute("list");
+}%>
 
 
 <h1>MainPage</h1>
+<div class="input-group mb-3">
+
+    <div class="input-group-prepend">
+
+        <fmt:message key="store.product.sorting" bundle="${rb}"/>
+        <button class="btn btn-outline-secondary" type="button" onclick="location.href= '${pageContext.request.contextPath}/store/sortingProducts?v=1'">
+            <fmt:message key="store.product.descendingPrice" bundle="${rb}"/>
+        </button>
+
+        <button class="btn btn-outline-secondary" type="button" onclick="location.href= '${pageContext.request.contextPath}/store/sortingProducts?v=0'">
+            <fmt:message key="store.product.ascendingPrice" bundle="${rb}"/>
+        </button>
+    </div>
+
+
+    <input type="text" id="your_search_text"  name="searchText" class="form-control" placeholder="<fmt:message key="store.product.search" bundle="${rb}"/>" aria-label="" aria-describedby="basic-addon1">
+
+    <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button" onclick="location.href= '${pageContext.request.contextPath}/store/searchProduct?searchText=' + document.getElementById('your_search_text').value;"><fmt:message key="store.product.search" bundle="${rb}"/></button>
+          </div>
+
+
+</div>
+
 
 <table class="table">
     <thead class="thead-dark">
@@ -22,6 +49,7 @@
     </tr>
     </thead>
     <tbody>
+
     <c:forEach var="prod" items="<%=list%>">
         <c:url var="image" value="${prod.pathImage}"/>
         <tr>

@@ -33,7 +33,7 @@ public class OrderService {
 
         static {
             try {
-                INSTANCE = new OrderService(new MySqlDaoFactory(JDBCConnectionPoolManager.getInstance().getJdbcConnectionPool()).getDao(Order.class));
+                INSTANCE = new OrderService(MySqlDaoFactory.getMysqlDaoFactory(JDBCConnectionPoolManager.getInstance().getJdbcConnectionPool()).getDao(Order.class));
             } catch (PersistException e) {
                 e.printStackTrace();
             }

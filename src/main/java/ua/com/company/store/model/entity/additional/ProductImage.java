@@ -1,9 +1,11 @@
 package ua.com.company.store.model.entity.additional;
 
+import java.util.Comparator;
+
 /**
  * Created by Владислав on 13.12.2017.
  */
-public class ProductImage {
+public class ProductImage{
     private int id;
     private String title;
     private String description;
@@ -62,5 +64,10 @@ public class ProductImage {
         this.pathImage = pathImage;
     }
 
-
+    @Override
+    public String toString() {
+        return "ProductImage{" +
+                "price=" + price +
+                '}';
+    }
 }

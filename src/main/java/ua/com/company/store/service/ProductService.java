@@ -29,7 +29,7 @@ public class ProductService {
         static ProductService INSTANCE;
         static {
             try {
-                INSTANCE = new ProductService(new MySqlDaoFactory(JDBCConnectionPoolManager.getInstance().getJdbcConnectionPool()).getDao(Product.class));
+                INSTANCE = new ProductService(MySqlDaoFactory.getMysqlDaoFactory(JDBCConnectionPoolManager.getInstance().getJdbcConnectionPool()).getDao(Product.class));
             } catch (PersistException e) {
                 e.printStackTrace();
             }
