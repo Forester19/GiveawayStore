@@ -32,7 +32,9 @@ public class CommandAdminPageTest {
     private HttpServletResponse response;
     @Before
     public void setUp() throws Exception {
-        initObjectsMocking();
+        request = mock(HttpServletRequest.class);
+        response = mock(HttpServletResponse.class);
+        userService = mock(UserService.class);
         commandAdminPage = new CommandAdminPage(userService);
 
     }
@@ -77,9 +79,7 @@ public class CommandAdminPageTest {
     }
 
     private void initObjectsMocking() {
-        request = mock(HttpServletRequest.class);
-        response = mock(HttpServletResponse.class);
-        userService = mock(UserService.class);
+
     }
 
 }
