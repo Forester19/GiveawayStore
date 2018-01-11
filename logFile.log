@@ -620,3 +620,21 @@
 
 [INFO] 12:50:15 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@6c8ee06f 
 
+[INFO] 01:27:29 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
+
+[INFO] 01:27:30 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@378542de 
+
+[INFO] 01:27:30 (UserService.java:<init>:27)Created User Service 
+
+[INFO] 01:27:32 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@591e58fa 
+
+[INFO] 01:27:32 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@3954d008 
+
+[INFO] 01:27:32 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2f94c4db 
+
+[INFO] 01:27:32 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@593e824f 
+
+[INFO] 01:27:32 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@64bc21ac 
+
+[INFO] 01:27:50 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@15927030 
+

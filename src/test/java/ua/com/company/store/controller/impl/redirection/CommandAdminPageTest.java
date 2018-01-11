@@ -41,7 +41,7 @@ public class CommandAdminPageTest {
 
     @After
     public void tearDown() throws Exception {
-
+       validateMockitoUsage();
     }
 
     @Test
