@@ -65,7 +65,7 @@ public class CommandAdminPageTest {
         HttpSession session = mock(HttpSession.class);
         User user = mock(User.class);
         when(request.getSession()).thenReturn(session);
-        when(request.getSession().getAttribute("user")).thenReturn(user);
+        when(request.getSession().getAttribute(anyString())).thenReturn(user);
         when(user.isRole()).thenReturn(true);
 
         String expectedResultResource = Redirection.ADMIN_PAGE+ " " + RedirectionManager.REDIRECTION;
@@ -77,7 +77,11 @@ public class CommandAdminPageTest {
         verify(request, times(4)).getSession();
         verify(request).getAttribute("user");
         verify(user).isRole();
-       // verify(request).setAttribute(anyString(), mock(List.class));
+        verifyZeroInteractions(response);
+       verify(request).setAttribute(anyString(), anyObject());
+       verify(userService).getAllUsers();
+       verifyNoMoreInteractions(request,userService);
+
     }
 
     private void initObjectsMocking() {

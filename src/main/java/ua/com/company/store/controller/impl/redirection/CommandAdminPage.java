@@ -23,14 +23,17 @@ public class CommandAdminPage implements CommandTypical {
 
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        User user;
+        return verifyOnSuccessfulAccess(req,resp);
+    }
+    String verifyOnSuccessfulAccess(HttpServletRequest req, HttpServletResponse resp){
+       User user;
         if (req.getAttribute("user") != null) {
             user = (User) req.getAttribute("user");
         } else {
             user = (User) req.getSession().getAttribute("user");
         }
         if (req.getSession() == null || req.getSession().getAttribute("user") == null || !user.isRole()) {
-          return Redirection.ACCESS_ERROR_PAGE + " " + RedirectionManager.REDIRECTION;
+            return Redirection.ACCESS_ERROR_PAGE + " " + RedirectionManager.REDIRECTION;
         }else {
             req.setAttribute("listOfUsers", userService.getAllUsers());
             return Redirection.ADMIN_PAGE + " " + RedirectionManager.REDIRECTION;
