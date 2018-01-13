@@ -1,7 +1,7 @@
 # GiveawayStore
 
 [![Build Status](https://travis-ci.org/Forester19/GiveawayStore.svg?branch=master)](https://travis-ci.org/Forester19/GiveawayStore)
-[![Coverage Status](https://codecov.io/gh/peterarsentev/junior/branch/master/graph/badge.svg)](https://codecov.io/gh/Forester19/GiveawayStore)
+[![Coverage Status](https://codecov.io/gh/Forester19/GiveawayStore/badge.svg)](https://codecov.io/gh/Forester19/GiveawayStore)
 
 
 

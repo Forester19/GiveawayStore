@@ -638,3 +638,7 @@
 
 [INFO] 01:27:50 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@15927030 
 
+[INFO] 01:35:54 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@413a2359 
+
+[INFO] 01:35:58 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@557937cb 
+

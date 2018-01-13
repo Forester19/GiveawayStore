@@ -47,7 +47,7 @@ public class ProductImageDAO extends AbstractDao<ProductImage> {
 
     @Override
     public String getInsertQuery() {
-        return null;
+        return "insert into onlinestoreproject.images( id, path, data) VALUES (?,?,?)";
     }
 
     @Override
@@ -101,7 +101,7 @@ public class ProductImageDAO extends AbstractDao<ProductImage> {
         ResultSet resultSetProduct = null;
         PreparedStatement preparedStatementImageInsert = null;
         PreparedStatement preparedStatementProductInsert = null;
-        String imageInser = "insert into onlinestoreproject.images( id, path, data) VALUES (?,?,?)";
+        String imageInser = getInsertQuery();
         int rowAffected = 0;
         int imageId = 0;
         int productId = 0;
