@@ -2,7 +2,6 @@ package ua.com.company.store.controller.impl.executions;
 
 import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
-import ua.com.company.store.model.entity.Product;
 import ua.com.company.store.model.entity.additional.ProductImage;
 import ua.com.company.store.service.ProductImageService;
 

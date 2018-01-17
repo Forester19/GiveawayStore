@@ -1,27 +1,20 @@
 package ua.com.company.store.controller.impl.executions;
 
 import org.apache.log4j.Logger;
+import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
-import ua.com.company.store.model.dao.daoAbstract.AbstractDao;
-import ua.com.company.store.model.dao.daoAbstract.GenericDAO;
-import ua.com.company.store.model.dto.LoginDto;
 import ua.com.company.store.model.dto.ProductDto;
 import ua.com.company.store.model.entity.Image;
 import ua.com.company.store.model.entity.Product;
-import ua.com.company.store.service.ImageService;
 import ua.com.company.store.service.ProductImageService;
-import ua.com.company.store.service.ProductService;
 import ua.com.company.store.validation.ValidatorAbstract;
 import ua.com.company.store.validation.products.DescriptionValidator;
 import ua.com.company.store.validation.products.ImageInformValidator;
 import ua.com.company.store.validation.products.TitleValidator;
-import ua.com.company.store.validation.signup.LoginValidator;
-import ua.com.company.store.validation.signup.PasswordValidator;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import java.io.*;
 
@@ -43,8 +36,7 @@ public class CommandAddNewProductByAdminExecution implements CommandTypical {
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ProductDto productDto = getNewProductInputs(req.getParameter("title"), req.getParameter("description"), Integer.parseInt(req.getParameter("price")), downloadImage(req, resp));
         if (doValidationInputs(productDto)) {
-            Image
-                    image = new Image.ImageBuilder().setID(0)
+            Image image = new Image.ImageBuilder().setID(0)
                     .setPath(productDto.getImageInformation()[0])
                     .setdata(productDto.getImageInformation()[1]).build();
             Product product = new Product.ProductBuilder().setId(0)
@@ -54,10 +46,10 @@ public class CommandAddNewProductByAdminExecution implements CommandTypical {
                     .setImgId(0).build();
             productService.addProductAndImage(product, image);
             req.setAttribute("successful", "Successful added new product: " + product.getTitle());
-            return "/view/adminPage.jsp";
+            return Redirection.ADMIN_PAGE;
         } else {
             req.setAttribute("error", " NUll inputs!!!");
-            return "/view/someErrorsByInputs.jsp";
+            return Redirection.ERRORS_WITH_INPUTS;
         }
     }
 

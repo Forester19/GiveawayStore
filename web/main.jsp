@@ -1,4 +1,4 @@
-<%@include file="view/header.jsp"%>
+<%@include file="viewPublic/utils/header.jsp"%>
 <%@ page import="ua.com.company.store.model.entity.additional.ProductImage" %>
 <%@ page import="java.util.List" %>
 <%@ page import="ua.com.company.store.service.ProductService" %>
@@ -76,4 +76,4 @@
 </table>
 
 
-<%@include file="view/footer.jsp"%>
+<%@include file="viewPublic/utils/footer.jsp"%>

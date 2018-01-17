@@ -3,7 +3,6 @@ package ua.com.company.store.controller.impl.executions;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.model.entity.User;
 import ua.com.company.store.service.UserService;
@@ -14,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.*;

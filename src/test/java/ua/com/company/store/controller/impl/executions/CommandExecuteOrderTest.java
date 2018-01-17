@@ -6,8 +6,6 @@ import org.junit.Test;
 import ua.com.company.store.service.OrderService;
 import ua.com.company.store.service.UserService;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by Владислав on 09.01.2018.
  */

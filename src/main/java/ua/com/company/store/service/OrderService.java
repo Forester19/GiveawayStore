@@ -81,6 +81,7 @@ public class OrderService {
             userProduct.setUserName(userService.getById(order.getEntityId()).getNickname());
             userProduct.setProductTitle(productService.getById(order.getProductId()).getTitle());
             userProduct.setDate(order.getDate());
+            userProduct.setIs_paid(order.isSuccessful_paid());
             userProductList.add(userProduct);
         }
         return userProductList;

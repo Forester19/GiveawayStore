@@ -58,7 +58,9 @@ private Logger logger = Logger.getRootLogger();
                         .setId(rs.getInt("id"))
                         .setEntityId(rs.getInt("entity_id"))
                         .setProductId(rs.getInt("product_id"))
-                        .setData(rs.getDate("date")).build();
+                        .setData(rs.getDate("date"))
+                        .setPaid(rs.getBoolean("successful_paid"))
+                        .build();
 
                 list.add(order);
             }
@@ -75,6 +77,7 @@ private Logger logger = Logger.getRootLogger();
             statement.setInt(2,object.getProductId());
             statement.setInt(3,object.getEntityId());
             statement.setDate(4, (Date) object.getDate());
+            statement.setBoolean(5, object.isSuccessful_paid());
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -88,6 +91,7 @@ private Logger logger = Logger.getRootLogger();
             e.printStackTrace();
         }
     }
+
 
     @Override
     public Order getByParameter(String parameter) {

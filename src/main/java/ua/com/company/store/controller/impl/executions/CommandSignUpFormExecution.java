@@ -1,6 +1,7 @@
 package ua.com.company.store.controller.impl.executions;
 
 import org.apache.log4j.Logger;
+import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
 import ua.com.company.store.controller.utils.CookiesAction;
 import ua.com.company.store.controller.utils.RedirectionManager;
@@ -39,10 +40,12 @@ public class CommandSignUpFormExecution implements CommandTypical {
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         if (req.getSession().getAttribute("user") != null) {
-            return "/view/accessErrorPage.jsp";
+            return Redirection.ACCESS_ERROR_PAGE;
         }
 
-        String login = req.getParameter("login");
+        String loginfirst = req.getParameter("login");
+ String login = new String(loginfirst.getBytes(),"cp1251");
+
         String pass = req.getParameter("password");
         String email = req.getParameter("email");
 
@@ -64,7 +67,7 @@ public class CommandSignUpFormExecution implements CommandTypical {
             if (userService.validationUserOnBeforeExist(user)) {
                 logger.info("Validation on existing user is fallen");
                 req.setAttribute("userEmail", user.getEmail());
-                return "/view/existUserError.jsp";
+                return Redirection.EXIST_USER_ERROR;
             } else {
                 if (SessionManager.getSessionManager().isUserLoggedIn(session)) {
                     RedirectionManager.getRediractionManger().redirect(new ServletWrapper(req, resp), "/main.jsp");
@@ -81,12 +84,12 @@ public class CommandSignUpFormExecution implements CommandTypical {
                 }else {
                     logger.info("Continue execution without adding in cookie ");
                 }
-                return "/main.jsp";
+                return Redirection.MAIN_PAGE;
             }
         } else {
             logger.info("Validated inputs unsuccessful " + login + " -- " + pass);
             req.setAttribute("error", " NUll inputs!!!");
-            return "/view/someErrorsByInputs.jsp";
+            return Redirection.ERRORS_WITH_INPUTS;
         }
     }
 

@@ -37,6 +37,8 @@ public class FilterSecondPassword implements Filter {
         else {
             logger.info("Works filter" + this.toString() +"\n"+
             "passwords equals");
+            servletRequest.setCharacterEncoding("Cp1251");
+            servletResponse.setCharacterEncoding("Cp1251");
             filterChain.doFilter(servletRequest,servletResponse);
          }
     }

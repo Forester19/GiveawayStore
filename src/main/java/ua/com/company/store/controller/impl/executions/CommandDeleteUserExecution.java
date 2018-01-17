@@ -1,6 +1,7 @@
 package ua.com.company.store.controller.impl.executions;
 
 import org.apache.log4j.Logger;
+import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
 import ua.com.company.store.model.entity.User;
 import ua.com.company.store.service.UserService;
@@ -30,7 +31,7 @@ private Logger logger  = Logger.getRootLogger();
             userFormSession= (User) req.getSession().getAttribute("user");
         }
         if (req.getSession() == null || req.getSession().getAttribute("user") == null || !userFormSession.isRole()) {
-            return "/view/accessErrorPage.jsp";
+            return Redirection.ACCESS_ERROR_PAGE;
         }
 
     String id = req.getParameter("id");
@@ -39,6 +40,6 @@ private Logger logger  = Logger.getRootLogger();
     userService.deleteUser(user);
     logger.info("Successful deleted user " + user.toString());
         req.setAttribute("listOfUsers", userService.getAllUsers());
-    return "/view/adminPage.jsp";
+    return Redirection.ADMIN_PAGE;
     }
 }

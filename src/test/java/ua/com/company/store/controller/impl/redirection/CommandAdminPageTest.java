@@ -68,7 +68,7 @@ public class CommandAdminPageTest {
         when(request.getSession().getAttribute(anyString())).thenReturn(user);
         when(user.isRole()).thenReturn(true);
 
-        String expectedResultResource = Redirection.ADMIN_PAGE+ " " + RedirectionManager.REDIRECTION;
+        String expectedResultResource = Redirection.ADMIN_PAGE;
         String actualResult = commandAdminPage.execute(request,response);
 
 

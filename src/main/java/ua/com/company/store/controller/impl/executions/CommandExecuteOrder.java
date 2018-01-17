@@ -1,6 +1,7 @@
 package ua.com.company.store.controller.impl.executions;
 
 import org.apache.log4j.Logger;
+import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
 import ua.com.company.store.model.entity.Order;
 import ua.com.company.store.model.entity.User;
@@ -8,7 +9,6 @@ import ua.com.company.store.service.OrderService;
 import ua.com.company.store.service.UserService;
 
 import javax.mail.*;
-import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.servlet.ServletException;
@@ -40,7 +40,7 @@ public class CommandExecuteOrder implements CommandTypical {
             userFormSession = (User) req.getSession().getAttribute("user");
         }
         if (req.getSession() == null || req.getSession().getAttribute("user") == null || !userFormSession.isRole()) {
-            return "/view/accessErrorPage.jsp";
+            return Redirection.ACCESS_ERROR_PAGE;
         }
 
         String userNameByOrder = req.getParameter("userName");
@@ -48,7 +48,7 @@ public class CommandExecuteOrder implements CommandTypical {
         Order order = orderService.getByParameter(user);
 
 
-        return "/view/adminPage.jsp";
+        return Redirection.ADMIN_PAGE;
     }
 
     public void sendMessage(String to, String sub, String msg,final String user,final String pass) throws IOException, MessagingException {

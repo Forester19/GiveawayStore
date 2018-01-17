@@ -9,18 +9,21 @@ public class Order extends Entity {
     private int productId;
     private int entityId;
     private Date date;
+    private boolean successful_paid;
 
     public Order(OrderBuilder orderBuilder) {
         super(orderBuilder.getId());
         this.productId = orderBuilder.getProductId();
         this.entityId = orderBuilder.getEntityId();
         this.date = orderBuilder.getDate();
+        this.successful_paid = orderBuilder.isSuccessful_paid();
     }
     public static class OrderBuilder{
         private int id;
         private int productId;
         private int entityId;
         private Date date;
+        private boolean successful_paid;
 
         public OrderBuilder setId (final int id){
             this.id = id;
@@ -38,6 +41,14 @@ public class Order extends Entity {
         public OrderBuilder setData (final Date data){
             this.date = data;
             return this;
+        }
+        public OrderBuilder setPaid (final boolean successful_paid){
+            this.successful_paid = successful_paid;
+            return this;
+        }
+
+        public boolean isSuccessful_paid() {
+            return successful_paid;
         }
 
         public int getId() {
@@ -70,6 +81,10 @@ public class Order extends Entity {
 
     public Date getDate() {
         return date;
+    }
+
+    public boolean isSuccessful_paid() {
+        return successful_paid;
     }
 
     @Override

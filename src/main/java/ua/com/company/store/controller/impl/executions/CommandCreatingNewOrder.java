@@ -1,8 +1,8 @@
 package ua.com.company.store.controller.impl.executions;
 
 import org.apache.log4j.Logger;
+import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
-import ua.com.company.store.model.dao.impl.OrderDAO;
 import ua.com.company.store.model.entity.Order;
 import ua.com.company.store.model.entity.Product;
 import ua.com.company.store.model.entity.User;
@@ -36,7 +36,7 @@ public class CommandCreatingNewOrder implements CommandTypical {
 
        User user;
        if (req.getSession() == null || req.getSession().getAttribute("user")==null){
-           return "/view/accessErrorPage.jsp";
+           return Redirection.ACCESS_ERROR_PAGE;
        }
 
         user = (User) req.getSession().getAttribute("user");
@@ -49,11 +49,13 @@ public class CommandCreatingNewOrder implements CommandTypical {
         Order order = new Order.OrderBuilder().setId(0)
                 .setProductId(Integer.parseInt(producrId))
                 .setEntityId(user.getId())
-                .setData(new Date(Calendar.getInstance().getTime().getTime())).build();
+                .setData(new Date(Calendar.getInstance().getTime().getTime()))
+                .setPaid(false)
+                .build();
         orderService.addOrder(order);
         logger.info("Successful added " + order.toString());
 
 
-        return "/view/successfulCreatedOrder.jsp";
+        return Redirection.SUCCESSFUL_CREATED_ORDER;
     }
 }

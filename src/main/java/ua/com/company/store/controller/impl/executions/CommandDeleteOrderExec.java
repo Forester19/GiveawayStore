@@ -1,7 +1,9 @@
 package ua.com.company.store.controller.impl.executions;
 
 import org.apache.log4j.Logger;
+import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
+import ua.com.company.store.exceptions.ServiceException;
 import ua.com.company.store.model.entity.Order;
 import ua.com.company.store.model.entity.User;
 import ua.com.company.store.service.OrderService;
@@ -34,20 +36,28 @@ public class CommandDeleteOrderExec implements CommandTypical {
             userFormSession= (User) req.getSession().getAttribute("user");
         }
         if (req.getSession() == null || req.getSession().getAttribute("user") == null || !userFormSession.isRole()) {
-            return "/view/accessErrorPage.jsp";
+            return Redirection.ACCESS_ERROR_PAGE;
         }
 
         String userNameByOrder = req.getParameter("userName");
+        System.out.println(userNameByOrder);
         User user = userService.getUserByNickName(userNameByOrder);
-        Order order = orderService.getByParameter(user);
+        System.out.println(user.getNickname());
+        Order order = null;
+        try{
+            order = orderService.getByParameter(user);
+        }catch (ServiceException e){
+            logger.error(e);
+        }
 
         orderService.deleteOrder(order);
 
         logger.info("Successful deleted order " + order.toString());
+        req.setAttribute("listOrders",orderService.getOrderWithInformation());
 
 
 
 
-        return "/view/adminPage.jsp";
+        return Redirection.ADMIN_PAGE;
     }
 }

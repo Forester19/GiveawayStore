@@ -1,24 +1,21 @@
 package ua.com.company.store.controller.impl.executions;
 
 import org.apache.log4j.Logger;
+import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
 import ua.com.company.store.controller.utils.CookiesAction;
 import ua.com.company.store.controller.utils.RedirectionManager;
 import ua.com.company.store.controller.utils.ServletWrapper;
 import ua.com.company.store.controller.utils.SessionManager;
 import ua.com.company.store.hashing.PasswordHashing;
-import ua.com.company.store.model.dao.daoAbstract.AbstractDao;
 import ua.com.company.store.model.dto.LoginDto;
 import ua.com.company.store.model.entity.User;
 import ua.com.company.store.service.UserService;
 import ua.com.company.store.validation.ValidatorAbstract;
 import ua.com.company.store.validation.login.LoginUpValidator;
 import ua.com.company.store.validation.login.PasswordUpValidator;
-import ua.com.company.store.validation.signup.LoginValidator;
-import ua.com.company.store.validation.signup.PasswordValidator;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -55,7 +52,7 @@ public class CommandLoginFormExecution implements CommandTypical {
                 logger.info("User don't exist in cookie(successful)");
                 user = userService.getUserByNickName(loginDto.getLogin());
                 if (user == null) {
-                    return "/view/noExistUserPage.jsp";
+                    return Redirection.NO_EXIST_USER_PAGE;
                 }
 
 
@@ -76,9 +73,9 @@ public class CommandLoginFormExecution implements CommandTypical {
                     }else {
                         logger.info("Continue execution without adding in cookie ");
                     }
-                    return "/main.jsp";
+                    return Redirection.MAIN_PAGE;
                 } else {
-                    return "/view/noExistUserPage.jsp";
+                    return Redirection.NO_EXIST_USER_PAGE;
                 }
 
             } else {
@@ -87,13 +84,13 @@ public class CommandLoginFormExecution implements CommandTypical {
                 User user1 = (User) list.get(0);
                 session.setAttribute("user", user1);
                 req.setAttribute("user", user1);
-                return "/main.jsp";
+                return Redirection.MAIN_PAGE;
 
             }
         }else {
             logger.info("Validated inputs failed " + loginDto.getLogin() + " -- " + loginDto.getPassword());
             req.setAttribute("error", " NUll inputs!!!");
-            return "/view/someErrorsByInputs.jsp";
+            return Redirection.ERRORS_WITH_INPUTS;
 
         }
     }

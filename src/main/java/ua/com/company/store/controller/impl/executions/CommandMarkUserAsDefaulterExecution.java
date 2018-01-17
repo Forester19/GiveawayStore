@@ -29,7 +29,7 @@ public class CommandMarkUserAsDefaulterExecution implements CommandTypical{
             userFormSession= (User) req.getSession().getAttribute("user");
         }
         if (req.getSession() == null || req.getSession().getAttribute("user") == null || !userFormSession.isRole()) {
-            return "/view/accessErrorPage.jsp";
+            return Redirection.ACCESS_ERROR_PAGE;
         }
         String id = req.getParameter("id");
         User user = userService.getById(Integer.parseInt(id));

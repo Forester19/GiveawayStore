@@ -4,15 +4,12 @@ import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 import ua.com.company.store.model.entity.additional.ProductImage;
 import ua.com.company.store.service.ProductImageService;
-import ua.com.company.store.service.ProductService;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 /**

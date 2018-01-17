@@ -1,5 +1,6 @@
 package ua.com.company.store.controller.impl.redirection;
 
+import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
 import ua.com.company.store.controller.utils.RedirectionManager;
 
@@ -14,7 +15,7 @@ import java.io.IOException;
 public class CommandLoginPage implements CommandTypical {
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        return "/view/loginPage.jsp " + RedirectionManager.REDIRECTION;
+        return Redirection.LOGIN_PAGE + " " + RedirectionManager.REDIRECTION;
     }
 
     @Override

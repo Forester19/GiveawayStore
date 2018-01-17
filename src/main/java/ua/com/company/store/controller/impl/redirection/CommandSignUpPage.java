@@ -1,5 +1,6 @@
 package ua.com.company.store.controller.impl.redirection;
 
+import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
 import ua.com.company.store.controller.utils.RedirectionManager;
 
@@ -9,12 +10,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by Владислав on 08.12.2017.
+ *
+ *
+ *
  */
 public class CommandSignUpPage implements CommandTypical {
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        return "/view/signUpPage.jsp" + " " + RedirectionManager.REDIRECTION;
+        return Redirection.SIGN_UP_PAGE + " " + RedirectionManager.REDIRECTION;
     }
 
     @Override

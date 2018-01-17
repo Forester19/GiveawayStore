@@ -1,4 +1,4 @@
-<%@include file="header.jsp"%>
+<%@include file="utils/header.jsp"%>
 
 <div class="row">
     <div class="col-md-6 offset-md-3">
@@ -22,4 +22,4 @@
         </form>
     </div>
 </div>
-<%@include file="footer.jsp"%>
+<%@include file="utils/footer.jsp"%>

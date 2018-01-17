@@ -36,7 +36,7 @@ public class CommandAdminPage implements CommandTypical {
             return Redirection.ACCESS_ERROR_PAGE + " " + RedirectionManager.REDIRECTION;
         }else {
             req.setAttribute("listOfUsers", userService.getAllUsers());
-            return Redirection.ADMIN_PAGE + " " + RedirectionManager.REDIRECTION;
+            return Redirection.ADMIN_PAGE;
         }
     }
 }

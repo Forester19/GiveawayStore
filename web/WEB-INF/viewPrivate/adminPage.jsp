@@ -4,7 +4,7 @@
 <%@ page import="ua.com.company.store.model.entity.User" %>
 <%@ page import="ua.com.company.store.service.UserService" %>
 <%@ page import="ua.com.company.store.model.entity.additional.UserProduct" %>
-<%@include file="header.jsp"%>
+<%@include file="../../viewPublic/utils/header.jsp"%>
 
 <div class="container">
     <table>
@@ -69,7 +69,11 @@
             </th>
             <th>
                 <div class="active">
-                    <% List<UserProduct> listOrders = OrderService.getInstance().getOrderWithInformation();%>
+                    <% List<UserProduct> listOrders = OrderService.getInstance().getOrderWithInformation();
+                        if (request.getAttribute("listOrders") != null) {
+                            listOrders = (List) request.getAttribute("listOrders");
+                        }
+                    %>
                     <table class="table table-dark table-condensed">
                         <caption><fmt:message key="store.order" bundle="${rb}"/>  </caption>
                         <thead>
@@ -80,6 +84,7 @@
                             <th scope="col"><fmt:message key="store.order.date" bundle="${rb}"/> </th>
                             <th scope="col"><fmt:message key="store.admin.deleteUser" bundle="${rb}"/> </th>
                             <th scope="col"><fmt:message key="store.order.doExecution" bundle="${rb}"/> </th>
+                            <th scope="col"><fmt:message key="store.order.successful_paid" bundle="${rb}"/> </th>
                         </tr>
                         </thead>
                         <tbody>
@@ -91,6 +96,7 @@
                                 <td>${listO.date}</td>
                                 <td><a href="${pageContext.request.contextPath}/store/deleteOrder?userName=${listO.userName}"><fmt:message key="store.admin.deleteUser" bundle="${rb}"/> </a> </td>
                                 <td><a href="${pageContext.request.contextPath}/store/executeOrder?userName=${listO.userName}"><fmt:message key="store.order.Ok" bundle="${rb}"/> </a> </td>
+                                <td>${listO.is_paid}</td>
                             </tr>
                         </c:forEach>
 
@@ -154,4 +160,4 @@
 </div>
 
 
-<%@include file="footer.jsp"%>
+<%@include file="../../viewPublic/utils/footer.jsp"%>

@@ -2,16 +2,13 @@ package ua.com.company.store.controller.impl.executions;
 
 import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
-import ua.com.company.store.controller.utils.RedirectionManager;
 import ua.com.company.store.model.entity.additional.ProductImage;
 import ua.com.company.store.service.ProductImageService;
-import ua.com.company.store.service.ProductService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
