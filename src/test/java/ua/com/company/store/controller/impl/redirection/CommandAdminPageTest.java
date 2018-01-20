@@ -5,7 +5,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import ua.com.company.store.constants.Redirection;
-import ua.com.company.store.controller.utils.RedirectionManager;
 import ua.com.company.store.model.entity.User;
 import ua.com.company.store.service.UserService;
 
@@ -16,11 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import java.io.IOException;
-import java.util.List;
 
 import static org.mockito.Mockito.*;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by Владислав on 03.01.2018.

@@ -1,14 +1,18 @@
-package ua.com.company.store.controller.utils;
+package ua.com.company.store.utils;
 
 import org.apache.log4j.Logger;
 import ua.com.company.store.model.entity.User;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * Created by Владислав on 09.12.2017.
  */
-public class SessionManager {
+public final class SessionManager {
     private Logger logger = Logger.getRootLogger();
 
     public SessionManager() {
@@ -26,10 +30,19 @@ public class SessionManager {
         logger.info("User has logged in " + user.getNickname());
       session.setAttribute("user",user);
     }
+    public boolean failedSession(HttpSession session, HttpServletResponse resp) throws IOException {
+        if (session == null || session.getAttribute("user") == null ){
+            PrintWriter printWriter = resp.getWriter();
+            printWriter.print("Session is null");
+           return  false;
+            }
+            return true;
+    }
+
     public User getUserFromSession(HttpSession session){
         return (User)session.getAttribute("user");
     }
-    public void invalidateSession(HttpSession session){
+    public void invalidateSession(HttpSession session, HttpServletRequest req){
         if (session != null && session.getAttribute("user") !=null){
             User user = (User) session.getAttribute("user");
             logger.info("User has logged out " + user.getNickname());

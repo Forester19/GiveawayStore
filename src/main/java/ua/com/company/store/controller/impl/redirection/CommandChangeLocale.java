@@ -3,7 +3,7 @@ package ua.com.company.store.controller.impl.redirection;
 import org.apache.log4j.Logger;
 import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
-import ua.com.company.store.controller.utils.RedirectionManager;
+import ua.com.company.store.utils.RedirectionManager;
 import ua.com.company.store.locale.AppLocale;
 import ua.com.company.store.locale.MessageLocale;
 
@@ -11,7 +11,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.Locale;
 
 /**

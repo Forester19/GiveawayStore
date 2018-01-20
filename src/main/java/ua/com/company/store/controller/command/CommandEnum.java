@@ -8,9 +8,10 @@ import ua.com.company.store.service.OrderService;
 import ua.com.company.store.service.ProductImageService;
 import ua.com.company.store.service.ProductService;
 import ua.com.company.store.service.UserService;
+import ua.com.company.store.utils.SessionManager;
 
 /**
- * Created by Владислав on 22.11.2017.
+ * Enum using as map with key - url from client & value = command realisation;
  */
 public enum CommandEnum {
     PAGE_NOT_FOUND {
@@ -81,7 +82,7 @@ public enum CommandEnum {
     }},
     LOGOUT_FORM {{
         this.key = "GET:/store/logout";
-        this.command = new CommandRemoveSession();
+        this.command = new CommandRemoveSession(SessionManager.getSessionManager());
 
     }},
     CREATING_NEW_ORDER{{
@@ -107,8 +108,8 @@ public enum CommandEnum {
 
     String key;
     CommandTypical command;
-    JDBCConnectionPool jdbcConnectionPool = JDBCConnectionPool.getInstanceConnectionPool();
-    public String getKey() {
+
+     public String getKey() {
         return key;
     }
 

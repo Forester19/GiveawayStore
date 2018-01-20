@@ -3,9 +3,10 @@ package ua.com.company.store.controller.impl.redirection;
 import org.apache.log4j.Logger;
 import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
-import ua.com.company.store.controller.utils.CookiesAction;
-import ua.com.company.store.controller.utils.RedirectionManager;
+import ua.com.company.store.utils.CookiesAction;
+import ua.com.company.store.utils.RedirectionManager;
 import ua.com.company.store.model.entity.User;
+import ua.com.company.store.utils.SessionManager;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -20,6 +21,12 @@ import java.util.Date;
  */
 public class CommandRemoveSession implements CommandTypical {
     private Logger logger = Logger.getRootLogger();
+    private SessionManager sessionManager;
+
+    public CommandRemoveSession(SessionManager sessionManager) {
+        this.sessionManager = sessionManager;
+    }
+
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession(false);
@@ -28,9 +35,7 @@ public class CommandRemoveSession implements CommandTypical {
         // Get last access time of this web page.
         Date lastAccessTime = null;
 
-        if (session == null || session.getAttribute("user") == null ){
-            PrintWriter printWriter = resp.getWriter();
-            printWriter.print("Session is null");
+        if (sessionManager.failedSession(session,resp)){
             return null;
         }
         if (req.getCookies() != null){

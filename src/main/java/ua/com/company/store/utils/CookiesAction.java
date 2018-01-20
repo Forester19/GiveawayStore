@@ -1,4 +1,4 @@
-package ua.com.company.store.controller.utils;
+package ua.com.company.store.utils;
 
 import org.apache.log4j.Logger;
 import ua.com.company.store.model.entity.User;
@@ -14,7 +14,7 @@ import java.util.Objects;
 /**
  * Created by Владислав on 26.12.2017.
  */
-public class CookiesAction {
+public final class CookiesAction {
     private static Logger logger = Logger.getRootLogger();
 
     public static void setCookieUserInform(HttpServletResponse response, Object userInform) {

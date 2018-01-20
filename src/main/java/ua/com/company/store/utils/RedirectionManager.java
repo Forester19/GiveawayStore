@@ -1,4 +1,4 @@
-package ua.com.company.store.controller.utils;
+package ua.com.company.store.utils;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.net.URLEncoder;
 import java.util.Map;
 
-public class RedirectionManager {
+public final class RedirectionManager {
     public static String REDIRECTION = "REDIRECTION";
     public static String MESSAGE_ENCODING = "UTF-8";
 

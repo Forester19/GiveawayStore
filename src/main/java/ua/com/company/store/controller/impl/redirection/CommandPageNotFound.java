@@ -2,7 +2,7 @@ package ua.com.company.store.controller.impl.redirection;
 
 import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
-import ua.com.company.store.controller.utils.RedirectionManager;
+import ua.com.company.store.utils.RedirectionManager;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

@@ -3,10 +3,10 @@ package ua.com.company.store.controller.impl.executions;
 import org.apache.log4j.Logger;
 import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
-import ua.com.company.store.controller.utils.CookiesAction;
-import ua.com.company.store.controller.utils.RedirectionManager;
-import ua.com.company.store.controller.utils.ServletWrapper;
-import ua.com.company.store.controller.utils.SessionManager;
+import ua.com.company.store.utils.CookiesAction;
+import ua.com.company.store.utils.RedirectionManager;
+import ua.com.company.store.utils.ServletWrapper;
+import ua.com.company.store.utils.SessionManager;
 import ua.com.company.store.hashing.PasswordHashing;
 import ua.com.company.store.model.dto.SignUpDto;
 import ua.com.company.store.model.entity.User;
@@ -43,8 +43,9 @@ public class CommandSignUpFormExecution implements CommandTypical {
             return Redirection.ACCESS_ERROR_PAGE;
         }
 
-        String loginfirst = req.getParameter("login");
- String login = new String(loginfirst.getBytes(),"cp1251");
+        String login = req.getParameter("login");
+        System.out.println(login);
+
 
         String pass = req.getParameter("password");
         String email = req.getParameter("email");
@@ -58,7 +59,7 @@ public class CommandSignUpFormExecution implements CommandTypical {
         if (doValidationInputs(signUpDto)) {
             logger.info("Successful validated inputs signUp");
             try {
-                user = new User.UserBuilder().id(0).nickname(signUpDto.getLogin()).password(passwordHashing.hashingPassword( signUpDto.getPassword()))
+                user = new User.UserBuilder().id(0).nickname(signUpDto.getLogin()).password(passwordHashing.hashingPassword(signUpDto.getPassword()))
                         .email(signUpDto.getEmail()).role(false).isDefaulter(false).build();
                 System.out.println(user.toString());
             } catch (NoSuchAlgorithmException e) {
@@ -81,7 +82,7 @@ public class CommandSignUpFormExecution implements CommandTypical {
                 if (checkedIds != null && checkedIds.equals("OK")) {
                     CookiesAction.setCookieUserInform(resp, user);
                     logger.info("Marked checkbox and added user in cookie successfully");
-                }else {
+                } else {
                     logger.info("Continue execution without adding in cookie ");
                 }
                 return Redirection.MAIN_PAGE;

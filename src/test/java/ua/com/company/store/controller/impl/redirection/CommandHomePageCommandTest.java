@@ -1,13 +1,11 @@
 package ua.com.company.store.controller.impl.redirection;
 
-import javafx.print.Collation;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import ua.com.company.store.constants.Redirection;
-import ua.com.company.store.controller.utils.CookiesAction;
-import ua.com.company.store.controller.utils.RedirectionManager;
-import ua.com.company.store.model.entity.User;
+import ua.com.company.store.utils.CookiesAction;
+import ua.com.company.store.utils.RedirectionManager;
 import ua.com.company.store.service.UserService;
 
 import javax.servlet.http.Cookie;
@@ -16,7 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import static org.junit.Assert.*;
-import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;

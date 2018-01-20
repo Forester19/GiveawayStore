@@ -1,11 +1,11 @@
-package ua.com.company.store.controller.utils;
+package ua.com.company.store.utils;
 
 import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created by Владислав on 06.12.2017.
  */
-public class CommandKeyGenerator {
+public final class CommandKeyGenerator {
     private CommandKeyGenerator() {
     }
     public static String generateCommandKeyByRequest(HttpServletRequest request) {

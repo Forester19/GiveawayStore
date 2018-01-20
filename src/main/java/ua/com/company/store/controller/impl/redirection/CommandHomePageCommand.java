@@ -2,8 +2,8 @@ package ua.com.company.store.controller.impl.redirection;
 
 import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
-import ua.com.company.store.controller.utils.CookiesAction;
-import ua.com.company.store.controller.utils.RedirectionManager;
+import ua.com.company.store.utils.CookiesAction;
+import ua.com.company.store.utils.RedirectionManager;
 import ua.com.company.store.model.entity.User;
 import ua.com.company.store.service.UserService;
 

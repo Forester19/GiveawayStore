@@ -54,10 +54,23 @@ public class CommandAddNewProductByAdminExecution implements CommandTypical {
     }
 
 
+    /**
+     * Method for transportation information about product in object DTO
+     * @param title
+     * @param desc
+     * @param price
+     * @param imgInform
+     * @return
+     */
     private ProductDto getNewProductInputs(String title, String desc, int price, String[] imgInform) {
         return new ProductDto(title, desc, price, imgInform);
     }
 
+    /**
+     * Function witch do validation inputs using change of responsibility pattern
+     * @param productDto
+     * @return
+     */
     private boolean doValidationInputs(ProductDto productDto) {
         ValidatorAbstract validatorAbstractTitle = new TitleValidator();
         ValidatorAbstract validatorAbstractDescription = new DescriptionValidator();
@@ -71,6 +84,14 @@ public class CommandAddNewProductByAdminExecution implements CommandTypical {
         return validatorAbstractTitle.validate(productDto.getTitle(), productDto.getDescription(), String.valueOf(productDto.getPrice()), productDto.getImageInformation()[0], productDto.getImageInformation()[1]);
     }
 
+    /**
+     * Method witch do byte-byte writing image for product from Admin
+     * @param req
+     * @param resp
+     * @return
+     * @throws ServletException
+     * @throws IOException
+     */
     private String[] downloadImage(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         final String path = "G:\\JAVA\\EPAM\\GiveawayStore\\web\\resources\\images";
         final Part filePart = req.getPart("file");

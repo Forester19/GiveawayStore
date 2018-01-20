@@ -1,4 +1,4 @@
-package ua.com.company.store.controller.utils;
+package ua.com.company.store.utils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Created by Владислав on 07.12.2017.
  */
-public class ServletWrapper {
+public final class ServletWrapper {
     private HttpServletRequest request;
     private HttpServletResponse response;
 

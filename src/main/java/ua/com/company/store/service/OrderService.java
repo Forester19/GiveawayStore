@@ -1,7 +1,6 @@
 package ua.com.company.store.service;
 
-import ua.com.company.store.controller.DefaultServlet;
-import ua.com.company.store.controller.utils.JDBCConnectionPoolManager;
+import ua.com.company.store.utils.JDBCConnectionPoolManager;
 import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
 import ua.com.company.store.model.dao.daoAbstract.GenericDAO;
 import ua.com.company.store.model.dao.exceptions.PersistException;
@@ -15,8 +14,6 @@ import ua.com.company.store.model.entity.additional.UserProduct;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static ua.com.company.store.model.dao.connection.JDBCConnectionPool.getInstanceConnectionPool;
 
 /**
  * Created by Владислав on 19.12.2017.

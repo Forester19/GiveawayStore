@@ -1,12 +1,10 @@
 package ua.com.company.store.service;
 
-import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import ua.com.company.store.controller.utils.JDBCConnectionPoolManager;
+import ua.com.company.store.utils.JDBCConnectionPoolManager;
 import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
-import ua.com.company.store.model.entity.User;
 
 import static org.junit.Assert.*;
 

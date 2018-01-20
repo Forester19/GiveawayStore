@@ -1,1474 +1,776 @@
-[INFO] 12:11:40 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@257a7ce3 
+[INFO] 01:00:06 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 12:12:14 (DefaultServlet.java:process:60)Query with url: GET:/store 
+[INFO] 01:00:06 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 12:12:14 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
+[INFO] 01:00:06 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1f529402 
 
-[INFO] 12:12:14 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@776e1a9 
+[INFO] 01:00:06 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:12:14 (UserService.java:<init>:27)Created User Service 
+[INFO] 01:00:07 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 12:12:14 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
+[ERROR] 01:00:07 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[ERROR] 12:12:15 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 01:00:07 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
 
-[INFO] 12:12:15 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
+[INFO] 01:00:25 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
 
-[INFO] 12:12:19 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
+[INFO] 01:00:25 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
 
-[INFO] 12:12:19 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
+[INFO] 01:00:25 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
 
-[INFO] 12:12:19 (DefaultServlet.java:process:65)Redirection path: /view/loginPage.jsp REDIRECTION 
+[INFO] 01:00:29 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
 
-[INFO] 12:12:23 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
+[INFO] 01:00:29 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@73f3b4fe 
 
-[INFO] 12:12:23 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@7ff5b0e0 
+[INFO] 01:00:29 (CommandLoginFormExecution.java:execute:50)Successful validation inputs 
 
-[INFO] 12:12:23 (CommandLoginFormExecution.java:execute:53)Successful validation inputs 
+[ERROR] 01:00:29 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[ERROR] 12:12:23 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 01:00:29 (CommandLoginFormExecution.java:execute:52)User don't exist in cookie(successful) 
 
-[INFO] 12:12:23 (CommandLoginFormExecution.java:execute:55)User don't exist in cookie(successful) 
+[INFO] 01:00:29 (CommandLoginFormExecution.java:execute:59)Successful validated --Vlad 
 
-[INFO] 12:12:23 (CommandLoginFormExecution.java:execute:62)Successful validated --Vlad 
+[INFO] 01:00:29 (CommandLoginFormExecution.java:execute:66)Successful validation on registered before user 
 
-[INFO] 12:12:23 (CommandLoginFormExecution.java:execute:69)Successful validation on registered before user 
+[INFO] 01:00:29 (CommandLoginFormExecution.java:execute:74)Continue execution without adding in cookie  
 
-[INFO] 12:12:23 (CommandLoginFormExecution.java:execute:77)Continue execution without adding in cookie  
+[INFO] 01:00:29 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 12:12:23 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
+[INFO] 01:00:31 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
 
-[INFO] 12:12:25 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
+[INFO] 01:00:31 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@17feb476 
 
-[INFO] 12:12:25 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@6a99bf41 
+[INFO] 01:00:31 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
 
-[INFO] 12:12:25 (DefaultServlet.java:process:65)Redirection path: /view/adminPage.jsp REDIRECTION 
+[INFO] 01:00:32 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@19c4af2 
 
-[INFO] 12:12:26 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@62271fb8 
+[INFO] 01:00:32 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:12:26 (UserService.java:<init>:27)Created User Service 
+[INFO] 01:00:34 (DefaultServlet.java:process:60)Query with url: GET:/store/executeOrder 
 
-[INFO] 12:12:29 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteOrder 
+[INFO] 01:00:34 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandExecuteOrder@2d1576f6 
 
-[INFO] 12:12:29 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandDeleteOrderExec@3aaba09f 
+[ERROR] 01:00:35 (CommandExecuteOrder.java:execute:53)Error with sending message javax.mail.MessagingException: [EOF] 
 
-[ERROR] 12:12:29 (UserDAO.java:getByParameter:127)Cant search users with nickname Валя 
+[INFO] 01:00:35 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
 
-[INFO] 12:12:45 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@6aa0cdeb 
+[INFO] 01:00:35 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@55b6ace0 
 
-[INFO] 12:12:45 (UserService.java:<init>:27)Created User Service 
+[INFO] 01:00:35 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:12:50 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteOrder 
+[INFO] 04:09:22 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@4681002 
 
-[INFO] 12:12:50 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandDeleteOrderExec@3aaba09f 
+[INFO] 04:10:12 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[ERROR] 12:12:50 (UserDAO.java:getByParameter:127)Cant search users with nickname Валя 
+[INFO] 04:10:12 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 12:19:30 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@1f43250f 
+[INFO] 04:10:12 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@63e9998d 
 
-[INFO] 12:23:42 (DefaultServlet.java:process:60)Query with url: GET:/store 
+[INFO] 04:10:12 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:23:42 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
+[INFO] 04:10:13 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 12:23:42 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@63e9998d 
+[INFO] 04:10:16 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 12:23:42 (UserService.java:<init>:27)Created User Service 
+[INFO] 04:10:16 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 12:23:43 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
+[INFO] 04:10:17 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[ERROR] 12:23:44 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 04:10:17 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 12:23:44 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
+[ERROR] 04:10:18 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 12:25:20 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
+[ERROR] 04:10:18 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 12:25:20 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
+[INFO] 04:10:18 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
 
-[INFO] 12:25:20 (DefaultServlet.java:process:65)Redirection path: /view/loginPage.jsp REDIRECTION 
+[ERROR] 04:10:18 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 12:25:43 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
+[INFO] 04:10:19 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
 
-[INFO] 12:25:43 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.executions.CommandLoginFormExecution@5ea91585 
+[INFO] 04:10:19 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
 
-[INFO] 12:25:43 (CommandLoginFormExecution.java:execute:49)Successful validation inputs 
+[INFO] 04:11:35 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
 
-[ERROR] 12:25:43 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 04:11:35 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
 
-[INFO] 12:25:43 (CommandLoginFormExecution.java:execute:51)User don't exist in cookie(successful) 
+[INFO] 04:11:35 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
 
-[INFO] 12:25:43 (CommandLoginFormExecution.java:execute:58)Successful validated --Vlad 
+[INFO] 04:11:37 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
 
-[INFO] 12:25:43 (CommandLoginFormExecution.java:execute:65)Successful validation on registered before user 
+[INFO] 04:11:37 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@54aa969b 
 
-[INFO] 12:25:43 (CommandLoginFormExecution.java:execute:73)Continue execution without adding in cookie  
+[INFO] 04:11:37 (CommandLoginFormExecution.java:execute:50)Successful validation inputs 
 
-[INFO] 12:25:43 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
+[ERROR] 04:11:38 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 12:25:45 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
+[INFO] 04:11:38 (CommandLoginFormExecution.java:execute:52)User don't exist in cookie(successful) 
 
-[INFO] 12:25:45 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@37b90766 
+[INFO] 04:11:38 (CommandLoginFormExecution.java:execute:59)Successful validated --Vlad 
 
-[INFO] 12:25:45 (DefaultServlet.java:process:65)Redirection path: /view/adminPage.jsp REDIRECTION 
+[INFO] 04:11:38 (CommandLoginFormExecution.java:execute:66)Successful validation on registered before user 
 
-[INFO] 12:25:46 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@732f6a1c 
+[INFO] 04:11:38 (CommandLoginFormExecution.java:execute:74)Continue execution without adding in cookie  
 
-[INFO] 12:25:46 (UserService.java:<init>:27)Created User Service 
+[INFO] 04:11:38 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 12:25:48 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteOrder 
+[INFO] 04:11:40 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
 
-[INFO] 12:25:48 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.executions.CommandDeleteOrderExec@78367eea 
+[INFO] 04:11:40 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@15a365a5 
 
-[ERROR] 12:25:48 (UserDAO.java:getByParameter:127)Cant search users with nickname Валя 
+[INFO] 04:11:40 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
 
-[INFO] 12:29:04 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@2fdc7c3c 
+[INFO] 04:11:40 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@6993b690 
 
-[INFO] 12:30:21 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@63bc20de 
+[INFO] 04:11:40 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:38:44 (DefaultServlet.java:process:60)Query with url: GET:/store 
+[INFO] 04:11:43 (DefaultServlet.java:process:60)Query with url: GET:/store/executeOrder 
 
-[INFO] 12:38:44 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
+[INFO] 04:11:43 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandExecuteOrder@3a7403c7 
 
-[INFO] 12:38:44 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@341c8797 
+[ERROR] 04:11:45 (CommandExecuteOrder.java:execute:53)Error with sending message javax.mail.MessagingException: [EOF] 
 
-[INFO] 12:38:44 (UserService.java:<init>:27)Created User Service 
+[INFO] 04:11:45 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
 
-[INFO] 12:38:44 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
+[INFO] 04:11:45 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@664afe60 
 
-[ERROR] 12:38:45 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 04:11:45 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:38:45 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
+[INFO] 04:27:43 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@476e7545 
 
-[INFO] 12:42:03 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
+[INFO] 04:29:04 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 12:42:03 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
+[INFO] 04:29:04 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 12:42:03 (DefaultServlet.java:process:65)Redirection path: /view/loginPage.jsp REDIRECTION 
+[INFO] 04:29:04 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@59a1b532 
 
-[INFO] 12:45:10 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
+[INFO] 04:29:04 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:45:10 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.executions.CommandLoginFormExecution@37b90766 
+[INFO] 04:29:04 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 12:45:10 (CommandLoginFormExecution.java:execute:49)Successful validation inputs 
+[ERROR] 04:29:05 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[ERROR] 12:45:10 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 04:29:05 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
 
-[INFO] 12:45:10 (CommandLoginFormExecution.java:execute:51)User don't exist in cookie(successful) 
+[INFO] 04:29:08 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
 
-[INFO] 12:45:10 (CommandLoginFormExecution.java:execute:58)Successful validated --Vlad 
+[INFO] 04:29:08 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
 
-[INFO] 12:45:10 (CommandLoginFormExecution.java:execute:65)Successful validation on registered before user 
+[INFO] 04:29:08 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
 
-[INFO] 12:45:10 (CommandLoginFormExecution.java:execute:73)Continue execution without adding in cookie  
+[INFO] 04:29:10 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
 
-[INFO] 12:45:10 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
+[INFO] 04:29:10 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@32b0d705 
 
-[INFO] 12:45:12 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
+[INFO] 04:29:10 (CommandLoginFormExecution.java:execute:50)Successful validation inputs 
 
-[INFO] 12:45:12 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@442c7c68 
+[ERROR] 04:29:10 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 12:45:12 (DefaultServlet.java:process:65)Redirection path: /view/adminPage.jsp REDIRECTION 
+[INFO] 04:29:10 (CommandLoginFormExecution.java:execute:52)User don't exist in cookie(successful) 
 
-[INFO] 12:45:13 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@6a69e7f6 
+[INFO] 04:29:10 (CommandLoginFormExecution.java:execute:59)Successful validated --Vlad 
 
-[INFO] 12:45:13 (UserService.java:<init>:27)Created User Service 
+[INFO] 04:29:10 (CommandLoginFormExecution.java:execute:66)Successful validation on registered before user 
 
-[INFO] 12:45:16 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteOrder 
+[INFO] 04:29:10 (CommandLoginFormExecution.java:execute:74)Continue execution without adding in cookie  
 
-[INFO] 12:45:16 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.executions.CommandDeleteOrderExec@2584caa2 
+[INFO] 04:29:10 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[ERROR] 12:45:16 (UserDAO.java:getByParameter:127)Cant search users with nickname Валя 
+[INFO] 04:29:11 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
 
-[INFO] 12:50:36 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@192dc379 
+[INFO] 04:29:11 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@10069a4d 
 
-[INFO] 12:50:38 (DefaultServlet.java:process:60)Query with url: GET:/store 
+[INFO] 04:29:11 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
 
-[INFO] 12:50:38 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
+[INFO] 04:29:12 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@6167411f 
 
-[INFO] 12:50:38 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@7a0d165 
+[INFO] 04:29:12 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:50:38 (UserService.java:<init>:27)Created User Service 
+[INFO] 04:29:14 (DefaultServlet.java:process:60)Query with url: GET:/store/executeOrder 
 
-[INFO] 12:50:38 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
+[INFO] 04:29:14 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandExecuteOrder@17feb476 
 
-[ERROR] 12:50:39 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[ERROR] 04:29:15 (CommandExecuteOrder.java:execute:53)Error with sending message javax.mail.MessagingException: [EOF] 
 
-[INFO] 12:50:39 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
+[INFO] 04:29:15 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
 
-[INFO] 12:50:43 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
+[INFO] 04:29:15 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@266ed7ab 
 
-[INFO] 12:50:43 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
+[INFO] 04:29:15 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:50:43 (DefaultServlet.java:process:65)Redirection path: /view/loginPage.jsp REDIRECTION 
+[INFO] 04:30:28 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@2e252763 
 
-[INFO] 12:50:46 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
+[INFO] 04:31:49 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 12:50:46 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.executions.CommandLoginFormExecution@43d7b7ae 
+[INFO] 04:31:49 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 12:50:46 (CommandLoginFormExecution.java:execute:49)Successful validation inputs 
+[INFO] 04:31:49 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@73d01a87 
 
-[ERROR] 12:50:46 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 04:31:49 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:50:46 (CommandLoginFormExecution.java:execute:51)User don't exist in cookie(successful) 
+[INFO] 04:31:49 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 12:50:46 (CommandLoginFormExecution.java:execute:58)Successful validated --Vlad 
+[ERROR] 04:31:50 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 12:50:46 (CommandLoginFormExecution.java:execute:65)Successful validation on registered before user 
+[INFO] 04:31:50 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
 
-[INFO] 12:50:46 (CommandLoginFormExecution.java:execute:73)Continue execution without adding in cookie  
+[INFO] 04:32:20 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
 
-[INFO] 12:50:46 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
+[INFO] 04:32:20 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
 
-[INFO] 12:50:48 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
+[INFO] 04:32:20 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
 
-[INFO] 12:50:48 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@d094597 
+[INFO] 04:32:22 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
 
-[INFO] 12:50:48 (DefaultServlet.java:process:65)Redirection path: /view/adminPage.jsp REDIRECTION 
+[INFO] 04:32:22 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@697ff837 
 
-[INFO] 12:50:49 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@72a5110e 
+[INFO] 04:32:22 (CommandLoginFormExecution.java:execute:50)Successful validation inputs 
 
-[INFO] 12:50:49 (UserService.java:<init>:27)Created User Service 
+[ERROR] 04:32:22 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 12:50:51 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteOrder 
+[INFO] 04:32:22 (CommandLoginFormExecution.java:execute:52)User don't exist in cookie(successful) 
 
-[INFO] 12:50:51 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.executions.CommandDeleteOrderExec@58c0d892 
+[INFO] 04:32:22 (CommandLoginFormExecution.java:execute:59)Successful validated --Vlad 
 
-[ERROR] 12:50:51 (UserDAO.java:getByParameter:127)Cant search users with nickname Валя 
+[INFO] 04:32:22 (CommandLoginFormExecution.java:execute:66)Successful validation on registered before user 
 
-[INFO] 12:53:55 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteOrder 
+[INFO] 04:32:22 (CommandLoginFormExecution.java:execute:74)Continue execution without adding in cookie  
 
-[INFO] 12:53:55 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.executions.CommandDeleteOrderExec@58c0d892 
+[INFO] 04:32:22 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 12:54:16 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteOrder 
+[INFO] 04:32:23 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
 
-[INFO] 12:54:16 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.executions.CommandDeleteOrderExec@58c0d892 
+[INFO] 04:32:23 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@78b97149 
 
-[INFO] 12:55:21 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@c010018 
+[INFO] 04:32:23 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
 
-[INFO] 12:55:35 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
+[INFO] 04:32:24 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@31353fe9 
 
-[INFO] 12:55:35 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@217a2106 
+[INFO] 04:32:24 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:55:35 (UserService.java:<init>:27)Created User Service 
+[INFO] 04:32:25 (DefaultServlet.java:process:60)Query with url: GET:/store/executeOrder 
 
-[INFO] 12:55:37 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@151e5e12 
+[INFO] 04:32:25 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandExecuteOrder@2d8cc042 
 
-[INFO] 12:55:37 (UserService.java:<init>:27)Created User Service 
+[ERROR] 04:32:26 (CommandExecuteOrder.java:execute:53)Error with sending message javax.mail.MessagingException: [EOF] 
 
-[INFO] 12:56:04 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@20770619 
+[INFO] 04:32:26 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
 
-[INFO] 12:56:04 (UserService.java:<init>:27)Created User Service 
+[INFO] 04:32:26 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@70f408a0 
 
-[INFO] 12:57:11 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@2a87e82 
+[INFO] 04:32:26 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:57:20 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
+[INFO] 04:40:08 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@3de011eb 
 
-[INFO] 12:57:20 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4923c5f3 
+[INFO] 04:42:56 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 12:57:20 (UserService.java:<init>:27)Created User Service 
+[INFO] 04:42:56 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 12:57:22 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4492f7b 
+[INFO] 04:42:56 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@47bd1f01 
 
-[INFO] 12:57:22 (UserService.java:<init>:27)Created User Service 
+[INFO] 04:42:56 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:57:25 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1feaf7be 
+[INFO] 04:42:57 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 12:57:25 (UserService.java:<init>:27)Created User Service 
+[ERROR] 04:42:57 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 12:57:37 (DefaultServlet.java:process:60)Query with url: GET:/store 
+[INFO] 04:42:57 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
 
-[INFO] 12:57:37 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
+[INFO] 04:43:00 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
 
-[ERROR] 12:57:38 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 04:43:00 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
 
-[INFO] 12:57:38 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
+[INFO] 04:43:00 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
 
-[INFO] 12:57:41 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
+[INFO] 04:43:03 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
 
-[INFO] 12:57:41 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
+[INFO] 04:43:03 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@1282feb3 
 
-[INFO] 12:57:41 (DefaultServlet.java:process:65)Redirection path: /view/loginPage.jsp REDIRECTION 
+[INFO] 04:43:03 (CommandLoginFormExecution.java:execute:50)Successful validation inputs 
 
-[INFO] 12:57:46 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
+[ERROR] 04:43:03 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 12:57:46 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.executions.CommandLoginFormExecution@785a6790 
+[INFO] 04:43:03 (CommandLoginFormExecution.java:execute:52)User don't exist in cookie(successful) 
 
-[INFO] 12:57:46 (CommandLoginFormExecution.java:execute:49)Successful validation inputs 
+[INFO] 04:43:03 (CommandLoginFormExecution.java:execute:59)Successful validated --Vlad 
 
-[ERROR] 12:57:46 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 04:43:03 (CommandLoginFormExecution.java:execute:66)Successful validation on registered before user 
 
-[INFO] 12:57:46 (CommandLoginFormExecution.java:execute:51)User don't exist in cookie(successful) 
+[INFO] 04:43:03 (CommandLoginFormExecution.java:execute:74)Continue execution without adding in cookie  
 
-[INFO] 12:57:46 (CommandLoginFormExecution.java:execute:58)Successful validated --Vlad 
+[INFO] 04:43:03 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 12:57:46 (CommandLoginFormExecution.java:execute:65)Successful validation on registered before user 
+[INFO] 04:43:04 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
 
-[INFO] 12:57:46 (CommandLoginFormExecution.java:execute:73)Continue execution without adding in cookie  
+[INFO] 04:43:04 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@dba1e12 
 
-[INFO] 12:57:46 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
+[INFO] 04:43:04 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
 
-[INFO] 12:57:48 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
+[INFO] 04:43:04 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@55d6905 
 
-[INFO] 12:57:48 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@49ab9c7d 
+[INFO] 04:43:04 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:57:48 (DefaultServlet.java:process:65)Redirection path: /view/adminPage.jsp 
+[INFO] 04:43:06 (DefaultServlet.java:process:60)Query with url: GET:/store/executeOrder 
 
-[INFO] 12:57:48 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@6230848b 
+[INFO] 04:43:06 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandExecuteOrder@1eefe2c7 
 
-[INFO] 12:57:48 (UserService.java:<init>:27)Created User Service 
+[ERROR] 04:43:07 (CommandExecuteOrder.java:execute:53)Error with sending message javax.mail.MessagingException: [EOF] 
 
-[INFO] 12:58:03 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
+[INFO] 04:43:07 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
 
-[INFO] 12:58:03 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@49ab9c7d 
+[INFO] 04:43:07 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@a2c8546 
 
-[INFO] 12:58:05 (DefaultServlet.java:process:65)Redirection path: /view/adminPage.jsp 
+[INFO] 04:43:07 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:58:05 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@11789ae0 
+[INFO] 04:46:57 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@6f5215b9 
 
-[INFO] 12:58:05 (UserService.java:<init>:27)Created User Service 
+[INFO] 04:47:02 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 12:58:26 (DefaultServlet.java:process:60)Query with url: GET:/store/logout 
+[INFO] 04:47:02 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 12:58:26 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandRemoveSession@7412fe17 
+[INFO] 04:47:02 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@59a1b532 
 
-[INFO] 12:58:26 (CommandRemoveSession.java:execute:37)Removed cookies [Ljavax.servlet.http.Cookie;@446993d7 
+[INFO] 04:47:02 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:58:26 (CommandRemoveSession.java:execute:46)Removed session with ID Vlad
-Time online 1 min. 
+[INFO] 04:47:02 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 12:58:26 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
+[ERROR] 04:47:03 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 12:58:29 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
+[INFO] 04:47:03 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
 
-[INFO] 12:58:29 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@49ab9c7d 
+[INFO] 04:47:06 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
 
-[INFO] 12:58:29 (DefaultServlet.java:process:65)Redirection path: /view/accessErrorPage.jsp REDIRECTION 
+[INFO] 04:47:06 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
 
-[INFO] 12:59:07 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@7ce0a374 
+[INFO] 04:47:06 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
 
-[INFO] 12:59:07 (UserService.java:<init>:27)Created User Service 
+[INFO] 04:47:08 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
 
-[INFO] 01:05:36 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@29b21721 
+[INFO] 04:47:08 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@32b0d705 
 
-[INFO] 01:06:15 (DefaultServlet.java:process:60)Query with url: GET:/store 
+[INFO] 04:47:08 (CommandLoginFormExecution.java:execute:50)Successful validation inputs 
 
-[INFO] 01:06:15 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
+[ERROR] 04:47:08 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 01:06:15 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@59a1b532 
+[INFO] 04:47:08 (CommandLoginFormExecution.java:execute:52)User don't exist in cookie(successful) 
 
-[INFO] 01:06:15 (UserService.java:<init>:27)Created User Service 
+[INFO] 04:47:08 (CommandLoginFormExecution.java:execute:59)Successful validated --Vlad 
 
-[INFO] 01:06:16 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
+[INFO] 04:47:08 (CommandLoginFormExecution.java:execute:66)Successful validation on registered before user 
 
-[ERROR] 01:06:16 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 04:47:08 (CommandLoginFormExecution.java:execute:74)Continue execution without adding in cookie  
 
-[INFO] 01:06:16 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
+[INFO] 04:47:08 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 01:08:57 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@553846e1 
+[INFO] 04:47:10 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
 
-[INFO] 01:09:08 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
+[INFO] 04:47:10 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@b7a9692 
 
-[INFO] 01:09:14 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
+[INFO] 04:47:10 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
 
-[INFO] 01:09:14 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4e395087 
+[INFO] 04:47:11 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@23f2c9e6 
 
-[INFO] 01:09:14 (UserService.java:<init>:27)Created User Service 
+[INFO] 04:47:11 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:09:14 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
+[INFO] 04:47:14 (DefaultServlet.java:process:60)Query with url: GET:/store/executeOrder 
 
-[INFO] 01:09:14 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/view/loginPage.jsp REDIRECTION 
+[INFO] 04:47:14 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandExecuteOrder@11135001 
 
-[INFO] 01:42:28 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@4d0cf32c 
+[ERROR] 04:47:14 (CommandExecuteOrder.java:execute:53)Error with sending message javax.mail.MessagingException: [EOF] 
 
-[INFO] 01:42:40 (DefaultServlet.java:process:60)Query with url: GET:/store 
+[INFO] 04:47:14 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
 
-[INFO] 01:42:40 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
+[INFO] 04:47:14 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@124b4156 
 
-[INFO] 01:42:40 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@25e9611d 
+[INFO] 04:47:14 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:42:40 (UserService.java:<init>:27)Created User Service 
+[INFO] 04:53:23 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@496ab503 
 
-[INFO] 01:42:41 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
+[INFO] 04:53:28 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[ERROR] 01:42:41 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 04:53:28 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:42:41 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
+[INFO] 04:53:28 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4a3e179 
 
-[INFO] 01:42:47 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
+[INFO] 04:53:28 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:42:47 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
+[INFO] 04:53:28 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 01:42:47 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jspREDIRECTION 
+[ERROR] 04:53:28 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 01:43:20 (DefaultServlet.java:process:60)Query with url: GET:/store/signUp 
+[INFO] 04:53:28 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
 
-[INFO] 01:43:20 (DefaultServlet.java:process:62)Command key execution: CommandSignUpPage{} 
+[INFO] 04:53:45 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
 
-[INFO] 01:43:20 (DefaultServlet.java:process:65)Redirection path: /viewPublic/signUpPage.jsp REDIRECTION 
+[INFO] 04:53:45 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
 
-[INFO] 01:44:28 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@5f3b0681 
+[INFO] 04:53:45 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
 
-[INFO] 01:44:44 (DefaultServlet.java:process:60)Query with url: GET:/store 
+[INFO] 04:53:47 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
 
-[INFO] 01:44:44 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
+[INFO] 04:53:47 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
 
-[INFO] 01:44:44 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@292592bc 
+[INFO] 04:53:47 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
 
-[INFO] 01:44:44 (UserService.java:<init>:27)Created User Service 
+[INFO] 04:53:48 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
 
-[INFO] 01:44:44 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
+[INFO] 04:53:48 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@7d8aa91e 
 
-[ERROR] 01:44:45 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 04:53:48 (CommandLoginFormExecution.java:execute:50)Successful validation inputs 
 
-[INFO] 01:44:45 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
+[ERROR] 04:53:48 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 01:44:55 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
+[INFO] 04:53:48 (CommandLoginFormExecution.java:execute:52)User don't exist in cookie(successful) 
 
-[INFO] 01:44:55 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
+[INFO] 04:53:48 (CommandLoginFormExecution.java:execute:59)Successful validated --Vlad 
 
-[INFO] 01:44:55 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
+[INFO] 04:53:48 (CommandLoginFormExecution.java:execute:66)Successful validation on registered before user 
 
-[INFO] 01:44:58 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
+[INFO] 04:53:48 (CommandLoginFormExecution.java:execute:74)Continue execution without adding in cookie  
 
-[INFO] 01:44:58 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@44b57355 
+[INFO] 04:53:48 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 01:44:58 (CommandLoginFormExecution.java:execute:50)Successful validation inputs 
+[INFO] 04:53:49 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
 
-[ERROR] 01:44:58 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 04:53:49 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@456c7271 
 
-[INFO] 01:44:58 (CommandLoginFormExecution.java:execute:52)User don't exist in cookie(successful) 
+[INFO] 04:53:49 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
 
-[INFO] 01:44:58 (CommandLoginFormExecution.java:execute:59)Successful validated --Vlad 
+[INFO] 04:53:50 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1e6f4d5a 
 
-[INFO] 01:44:58 (CommandLoginFormExecution.java:execute:66)Successful validation on registered before user 
+[INFO] 04:53:50 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:44:58 (CommandLoginFormExecution.java:execute:74)Continue execution without adding in cookie  
+[INFO] 04:53:52 (DefaultServlet.java:process:60)Query with url: GET:/store/executeOrder 
 
-[INFO] 01:44:58 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
+[INFO] 04:53:52 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandExecuteOrder@11cf9c1a 
 
-[INFO] 01:45:01 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
+[ERROR] 04:53:57 (CommandExecuteOrder.java:execute:53)Error with sending message javax.mail.AuthenticationFailedException 
 
-[INFO] 01:45:01 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@294f527f 
+[INFO] 04:53:57 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
 
-[INFO] 01:45:01 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
+[INFO] 04:53:57 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@23bf5e21 
 
-[INFO] 01:45:02 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@27f7978f 
+[INFO] 04:53:57 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:45:02 (UserService.java:<init>:27)Created User Service 
+[INFO] 05:28:00 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:45:18 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteOrder 
+[INFO] 05:28:01 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@6979e8cb 
 
-[INFO] 01:45:18 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandDeleteOrderExec@55ac7cdd 
+[INFO] 05:28:01 (UserService.java:<init>:27)Created User Service 
 
-[ERROR] 01:45:18 (UserDAO.java:getByParameter:127)Cant search users with nickname Валя 
+[INFO] 05:30:44 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:52:04 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteOrder 
+[INFO] 05:30:44 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@6979e8cb 
 
-[INFO] 01:52:04 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandDeleteOrderExec@55ac7cdd 
+[INFO] 05:30:44 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:52:23 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
+[INFO] 05:31:43 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:52:23 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@294f527f 
+[INFO] 05:31:43 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5fe5c6f 
 
-[INFO] 01:52:23 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
+[INFO] 05:31:43 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:52:23 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@60088efe 
+[INFO] 11:23:18 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:52:23 (UserService.java:<init>:27)Created User Service 
+[INFO] 11:23:19 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2d6a9952 
 
-[INFO] 12:51:12 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@12c9ed45 
+[INFO] 11:23:19 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:51:39 (DefaultServlet.java:process:60)Query with url: GET:/store/loginForm 
+[INFO] 11:25:01 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 12:51:39 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
+[INFO] 11:25:01 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2d6a9952 
 
-[INFO] 12:51:39 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@6fb7801 
+[INFO] 11:25:01 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:51:39 (UserService.java:<init>:27)Created User Service 
+[INFO] 11:26:24 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 12:51:40 (DefaultServlet.java:process:62)Command key execution: CommandPageNotFound{} 
+[INFO] 11:26:24 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2d6a9952 
 
-[INFO] 12:51:40 (DefaultServlet.java:process:65)Redirection path: /viewPublic/errors/pageNotFound.jsp REDIRECTION 
+[INFO] 11:26:24 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:51:45 (DefaultServlet.java:process:60)Query with url: GET:/store/loginForm 
+[INFO] 11:41:49 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 12:51:45 (DefaultServlet.java:process:62)Command key execution: CommandPageNotFound{} 
+[INFO] 11:41:49 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2d6a9952 
 
-[INFO] 12:51:45 (DefaultServlet.java:process:65)Redirection path: /viewPublic/errors/pageNotFound.jsp REDIRECTION 
+[INFO] 11:41:49 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:51:51 (DefaultServlet.java:process:60)Query with url: GET:/store 
+[INFO] 11:47:23 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 12:51:51 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
+[INFO] 11:47:23 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2d6a9952 
 
-[ERROR] 12:51:52 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 11:47:23 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:51:52 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
+[INFO] 11:49:09 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 12:54:05 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
+[INFO] 11:49:09 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2d6a9952 
 
-[INFO] 12:54:05 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
+[INFO] 11:49:09 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:54:05 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
+[INFO] 11:50:21 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 12:54:09 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
+[INFO] 11:50:22 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2d6a9952 
 
-[INFO] 12:54:09 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@45b5da47 
+[INFO] 11:50:22 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:54:09 (CommandLoginFormExecution.java:execute:50)Successful validation inputs 
+[INFO] 11:52:48 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[ERROR] 12:54:09 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 11:52:48 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2d6a9952 
 
-[INFO] 12:54:09 (CommandLoginFormExecution.java:execute:52)User don't exist in cookie(successful) 
+[INFO] 11:52:48 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:54:09 (CommandLoginFormExecution.java:execute:59)Successful validated --Vlad 
+[INFO] 11:55:19 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 12:54:09 (CommandLoginFormExecution.java:execute:66)Successful validation on registered before user 
+[INFO] 11:55:19 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2d6a9952 
 
-[INFO] 12:54:09 (CommandLoginFormExecution.java:execute:74)Continue execution without adding in cookie  
+[INFO] 11:55:19 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:54:09 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
+[INFO] 12:05:20 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 12:54:11 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
+[INFO] 12:05:20 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@3ac42916 
 
-[INFO] 12:54:11 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@6584e567 
+[INFO] 12:05:20 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:54:11 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
+[INFO] 12:05:53 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 12:54:13 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@988591f 
+[INFO] 12:05:53 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@3ac42916 
 
-[INFO] 12:54:13 (UserService.java:<init>:27)Created User Service 
+[INFO] 12:05:53 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 12:54:18 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteOrder 
+[INFO] 12:07:03 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 12:54:18 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandDeleteOrderExec@2a19d67e 
+[INFO] 12:07:03 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@3ac42916 
 
-[ERROR] 12:54:18 (UserDAO.java:getByParameter:127)Cant search users with nickname Валя 
+[INFO] 12:07:03 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:01:43 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
+[INFO] 12:09:55 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:01:43 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@74455848 
+[INFO] 12:09:55 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@3ac42916 
 
-[INFO] 01:01:43 (UserService.java:<init>:27)Created User Service 
+[INFO] 12:09:55 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:01:46 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@15a902e7 
+[INFO] 12:16:56 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:01:46 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@7876d598 
+[INFO] 12:16:56 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5c0369c4 
 
-[INFO] 01:01:46 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4a3e3e8b 
+[INFO] 12:16:56 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:01:46 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5af28b27 
+[INFO] 12:24:42 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:01:46 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@72f46e16 
+[INFO] 12:24:42 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5c0369c4 
 
-[INFO] 01:03:51 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
+[INFO] 12:24:42 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:03:51 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2e55dd0c 
+[INFO] 12:28:55 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:03:51 (UserService.java:<init>:27)Created User Service 
+[INFO] 12:28:55 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5c0369c4 
 
-[INFO] 01:03:52 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@72ccd81a 
+[INFO] 12:28:55 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:03:52 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@6d8792db 
+[INFO] 12:29:55 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:03:52 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@64bc21ac 
+[INFO] 12:29:55 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5c0369c4 
 
-[INFO] 01:03:52 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@493dfb8e 
+[INFO] 12:29:55 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:03:52 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@9d157ff 
+[INFO] 12:31:11 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:05:10 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@c4d5ac0 
+[INFO] 12:31:12 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@5c0369c4 
 
-[INFO] 01:08:59 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@64517333 
+[INFO] 12:31:12 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:09:32 (DefaultServlet.java:process:60)Query with url: GET:/store 
+[INFO] 07:16:34 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@3058ae58 
 
-[INFO] 01:09:32 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
+[INFO] 07:19:28 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 01:09:32 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@7d73a72e 
+[INFO] 07:19:28 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:09:32 (UserService.java:<init>:27)Created User Service 
+[INFO] 07:19:28 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@8b40148 
 
-[INFO] 01:09:32 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
+[INFO] 07:19:28 (UserService.java:<init>:27)Created User Service 
 
-[ERROR] 01:09:32 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 07:19:29 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 01:09:32 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
+[INFO] 07:19:32 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 01:09:48 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
+[INFO] 07:19:32 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 01:09:48 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
+[ERROR] 07:19:34 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 01:09:48 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
+[ERROR] 07:19:34 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 01:09:53 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
+[INFO] 07:19:34 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
 
-[INFO] 01:09:53 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@32b0d705 
+[INFO] 07:19:34 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
 
-[INFO] 01:09:53 (CommandLoginFormExecution.java:execute:50)Successful validation inputs 
+[INFO] 08:02:37 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@3e250398 
 
-[ERROR] 01:09:53 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 08:03:53 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@3fa39c91 
 
-[INFO] 01:09:53 (CommandLoginFormExecution.java:execute:52)User don't exist in cookie(successful) 
+[INFO] 08:04:03 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:09:53 (CommandLoginFormExecution.java:execute:59)Successful validated --Vlad 
+[INFO] 08:04:09 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
 
-[INFO] 01:09:53 (CommandLoginFormExecution.java:execute:66)Successful validation on registered before user 
+[INFO] 08:04:09 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@4bd93d7c 
 
-[INFO] 01:09:53 (CommandLoginFormExecution.java:execute:74)Continue execution without adding in cookie  
+[INFO] 08:04:09 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:09:53 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
+[INFO] 08:04:09 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
 
-[INFO] 01:10:12 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
+[INFO] 08:04:09 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
 
-[INFO] 01:10:12 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@451eda77 
+[INFO] 08:04:13 (DefaultServlet.java:process:60)Query with url: GET:/store/locale 
 
-[INFO] 01:10:12 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
+[INFO] 08:04:13 (DefaultServlet.java:process:62)Command key execution: ChangeLocale{} 
 
-[INFO] 01:10:13 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2070dd23 
+[INFO] 08:04:13 (CommandChangeLocale.java:setLocale:34)Chosen language uk 
 
-[INFO] 01:10:13 (UserService.java:<init>:27)Created User Service 
+[INFO] 08:04:13 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
 
-[INFO] 01:10:16 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteOrder 
+[INFO] 08:04:19 (DefaultServlet.java:process:60)Query with url: GET:/store/executeOrder 
 
-[INFO] 01:10:16 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandDeleteOrderExec@6d6f72a4 
+[INFO] 08:04:19 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandExecuteOrder@32b0d705 
 
-[ERROR] 01:10:16 (UserDAO.java:getByParameter:127)Cant search users with nickname Валя 
+[INFO] 08:04:19 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/errors/accessErrorPage.jsp 
 
-[INFO] 01:11:58 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@474bbf53 
+[INFO] 08:07:07 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@52e43703 
 
-[INFO] 01:12:08 (DefaultServlet.java:process:60)Query with url: GET:/store 
+[INFO] 08:11:38 (DefaultServlet.java:process:60)Query with url: GET:/store/executeOrder 
 
-[INFO] 01:12:08 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
+[INFO] 08:11:38 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:12:08 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1170f203 
+[INFO] 08:11:38 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@3f2effb6 
 
-[INFO] 01:12:08 (UserService.java:<init>:27)Created User Service 
+[INFO] 08:11:38 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:12:08 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
+[INFO] 08:11:38 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandExecuteOrder@5a6d5fd4 
 
-[ERROR] 01:12:09 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 08:11:38 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/errors/accessErrorPage.jsp 
 
-[INFO] 01:12:09 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
+[INFO] 08:11:42 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 01:12:42 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
+[INFO] 08:11:42 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 01:12:42 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
+[ERROR] 08:11:42 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 01:12:42 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
+[INFO] 08:11:42 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
 
-[INFO] 01:12:46 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
+[INFO] 08:11:54 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
 
-[INFO] 01:12:46 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@25be2f06 
+[INFO] 08:11:54 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
 
-[INFO] 01:12:46 (CommandLoginFormExecution.java:execute:50)Successful validation inputs 
+[INFO] 08:11:54 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
 
-[ERROR] 01:12:46 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 08:11:56 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
 
-[INFO] 01:12:46 (CommandLoginFormExecution.java:execute:52)User don't exist in cookie(successful) 
+[INFO] 08:11:56 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@6536fbfc 
 
-[INFO] 01:12:46 (CommandLoginFormExecution.java:execute:59)Successful validated --Vlad 
+[INFO] 08:11:56 (CommandLoginFormExecution.java:execute:50)Successful validation inputs 
 
-[INFO] 01:12:46 (CommandLoginFormExecution.java:execute:66)Successful validation on registered before user 
+[ERROR] 08:11:56 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 01:12:46 (CommandLoginFormExecution.java:execute:74)Continue execution without adding in cookie  
+[INFO] 08:11:56 (CommandLoginFormExecution.java:execute:52)User don't exist in cookie(successful) 
 
-[INFO] 01:12:46 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
+[INFO] 08:11:56 (CommandLoginFormExecution.java:execute:59)Successful validated --Vlad 
 
-[INFO] 01:12:47 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
+[INFO] 08:11:56 (CommandLoginFormExecution.java:execute:66)Successful validation on registered before user 
 
-[INFO] 01:12:47 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@5a598aa5 
+[INFO] 08:11:56 (CommandLoginFormExecution.java:execute:74)Continue execution without adding in cookie  
 
-[INFO] 01:12:48 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
+[INFO] 08:11:56 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
 
-[INFO] 01:12:48 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@7e06f3cc 
+[INFO] 08:11:59 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
 
-[INFO] 01:12:48 (UserService.java:<init>:27)Created User Service 
+[INFO] 08:11:59 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@5f4534f6 
 
-[INFO] 01:12:51 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteOrder 
+[INFO] 08:11:59 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
 
-[INFO] 01:12:51 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandDeleteOrderExec@6f85b24 
+[INFO] 08:11:59 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@718546dc 
 
-[INFO] 01:12:53 (CommandDeleteOrderExec.java:execute:55)Successful deleted order Order{productId=15, entityId=26, date=2017-12-28} 
+[INFO] 08:11:59 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:12:53 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@103d2a59 
+[INFO] 08:12:42 (DefaultServlet.java:process:60)Query with url: POST:/store/addNewProduct 
 
-[INFO] 01:12:53 (UserService.java:<init>:27)Created User Service 
+[INFO] 08:12:42 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandAddNewProductByAdminExecution@1ad065c2 
 
-[INFO] 01:12:53 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
+[INFO] 08:12:42 (CommandAddNewProductByAdminExecution.java:downloadImage:115)Problems during file upload. Error: {0}G:\JAVA\EPAM\GiveawayStore\web\resources\images (Отказано в доступе) 
 
-[INFO] 01:12:53 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@e03b8df 
+[INFO] 08:12:43 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
 
-[INFO] 01:12:53 (UserService.java:<init>:27)Created User Service 
+[INFO] 08:12:43 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2182ed1f 
 
-[INFO] 01:14:50 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteOrder 
+[INFO] 08:12:43 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:14:50 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandDeleteOrderExec@6f85b24 
+[INFO] 08:12:49 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[ERROR] 01:14:50 (UserDAO.java:getByParameter:127)Cant search users with nickname Валя 
+[INFO] 08:12:49 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 01:15:18 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteOrder 
+[ERROR] 08:12:49 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 01:15:18 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandDeleteOrderExec@6f85b24 
+[INFO] 08:12:49 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
 
-[INFO] 01:15:18 (CommandDeleteOrderExec.java:execute:55)Successful deleted order Order{productId=16, entityId=27, date=2017-12-28} 
+[INFO] 08:39:55 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@405b748e 
 
-[INFO] 01:15:18 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2dd32ce5 
+[INFO] 08:40:52 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@149799cf 
 
-[INFO] 01:15:18 (UserService.java:<init>:27)Created User Service 
+[INFO] 08:43:21 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@3e250398 
 
-[INFO] 01:15:19 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
+[INFO] 08:44:40 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@cbf64c 
 
-[INFO] 01:15:19 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@594637c 
+[INFO] 08:48:26 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@6317aaa 
 
-[INFO] 01:15:19 (UserService.java:<init>:27)Created User Service 
+[INFO] 08:52:29 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@19d5c015 
 
-[INFO] 01:17:42 (DefaultServlet.java:process:60)Query with url: GET:/store/deleteOrder 
+[INFO] 08:54:00 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@2b078dae 
 
-[INFO] 01:17:42 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandDeleteOrderExec@6f85b24 
+[INFO] 08:59:11 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@d6a67d9 
 
-[ERROR] 01:17:42 (UserDAO.java:getByParameter:127)Cant search users with nickname Валя 
+[INFO] 08:59:24 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:24:24 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@3bb37888 
+[INFO] 09:02:36 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@ab30f98 
 
-[INFO] 01:24:33 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
+[INFO] 09:02:55 (DefaultServlet.java:process:60)Query with url: GET:/store 
 
-[INFO] 01:24:33 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
+[INFO] 09:02:55 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:24:33 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@7c3f2b7b 
+[INFO] 09:02:55 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@17187263 
 
-[INFO] 01:24:33 (UserService.java:<init>:27)Created User Service 
+[INFO] 09:02:55 (UserService.java:<init>:27)Created User Service 
 
-[INFO] 01:24:33 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
+[INFO] 09:02:55 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
 
-[INFO] 01:24:33 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
+[ERROR] 09:02:56 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
 
-[INFO] 01:24:41 (DefaultServlet.java:process:60)Query with url: GET:/store 
+[INFO] 09:02:56 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
 
-[INFO] 01:24:41 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
+[INFO] 11:58:48 (DefaultServlet.java:init:43)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@1f8080c2 
 
-[ERROR] 01:24:42 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 12:03:21 (DefaultServlet.java:init:43)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@2fc853b3 
 
-[INFO] 01:24:42 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
+[INFO] 12:13:52 (DefaultServlet.java:init:43)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@3e1dc78b 
 
-[INFO] 01:25:51 (DefaultServlet.java:process:60)Query with url: GET:/store 
+[INFO] 12:36:58 (DefaultServlet.java:init:43)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@2a0006c5 
 
-[INFO] 01:25:51 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
+[INFO] 12:39:45 (DefaultServlet.java:init:43)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@2c1cebf3 
 
-[ERROR] 01:25:51 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
+[INFO] 12:40:52 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:25:51 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
+[INFO] 12:41:47 (DefaultServlet.java:init:43)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@4bc42bf 
 
-[INFO] 01:26:02 (DefaultServlet.java:process:60)Query with url: GET:/store/signUp 
+[INFO] 12:43:04 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:26:02 (DefaultServlet.java:process:62)Command key execution: CommandSignUpPage{} 
+[INFO] 12:45:01 (DefaultServlet.java:init:43)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@7650aca4 
 
-[INFO] 01:26:02 (DefaultServlet.java:process:65)Redirection path: /viewPublic/signUpPage.jsp REDIRECTION 
+[INFO] 12:45:15 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:26:58 (FilterSecondPassword.java:doFilter:38)Works filterua.com.company.store.controller.filters.FilterSecondPassword@20770619
-passwords equals 
+[INFO] 12:46:06 (DefaultServlet.java:init:43)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@4a99819c 
 
-[INFO] 01:26:58 (DefaultServlet.java:process:60)Query with url: POST:/store/signUpForm 
+[INFO] 12:46:14 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:26:58 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSignUpFormExecution@3d57e7e7 
+[INFO] 12:51:32 (DefaultServlet.java:init:43)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@43aabc30 
 
-[INFO] 01:26:58 (CommandSignUpFormExecution.java:execute:57)Successful validated inputs signUp 
+[INFO] 12:52:13 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 
-[INFO] 01:26:58 (AbstractDao.java:insert:72)Insert into db new object User:???°?»?µ???° ae7091559c3a6e76e5923e597073bcc7f0b808643406abb17ea8e0b8f21c9f10 valera@val.val false false 
+[INFO] 12:53:21 (DefaultServlet.java:init:43)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@1f8e511a 
 
-[INFO] 01:26:58 (CommandSignUpFormExecution.java:execute:83)Continue execution without adding in cookie  
-
-[INFO] 01:26:58 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 01:35:11 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@64e7b83e 
-
-[INFO] 01:36:48 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@29c3a7c4 
-
-[INFO] 01:37:17 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 01:37:17 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
-
-[INFO] 01:37:17 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@40ba36c9 
-
-[INFO] 01:37:17 (UserService.java:<init>:27)Created User Service 
-
-[INFO] 01:37:17 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 01:37:18 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 01:37:18 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 01:39:15 (DefaultServlet.java:process:60)Query with url: GET:/store/signUp 
-
-[INFO] 01:39:15 (DefaultServlet.java:process:62)Command key execution: CommandSignUpPage{} 
-
-[INFO] 01:39:15 (DefaultServlet.java:process:65)Redirection path: /viewPublic/signUpPage.jsp REDIRECTION 
-
-[INFO] 01:39:39 (FilterSecondPassword.java:doFilter:38)Works filterua.com.company.store.controller.filters.FilterSecondPassword@3ba62a0
-passwords equals 
-
-[INFO] 01:39:39 (DefaultServlet.java:process:60)Query with url: POST:/store/signUpForm 
-
-[INFO] 01:39:39 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSignUpFormExecution@46b8fcb3 
-
-[INFO] 01:39:39 (CommandSignUpFormExecution.java:execute:57)Successful validated inputs signUp 
-
-[INFO] 01:39:39 (AbstractDao.java:insert:72)Insert into db new object User:???°?»?µ???° ae7091559c3a6e76e5923e597073bcc7f0b808643406abb17ea8e0b8f21c9f10 valera@gmail.com false false 
-
-[INFO] 01:39:39 (CommandSignUpFormExecution.java:execute:83)Continue execution without adding in cookie  
-
-[INFO] 01:39:39 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 01:42:34 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@5dd040f3 
-
-[INFO] 01:42:45 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 01:42:45 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
-
-[INFO] 01:42:45 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1f529402 
-
-[INFO] 01:42:45 (UserService.java:<init>:27)Created User Service 
-
-[INFO] 01:42:45 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 01:42:46 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 01:42:46 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 01:42:51 (DefaultServlet.java:process:60)Query with url: GET:/store/signUp 
-
-[INFO] 01:42:51 (DefaultServlet.java:process:62)Command key execution: CommandSignUpPage{} 
-
-[INFO] 01:42:51 (DefaultServlet.java:process:65)Redirection path: /viewPublic/signUpPage.jsp REDIRECTION 
-
-[INFO] 01:43:24 (FilterSecondPassword.java:doFilter:38)Works filterua.com.company.store.controller.filters.FilterSecondPassword@83aae11
-passwords equals 
-
-[INFO] 01:43:24 (DefaultServlet.java:process:60)Query with url: POST:/store/signUpForm 
-
-[INFO] 01:43:24 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSignUpFormExecution@4d382172 
-
-[INFO] 01:43:24 (CommandSignUpFormExecution.java:execute:58)Successful validated inputs signUp 
-
-[INFO] 01:43:24 (AbstractDao.java:insert:72)Insert into db new object User:???°?»?µ???° ae7091559c3a6e76e5923e597073bcc7f0b808643406abb17ea8e0b8f21c9f10 fregerg@frfr.erf false false 
-
-[INFO] 01:43:24 (CommandSignUpFormExecution.java:execute:84)Continue execution without adding in cookie  
-
-[INFO] 01:43:24 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 01:47:47 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@45cbf03c 
-
-[INFO] 01:47:59 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 01:47:59 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
-
-[INFO] 01:47:59 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@27c559ed 
-
-[INFO] 01:47:59 (UserService.java:<init>:27)Created User Service 
-
-[INFO] 01:47:59 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 01:48:00 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 01:48:00 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 01:48:39 (DefaultServlet.java:process:60)Query with url: GET:/store/sortingProducts 
-
-[INFO] 01:48:39 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSortProducts@634cd50b 
-
-[INFO] 01:48:39 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 01:48:42 (DefaultServlet.java:process:60)Query with url: GET:/store/sortingProducts 
-
-[INFO] 01:48:42 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSortProducts@634cd50b 
-
-[INFO] 01:48:42 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 01:50:19 (DefaultServlet.java:process:60)Query with url: GET:/store/locale 
-
-[INFO] 01:50:19 (DefaultServlet.java:process:62)Command key execution: ChangeLocale{} 
-
-[INFO] 01:50:19 (CommandChangeLocale.java:setLocale:34)Chosen language uk 
-
-[INFO] 01:50:19 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 01:50:25 (DefaultServlet.java:process:60)Query with url: GET:/store/signUp 
-
-[INFO] 01:50:25 (DefaultServlet.java:process:62)Command key execution: CommandSignUpPage{} 
-
-[INFO] 01:50:25 (DefaultServlet.java:process:65)Redirection path: /viewPublic/signUpPage.jsp REDIRECTION 
-
-[INFO] 01:50:52 (FilterSecondPassword.java:doFilter:38)Works filterua.com.company.store.controller.filters.FilterSecondPassword@26721ea0
-passwords equals 
-
-[INFO] 01:50:52 (DefaultServlet.java:process:60)Query with url: POST:/store/signUpForm 
-
-[INFO] 01:50:52 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSignUpFormExecution@6370840a 
-
-[INFO] 01:50:52 (CommandSignUpFormExecution.java:execute:58)Successful validated inputs signUp 
-
-[INFO] 01:50:52 (AbstractDao.java:insert:72)Insert into db new object User:?????? ae7091559c3a6e76e5923e597073bcc7f0b808643406abb17ea8e0b8f21c9f10 vddv@vfdv.vf false false 
-
-[INFO] 01:50:52 (CommandSignUpFormExecution.java:execute:84)Continue execution without adding in cookie  
-
-[INFO] 01:50:52 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 01:52:32 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@24d3f89a 
-
-[INFO] 01:53:39 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 01:53:39 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
-
-[INFO] 01:53:39 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@63e9998d 
-
-[INFO] 01:53:39 (UserService.java:<init>:27)Created User Service 
-
-[INFO] 01:53:40 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 01:53:40 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 01:53:40 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 01:53:51 (DefaultServlet.java:process:60)Query with url: GET:/store/locale 
-
-[INFO] 01:53:51 (DefaultServlet.java:process:62)Command key execution: ChangeLocale{} 
-
-[INFO] 01:53:51 (CommandChangeLocale.java:setLocale:34)Chosen language uk 
-
-[INFO] 01:53:51 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 01:54:04 (DefaultServlet.java:process:60)Query with url: GET:/store/signUp 
-
-[INFO] 01:54:04 (DefaultServlet.java:process:62)Command key execution: CommandSignUpPage{} 
-
-[INFO] 01:54:04 (DefaultServlet.java:process:65)Redirection path: /viewPublic/signUpPage.jsp REDIRECTION 
-
-[INFO] 01:54:34 (FilterSecondPassword.java:doFilter:38)Works filterua.com.company.store.controller.filters.FilterSecondPassword@3d416c16
-passwords equals 
-
-[INFO] 01:54:34 (DefaultServlet.java:process:60)Query with url: POST:/store/signUpForm 
-
-[INFO] 01:54:34 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSignUpFormExecution@186c1a95 
-
-[INFO] 01:54:34 (CommandSignUpFormExecution.java:execute:58)Successful validated inputs signUp 
-
-[INFO] 01:54:34 (AbstractDao.java:insert:72)Insert into db new object User:?????? ae7091559c3a6e76e5923e597073bcc7f0b808643406abb17ea8e0b8f21c9f10 val@va.vava false false 
-
-[INFO] 01:54:34 (CommandSignUpFormExecution.java:execute:84)Continue execution without adding in cookie  
-
-[INFO] 01:54:34 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 01:57:55 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@13e6f10c 
-
-[INFO] 01:58:30 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 01:58:30 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
-
-[INFO] 01:58:30 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@3b40b536 
-
-[INFO] 01:58:30 (UserService.java:<init>:27)Created User Service 
-
-[INFO] 01:58:30 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 01:58:31 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 01:58:31 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 01:58:36 (DefaultServlet.java:process:60)Query with url: GET:/store/signUp 
-
-[INFO] 01:58:36 (DefaultServlet.java:process:62)Command key execution: CommandSignUpPage{} 
-
-[INFO] 01:58:36 (DefaultServlet.java:process:65)Redirection path: /viewPublic/signUpPage.jsp REDIRECTION 
-
-[INFO] 01:59:03 (FilterSecondPassword.java:doFilter:38)Works filterua.com.company.store.controller.filters.FilterSecondPassword@50a1e1d5
-passwords equals 
-
-[INFO] 01:59:03 (DefaultServlet.java:process:60)Query with url: POST:/store/signUpForm 
-
-[INFO] 01:59:03 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSignUpFormExecution@15a365a5 
-
-[INFO] 01:59:03 (CommandSignUpFormExecution.java:execute:58)Successful validated inputs signUp 
-
-[INFO] 01:59:03 (AbstractDao.java:insert:72)Insert into db new object User:?????? ae7091559c3a6e76e5923e597073bcc7f0b808643406abb17ea8e0b8f21c9f10 valer@val.vale false false 
-
-[INFO] 01:59:03 (CommandSignUpFormExecution.java:execute:84)Continue execution without adding in cookie  
-
-[INFO] 01:59:03 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 02:00:23 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@235d1d48 
-
-[INFO] 02:00:36 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 02:00:36 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
-
-[INFO] 02:00:36 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1170f203 
-
-[INFO] 02:00:36 (UserService.java:<init>:27)Created User Service 
-
-[INFO] 02:00:36 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 02:00:37 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 02:00:37 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 02:00:43 (DefaultServlet.java:process:60)Query with url: GET:/store/signUp 
-
-[INFO] 02:00:43 (DefaultServlet.java:process:62)Command key execution: CommandSignUpPage{} 
-
-[INFO] 02:00:43 (DefaultServlet.java:process:65)Redirection path: /viewPublic/signUpPage.jsp REDIRECTION 
-
-[INFO] 02:01:12 (FilterSecondPassword.java:doFilter:38)Works filterua.com.company.store.controller.filters.FilterSecondPassword@50a1e1d5
-passwords equals 
-
-[INFO] 02:01:12 (DefaultServlet.java:process:60)Query with url: POST:/store/signUpForm 
-
-[INFO] 02:01:12 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSignUpFormExecution@15a365a5 
-
-[INFO] 02:01:12 (CommandSignUpFormExecution.java:execute:58)Successful validated inputs signUp 
-
-[INFO] 02:01:13 (AbstractDao.java:insert:72)Insert into db new object User:?????? ae7091559c3a6e76e5923e597073bcc7f0b808643406abb17ea8e0b8f21c9f10 csdscds@frerg.erg false false 
-
-[INFO] 02:01:13 (CommandSignUpFormExecution.java:execute:84)Continue execution without adding in cookie  
-
-[INFO] 02:01:13 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 02:02:44 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@7851215d 
-
-[INFO] 02:02:54 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 02:02:55 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
-
-[INFO] 02:02:55 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@7d642a06 
-
-[INFO] 02:02:55 (UserService.java:<init>:27)Created User Service 
-
-[INFO] 02:02:55 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 02:02:55 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 02:02:55 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 02:03:01 (DefaultServlet.java:process:60)Query with url: GET:/store/signUp 
-
-[INFO] 02:03:01 (DefaultServlet.java:process:62)Command key execution: CommandSignUpPage{} 
-
-[INFO] 02:03:01 (DefaultServlet.java:process:65)Redirection path: /viewPublic/signUpPage.jsp REDIRECTION 
-
-[INFO] 02:03:23 (FilterSecondPassword.java:doFilter:38)Works filterua.com.company.store.controller.filters.FilterSecondPassword@83aae11
-passwords equals 
-
-[INFO] 02:03:23 (DefaultServlet.java:process:60)Query with url: POST:/store/signUpForm 
-
-[INFO] 02:03:23 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSignUpFormExecution@4d382172 
-
-[INFO] 02:03:23 (CommandSignUpFormExecution.java:execute:58)Successful validated inputs signUp 
-
-[INFO] 02:03:23 (AbstractDao.java:insert:72)Insert into db new object User:?????? ae7091559c3a6e76e5923e597073bcc7f0b808643406abb17ea8e0b8f21c9f10 vfdfv@frger.gr false false 
-
-[INFO] 02:03:23 (CommandSignUpFormExecution.java:execute:84)Continue execution without adding in cookie  
-
-[INFO] 02:03:23 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 02:08:58 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@25a36651 
-
-[INFO] 02:09:04 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 02:09:04 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
-
-[INFO] 02:09:04 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@f6c5e38 
-
-[INFO] 02:09:04 (UserService.java:<init>:27)Created User Service 
-
-[INFO] 02:09:05 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 02:09:05 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 02:09:05 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 02:09:19 (DefaultServlet.java:process:60)Query with url: GET:/store/signUp 
-
-[INFO] 02:09:19 (DefaultServlet.java:process:62)Command key execution: CommandSignUpPage{} 
-
-[INFO] 02:09:19 (DefaultServlet.java:process:65)Redirection path: /viewPublic/signUpPage.jsp REDIRECTION 
-
-[INFO] 02:09:43 (FilterSecondPassword.java:doFilter:38)Works filterua.com.company.store.controller.filters.FilterSecondPassword@2d648ea4
-passwords equals 
-
-[INFO] 02:09:43 (DefaultServlet.java:process:60)Query with url: POST:/store/signUpForm 
-
-[INFO] 02:09:43 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSignUpFormExecution@6866056c 
-
-[INFO] 02:09:43 (CommandSignUpFormExecution.java:execute:59)Successful validated inputs signUp 
-
-[INFO] 02:09:44 (AbstractDao.java:insert:72)Insert into db new object User:?????? ae7091559c3a6e76e5923e597073bcc7f0b808643406abb17ea8e0b8f21c9f10 bdfb@fr.uu false false 
-
-[INFO] 02:09:44 (CommandSignUpFormExecution.java:execute:85)Continue execution without adding in cookie  
-
-[INFO] 02:09:44 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 02:11:49 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
-
-[INFO] 02:11:49 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2e55dd0c 
-
-[INFO] 02:11:49 (UserService.java:<init>:27)Created User Service 
-
-[INFO] 02:11:55 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@72ccd81a 
-
-[INFO] 02:11:55 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@6d8792db 
-
-[INFO] 02:11:55 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@64bc21ac 
-
-[INFO] 02:11:55 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@493dfb8e 
-
-[INFO] 02:11:55 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@9d157ff 
-
-[INFO] 02:13:10 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@3b5ea91f 
-
-[INFO] 02:13:15 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 02:13:15 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
-
-[INFO] 02:13:15 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@62ac9cdd 
-
-[INFO] 02:13:15 (UserService.java:<init>:27)Created User Service 
-
-[INFO] 02:13:15 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 02:13:16 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 02:13:16 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 02:13:22 (DefaultServlet.java:process:60)Query with url: GET:/store/locale 
-
-[INFO] 02:13:22 (DefaultServlet.java:process:62)Command key execution: ChangeLocale{} 
-
-[INFO] 02:13:22 (CommandChangeLocale.java:setLocale:34)Chosen language uk 
-
-[INFO] 02:13:22 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 02:14:52 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 02:14:52 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 02:14:52 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 02:14:52 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 02:14:57 (DefaultServlet.java:process:60)Query with url: GET:/store/signUp 
-
-[INFO] 02:14:57 (DefaultServlet.java:process:62)Command key execution: CommandSignUpPage{} 
-
-[INFO] 02:14:57 (DefaultServlet.java:process:65)Redirection path: /viewPublic/signUpPage.jsp REDIRECTION 
-
-[INFO] 02:15:21 (FilterSecondPassword.java:doFilter:38)Works filterua.com.company.store.controller.filters.FilterSecondPassword@534c751e
-passwords equals 
-
-[INFO] 02:15:21 (DefaultServlet.java:process:60)Query with url: POST:/store/signUpForm 
-
-[INFO] 02:15:21 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSignUpFormExecution@2ca3a86f 
-
-[INFO] 02:15:21 (CommandSignUpFormExecution.java:execute:59)Successful validated inputs signUp 
-
-[INFO] 02:15:22 (AbstractDao.java:insert:72)Insert into db new object User:?????? 984527ca0e690f26df97eb9e35874eb7a0e0f5a05aa33c652fd094ed03d5d03b wef@freg.um false false 
-
-[INFO] 02:15:22 (CommandSignUpFormExecution.java:execute:85)Continue execution without adding in cookie  
-
-[INFO] 02:15:22 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 02:18:03 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@241ac2e0 
-
-[INFO] 02:19:28 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 02:19:28 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
-
-[INFO] 02:19:28 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@27c559ed 
-
-[INFO] 02:19:28 (UserService.java:<init>:27)Created User Service 
-
-[INFO] 02:19:28 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 02:19:29 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 02:19:29 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 02:20:20 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
-
-[INFO] 02:20:20 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
-
-[INFO] 02:20:20 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
-
-[INFO] 02:20:23 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
-
-[INFO] 02:20:23 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@2c8a75d0 
-
-[INFO] 02:20:23 (CommandLoginFormExecution.java:execute:50)Successful validation inputs 
-
-[ERROR] 02:20:23 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 02:20:23 (CommandLoginFormExecution.java:execute:52)User don't exist in cookie(successful) 
-
-[INFO] 02:20:23 (CommandLoginFormExecution.java:execute:59)Successful validated --Vlad 
-
-[INFO] 02:20:23 (CommandLoginFormExecution.java:execute:66)Successful validation on registered before user 
-
-[INFO] 02:20:23 (CommandLoginFormExecution.java:execute:74)Continue execution without adding in cookie  
-
-[INFO] 02:20:23 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 02:20:25 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
-
-[INFO] 02:20:25 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@43f31bc7 
-
-[INFO] 02:20:25 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
-
-[INFO] 02:20:26 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@18f607fc 
-
-[INFO] 02:20:26 (UserService.java:<init>:27)Created User Service 
-
-[INFO] 02:20:49 (DefaultServlet.java:process:60)Query with url: POST:/store/addNewProduct 
-
-[INFO] 02:20:49 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandAddNewProductByAdminExecution@3b561e26 
-
-[INFO] 02:20:49 (CommandAddNewProductByAdminExecution.java:downloadImage:94)Problems during file upload. Error: {0}G:\JAVA\EPAM\GiveawayStore\web\resources\images (Отказано в доступе) 
-
-[INFO] 02:20:49 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
-
-[INFO] 02:20:49 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@681069bd 
-
-[INFO] 02:20:49 (UserService.java:<init>:27)Created User Service 
-
-[INFO] 02:20:55 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 02:20:55 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 02:20:55 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 02:20:55 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 11:48:51 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@7ec4850d 
-
-[INFO] 11:50:16 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 11:50:16 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
-
-[INFO] 11:50:16 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@1170f203 
-
-[INFO] 11:50:16 (UserService.java:<init>:27)Created User Service 
-
-[INFO] 11:50:16 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 11:50:17 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 11:50:17 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 11:50:46 (DefaultServlet.java:process:60)Query with url: GET:/store/sortingProducts 
-
-[INFO] 11:50:46 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSortProducts@4190e9d5 
-
-[INFO] 11:50:46 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 11:50:49 (DefaultServlet.java:process:60)Query with url: GET:/store/sortingProducts 
-
-[INFO] 11:50:49 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSortProducts@4190e9d5 
-
-[INFO] 11:50:49 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 11:50:51 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
-
-[INFO] 11:50:51 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
-
-[INFO] 11:50:51 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
-
-[INFO] 11:50:53 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
-
-[INFO] 11:50:53 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@15a365a5 
-
-[INFO] 11:50:53 (CommandLoginFormExecution.java:execute:50)Successful validation inputs 
-
-[ERROR] 11:50:54 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 11:50:54 (CommandLoginFormExecution.java:execute:52)User don't exist in cookie(successful) 
-
-[INFO] 11:50:54 (CommandLoginFormExecution.java:execute:59)Successful validated --Vlad 
-
-[INFO] 11:50:54 (CommandLoginFormExecution.java:execute:66)Successful validation on registered before user 
-
-[INFO] 11:50:54 (CommandLoginFormExecution.java:execute:74)Continue execution without adding in cookie  
-
-[INFO] 11:50:54 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 11:50:55 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
-
-[INFO] 11:50:55 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@83fa58b 
-
-[INFO] 11:50:55 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
-
-[INFO] 11:50:55 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@2d1e1086 
-
-[INFO] 11:50:55 (UserService.java:<init>:27)Created User Service 
-
-[INFO] 11:55:07 (DefaultServlet.java:process:60)Query with url: GET:/store/searchProduct 
-
-[INFO] 11:55:07 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSearchProduct@3eb6b1e7 
-
-[INFO] 11:55:07 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 11:55:42 (DefaultServlet.java:process:60)Query with url: GET:/store/searchProduct 
-
-[INFO] 11:55:42 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSearchProduct@3eb6b1e7 
-
-[INFO] 11:55:43 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 11:55:46 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 11:55:46 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 11:55:46 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 11:55:46 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 11:55:48 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
-
-[INFO] 11:55:48 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@83fa58b 
-
-[INFO] 11:55:48 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
-
-[INFO] 11:55:48 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@319bffc1 
-
-[INFO] 11:55:48 (UserService.java:<init>:27)Created User Service 
-
-[INFO] 11:59:56 (DefaultServlet.java:init:44)Initialized default servlet  ua.com.company.store.controller.DefaultServlet@2df559bc 
-
-[INFO] 12:13:56 (DefaultServlet.java:process:60)Query with url: GET:/store 
-
-[INFO] 12:13:56 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
-
-[INFO] 12:13:56 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@7d73a72e 
-
-[INFO] 12:13:56 (UserService.java:<init>:27)Created User Service 
-
-[INFO] 12:13:57 (DefaultServlet.java:process:62)Command key execution: CommandHomePageCommand{} 
-
-[ERROR] 12:13:58 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 12:13:58 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 12:14:45 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
-
-[INFO] 12:14:45 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
-
-[INFO] 12:14:45 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
-
-[INFO] 12:14:47 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
-
-[INFO] 12:14:47 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@2c2c561 
-
-[INFO] 12:14:47 (CommandLoginFormExecution.java:execute:50)Successful validation inputs 
-
-[ERROR] 12:14:47 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 12:14:47 (CommandLoginFormExecution.java:execute:52)User don't exist in cookie(successful) 
-
-[INFO] 12:14:47 (CommandLoginFormExecution.java:execute:59)Successful validated --Vlad 
-
-[INFO] 12:14:47 (CommandLoginFormExecution.java:execute:66)Successful validation on registered before user 
-
-[INFO] 12:14:47 (CommandLoginFormExecution.java:execute:74)Continue execution without adding in cookie  
-
-[INFO] 12:14:47 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 12:14:48 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
-
-[INFO] 12:14:48 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@53779b29 
-
-[INFO] 12:14:49 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
-
-[INFO] 12:14:49 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@25deadcc 
-
-[INFO] 12:14:49 (UserService.java:<init>:27)Created User Service 
-
-[INFO] 12:14:54 (DefaultServlet.java:process:60)Query with url: GET:/store/logout 
-
-[INFO] 12:14:54 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandRemoveSession@12838dd8 
-
-[INFO] 12:14:54 (CommandRemoveSession.java:execute:38)Removed cookies [Ljavax.servlet.http.Cookie;@1e077f84 
-
-[INFO] 12:14:54 (CommandRemoveSession.java:execute:47)Removed session with ID Vlad
-Time online 1 min. 
-
-[INFO] 12:14:54 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 12:21:37 (DefaultServlet.java:process:60)Query with url: GET:/store/signUp 
-
-[INFO] 12:21:37 (DefaultServlet.java:process:62)Command key execution: CommandSignUpPage{} 
-
-[INFO] 12:21:37 (DefaultServlet.java:process:65)Redirection path: /viewPublic/signUpPage.jsp REDIRECTION 
-
-[INFO] 12:22:02 (FilterSecondPassword.java:doFilter:38)Works filterua.com.company.store.controller.filters.FilterSecondPassword@10d8ee51
-passwords equals 
-
-[INFO] 12:22:02 (DefaultServlet.java:process:60)Query with url: POST:/store/signUpForm 
-
-[INFO] 12:22:02 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandSignUpFormExecution@12aab97f 
-
-[INFO] 12:22:02 (CommandSignUpFormExecution.java:execute:59)Successful validated inputs signUp 
-
-[INFO] 12:22:03 (AbstractDao.java:insert:72)Insert into db new object User:Vika 1a450110218864919244216425af636bda0270269ff295412c4a7b7c2e39f0fe vika@vi.vi false false 
-
-[INFO] 12:22:03 (CommandSignUpFormExecution.java:execute:85)Continue execution without adding in cookie  
-
-[INFO] 12:22:03 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 12:22:29 (DefaultServlet.java:process:60)Query with url: GET:/store/createOrder 
-
-[INFO] 12:22:29 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandCreatingNewOrder@6950ebd1 
-
-[INFO] 12:22:29 (AbstractDao.java:insert:72)Insert into db new object Order{productId=17, entityId=51, date=2018-01-17} 
-
-[INFO] 12:22:29 (CommandCreatingNewOrder.java:execute:56)Successful added Order{productId=17, entityId=51, date=2018-01-17} 
-
-[INFO] 12:22:29 (DefaultServlet.java:process:65)Redirection path: /viewPublic/successfulCreatedOrder.jsp 
-
-[INFO] 12:22:41 (DefaultServlet.java:process:60)Query with url: GET:/store/logout 
-
-[INFO] 12:22:41 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandRemoveSession@12838dd8 
-
-[INFO] 12:22:41 (CommandRemoveSession.java:execute:38)Removed cookies [Ljavax.servlet.http.Cookie;@235958be 
-
-[INFO] 12:22:41 (CommandRemoveSession.java:execute:47)Removed session with ID Vika
-Time online 8 min. 
-
-[INFO] 12:22:41 (DefaultServlet.java:process:65)Redirection path: /main.jsp REDIRECTION 
-
-[INFO] 12:22:43 (DefaultServlet.java:process:60)Query with url: GET:/store/login 
-
-[INFO] 12:22:43 (DefaultServlet.java:process:62)Command key execution: CommandLoginPage{} 
-
-[INFO] 12:22:43 (DefaultServlet.java:process:65)Redirection path: /viewPublic/loginPage.jsp REDIRECTION 
-
-[INFO] 12:22:44 (DefaultServlet.java:process:60)Query with url: POST:/store/loginForm 
-
-[INFO] 12:22:44 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.executions.CommandLoginFormExecution@2c2c561 
-
-[INFO] 12:22:44 (CommandLoginFormExecution.java:execute:50)Successful validation inputs 
-
-[ERROR] 12:22:44 (UserDAO.java:getByParameter:127)Cant search users with nickname JSESSIONID 
-
-[INFO] 12:22:44 (CommandLoginFormExecution.java:execute:52)User don't exist in cookie(successful) 
-
-[INFO] 12:22:44 (CommandLoginFormExecution.java:execute:59)Successful validated --Vlad 
-
-[INFO] 12:22:44 (CommandLoginFormExecution.java:execute:66)Successful validation on registered before user 
-
-[INFO] 12:22:44 (CommandLoginFormExecution.java:execute:74)Continue execution without adding in cookie  
-
-[INFO] 12:22:44 (DefaultServlet.java:process:65)Redirection path: /main.jsp 
-
-[INFO] 12:22:45 (DefaultServlet.java:process:60)Query with url: GET:/store/adminPage 
-
-[INFO] 12:22:45 (DefaultServlet.java:process:62)Command key execution: ua.com.company.store.controller.impl.redirection.CommandAdminPage@53779b29 
-
-[INFO] 12:22:46 (DefaultServlet.java:process:65)Redirection path: /WEB-INF/viewPrivate/adminPage.jsp 
-
-[INFO] 12:22:46 (UserDAO.java:<init>:22)Created dao layer + ua.com.company.store.model.dao.impl.UserDAO@39193e19 
-
-[INFO] 12:22:46 (UserService.java:<init>:27)Created User Service 
+[INFO] 12:54:20 (MySqlDaoFactory.java:<init>:47)Mysql dao factory constur 
 

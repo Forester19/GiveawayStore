@@ -3,16 +3,11 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
     <tlib-version>1.0</tlib-version>
-    <short-name>udt</short-name>
-    <uri>customtags</uri>
+    <short-name>ct</short-name>
+    <uri>today</uri>
     <tag>
-        <name>user-data</name>
-        <tag-class>ua.training.tag.UserDataTag</tag-class>
+        <name>info-time</name>
+        <tag-class>ua.com.company.store.taglib.ShowDateTag</tag-class>
         <body-content>empty</body-content>
-        <attribute>
-            <name>user</name>
-            <required>true</required>
-            <rtexprvalue>true</rtexprvalue>
-        </attribute>
     </tag>
 </taglib>

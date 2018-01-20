@@ -3,15 +3,21 @@ package ua.com.company.store.controller.filters;
 import org.apache.log4j.Logger;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Objects;
 
 /**
- * Created by Владислав on 09.01.2018.
+ * Filter witch check passwords on equals from sign up page
+ *
+ * if !equals passwords then sign up page include error information
+ * else do sign up
+ *
  */
-public class FilterSecondPassword implements Filter {
+@WebFilter(filterName = "passEqFilter", urlPatterns = {"/store/signUpForm"})
+public class FilterEqualsPasswords implements Filter {
     private Logger logger = Logger.getRootLogger();
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -23,8 +29,9 @@ public class FilterSecondPassword implements Filter {
 
         String pass1 = servletRequest.getParameter("password");
         String pass2 = servletRequest.getParameter("password2");
-        System.out.println(pass1);
-        System.out.println(pass2);
+
+        System.out.println(servletRequest.getCharacterEncoding());
+
         if (!Objects.equals(pass1, pass2) || pass1.equals("1234") || pass2.contains("<script>")){
 
             PrintWriter printWriter = servletResponse.getWriter();
@@ -37,8 +44,6 @@ public class FilterSecondPassword implements Filter {
         else {
             logger.info("Works filter" + this.toString() +"\n"+
             "passwords equals");
-            servletRequest.setCharacterEncoding("Cp1251");
-            servletResponse.setCharacterEncoding("Cp1251");
             filterChain.doFilter(servletRequest,servletResponse);
          }
     }

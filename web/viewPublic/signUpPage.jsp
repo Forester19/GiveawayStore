@@ -2,7 +2,7 @@
 
 <div class="row">
     <div class="col-md-6 offset-md-3">
-        <form name="LoginForm" action="/store/signUpForm" method="post">
+        <form name="LoginForm" accept-charset="UTF-8" action="/store/signUpForm" method="post">
             <div class="form-group">
             <label for="exampleInputEmail1"><fmt:message key="store.nickname" bundle="${rb}"/> </label>
             <input type="text" name="login" class="form-control" id="exampleInputEmail1" aria-describedby="nicknameHelp" placeholder="<fmt:message key="store.helpWithNickname" bundle="${rb}"/>">

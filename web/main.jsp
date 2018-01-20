@@ -57,7 +57,15 @@
             <td>${prod.title}</td>
             <td>${prod.description}</td>
             <td>${prod.price}</td>
-            <td><img src="${image}" width="100px" height="50px"></td>
+            <td>
+                <c:if test="${image eq '/resources/images/'}">
+                <img src="/resources/images/no-image-83a2b680abc7af87cfff7777d0756fadb9f9aecd5ebda5d34f8139668e0fc842.png" width="100px" height="50px">
+            </c:if>
+                <c:if test="${image ne '/resources/images/'}">
+                    <img src="${image}" width="100px" height="50px">
+                </c:if>
+            </td>
+
 
             <c:if test="${user.isRole() eq false}">
                 <td scope="col"> <a href="${pageContext.request.contextPath}/store/createOrder?id=${prod.id}">

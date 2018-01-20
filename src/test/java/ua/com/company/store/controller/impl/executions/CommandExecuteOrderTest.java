@@ -23,7 +23,7 @@ public class CommandExecuteOrderTest {
 
     @Test
     public void execute() throws Exception {
-
+      executeOrder.sendMessage("vd1321@mail.ru","test","test");
     }
 
     @Test

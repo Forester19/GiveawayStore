@@ -1,11 +1,11 @@
-package ua.com.company.store.controller.utils;
+package ua.com.company.store.utils;
 
 import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
 
 /**
  * Created by Владислав on 22.12.2017.
  */
-public class JDBCConnectionPoolManager {
+public final class JDBCConnectionPoolManager {
     private JDBCConnectionPool jdbcConnectionPool;
 
 
