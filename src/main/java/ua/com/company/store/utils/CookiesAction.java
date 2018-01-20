@@ -14,7 +14,7 @@ import java.util.Objects;
 /**
  * Created by Владислав on 26.12.2017.
  */
-public final class CookiesAction {
+public class CookiesAction {
     private static Logger logger = Logger.getRootLogger();
 
     public static void setCookieUserInform(HttpServletResponse response, Object userInform) {
