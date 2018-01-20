@@ -42,4 +42,5 @@ public class ProductImageService {
        ProductImageDAO productImageDAO = (ProductImageDAO) genericDAO;
         productImageDAO.insertImageAndProduct(image,product);
     }
+
 }

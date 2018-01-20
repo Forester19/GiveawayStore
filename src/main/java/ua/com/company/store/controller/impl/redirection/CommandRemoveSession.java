@@ -35,7 +35,7 @@ public class CommandRemoveSession implements CommandTypical {
         // Get last access time of this web page.
         Date lastAccessTime = null;
 
-        if (sessionManager.failedSession(session,resp)){
+        if (session == null || session.getAttribute("user") == null){
             return null;
         }
         if (req.getCookies() != null){

@@ -77,6 +77,7 @@ public class CommandAdminPageTest {
        verify(request).setAttribute(anyString(), anyObject());
        verify(userService).getAllUsers();
        verifyNoMoreInteractions(request,userService);
+       validateMockitoUsage();
 
     }
 

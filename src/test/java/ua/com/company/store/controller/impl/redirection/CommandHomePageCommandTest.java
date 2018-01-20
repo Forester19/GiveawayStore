@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import static org.junit.Assert.*;
+import static org.mockito.Matchers.anyObject;
+import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -53,8 +55,11 @@ public class CommandHomePageCommandTest {
         assertEquals(expexted,actual);
 
         verify(cookiesAction).getUserFromCookie(request,userService);
-       // verify(session).setAttribute(anyString(),mock(User.class));
+       //verify(session).setAttribute(anyString(),mock(anyObject()));
     }
+
+
+
     private void initObjectsMocking() {
         request = mock(HttpServletRequest.class);
         response = mock(HttpServletResponse.class);

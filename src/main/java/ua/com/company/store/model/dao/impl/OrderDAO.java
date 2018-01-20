@@ -46,7 +46,7 @@ private Logger logger = Logger.getRootLogger();
 
     @Override
     public String getInsertQuery() {
-        return "insert into onlinestoreproject.orders(id,product_id,entity_id,date) VALUES (?,?,?,?)";
+        return "insert into onlinestoreproject.orders(id,product_id,entity_id,date,successful_paid) VALUES (?,?,?,?,?)";
     }
 
     @Override

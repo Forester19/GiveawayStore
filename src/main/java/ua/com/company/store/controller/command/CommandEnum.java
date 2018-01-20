@@ -25,6 +25,11 @@ public enum CommandEnum {
         this.command = new CommandHomePageCommand(UserService.getInstance());
     }
     },
+    PRODUCT_PAGE {{
+        this.key = "GET:/store/productPage";
+        this.command = new CommandProductPage(ProductImageService.getInstance());
+    }
+    },
     CHANGE_LOCALE {{
 
         this.key = "GET:/store/locale";

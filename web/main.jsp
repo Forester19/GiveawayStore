@@ -28,7 +28,8 @@
     <input type="text" id="your_search_text"  name="searchText" class="form-control" placeholder="<fmt:message key="store.product.search" bundle="${rb}"/>" aria-label="" aria-describedby="basic-addon1">
 
     <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button" onclick="location.href= '${pageContext.request.contextPath}/store/searchProduct?searchText=' + document.getElementById('your_search_text').value;"><fmt:message key="store.product.search" bundle="${rb}"/></button>
+    <%--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    --%>    <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="location.href= '${pageContext.request.contextPath}/store/searchProduct?searchText=' + document.getElementById('your_search_text').value;"><fmt:message key="store.product.search" bundle="${rb}"/></button>
           </div>
 
 
@@ -54,7 +55,7 @@
         <c:url var="image" value="${prod.pathImage}"/>
         <tr>
             <th scope="row">${prod.id}</th>
-            <td>${prod.title}</td>
+            <td><a class="imageLink" href="/store/productPage?id=${prod.id}">${prod.title}</a></td>
             <td>${prod.description}</td>
             <td>${prod.price}</td>
             <td>

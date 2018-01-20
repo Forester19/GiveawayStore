@@ -6,12 +6,12 @@ package ua.com.company.store.constants;
 public class Redirection {
 
     // ERRORS PART
-    public static String ACCESS_ERROR_PAGE = "/WEB-INF/viewPrivate/errors/accessErrorPage.jsp";
-    public static String BAD_WAY_PASSWORDS = "/WEB-INF/viewPrivate/errors/badWayPassword.jsp";
-    public static String EXIST_USER_ERROR = "/WEB-INF/viewPrivate/errors/existUserError.jsp";
-    public static String NO_EXIST_USER_PAGE = "/WEB-INF/viewPrivate/errors/noExistUserPage.jsp";
-    public static String PAGE_NOT_FOUND = "/WEB-INF/viewPrivate/errors/pageNotFound.jsp";
-    public static String ERRORS_WITH_INPUTS = "/WEB-INF/viewPrivate/errors/someErrorByInputs.jsp";
+    public static String ACCESS_ERROR_PAGE = "/viewPublic/errors/accessErrorPage.jsp";
+    public static String BAD_WAY_PASSWORDS = "/viewPublic/errors/badWayPassword.jsp";
+    public static String EXIST_USER_ERROR = "/viewPublic/errors/existUserError.jsp";
+    public static String NO_EXIST_USER_PAGE = "/viewPublic/errors/noExistUserPage.jsp";
+    public static String PAGE_NOT_FOUND = "/viewPublic/errors/pageNotFound.jsp";
+    public static String ERRORS_WITH_INPUTS = "/viewPublic/errors/someErrorByInputs.jsp";
 
 
 
@@ -24,5 +24,8 @@ public class Redirection {
     //PRIVATE PAGES
     public static String ADMIN_PAGE = "/WEB-INF/viewPrivate/adminPage.jsp";
     public static String PERSONAL_PAGE = "/WEB-INF/viewPrivate/personalPage.jsp";
+
+    //Product
+    public static String PRODUCT_PAGE = "/viewPublic/productPage.jsp";
 
 }
