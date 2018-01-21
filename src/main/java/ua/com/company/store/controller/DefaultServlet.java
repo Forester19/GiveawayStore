@@ -10,7 +10,7 @@ import ua.com.company.store.utils.ServletWrapper;
 import ua.com.company.store.exceptions.ServiceException;
 import ua.com.company.store.locale.AppLocale;
 import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
-import ua.com.company.store.model.dao.exceptions.PersistException;
+import ua.com.company.store.exceptions.PersistException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;

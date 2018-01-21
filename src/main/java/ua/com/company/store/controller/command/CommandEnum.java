@@ -4,10 +4,7 @@ import ua.com.company.store.controller.impl.executions.*;
 import ua.com.company.store.controller.impl.redirection.*;
 import ua.com.company.store.hashing.PasswordHashing;
 import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
-import ua.com.company.store.service.OrderService;
-import ua.com.company.store.service.ProductImageService;
-import ua.com.company.store.service.ProductService;
-import ua.com.company.store.service.UserService;
+import ua.com.company.store.service.*;
 import ua.com.company.store.utils.SessionManager;
 
 /**
@@ -23,6 +20,11 @@ public enum CommandEnum {
     HOME {{
         this.key = "GET:/store";
         this.command = new CommandHomePageCommand(UserService.getInstance());
+    }
+    },
+    CREATE_REVIEW {{
+        this.key = "GET:/store/createReview";
+        this.command = new CommandCreateReview(ReviewService.getInstance());
     }
     },
     PRODUCT_PAGE {{

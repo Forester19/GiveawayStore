@@ -2,7 +2,7 @@ package ua.com.company.store.service;
 
 import ua.com.company.store.utils.JDBCConnectionPoolManager;
 import ua.com.company.store.model.dao.daoAbstract.GenericDAO;
-import ua.com.company.store.model.dao.exceptions.PersistException;
+import ua.com.company.store.exceptions.PersistException;
 import ua.com.company.store.model.dao.factory.MySqlDaoFactory;
 import ua.com.company.store.model.dao.impl.ProductImageDAO;
 import ua.com.company.store.model.entity.Image;

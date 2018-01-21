@@ -4,7 +4,7 @@ import org.apache.log4j.Logger;
 import ua.com.company.store.utils.JDBCConnectionPoolManager;
 import ua.com.company.store.model.dao.daoAbstract.AbstractDao;
 import ua.com.company.store.model.dao.daoAbstract.GenericDAO;
-import ua.com.company.store.model.dao.exceptions.PersistException;
+import ua.com.company.store.exceptions.PersistException;
 import ua.com.company.store.model.dao.factory.MySqlDaoFactory;
 import ua.com.company.store.model.entity.User;
 

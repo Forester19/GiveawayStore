@@ -5,6 +5,7 @@ import ua.com.company.store.controller.command.CommandTypical;
 import ua.com.company.store.model.entity.additional.ProductImage;
 import ua.com.company.store.service.ProductImageService;
 import ua.com.company.store.service.ProductService;
+import ua.com.company.store.utils.RedirectionManager;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -27,6 +28,7 @@ public class CommandProductPage implements CommandTypical {
         ProductImage productImage = getProductByID(Integer.parseInt(productId));
 
         req.setAttribute("product", productImage);
+        req.getSession().setAttribute("product",productImage);
 
         return Redirection.PRODUCT_PAGE;
     }

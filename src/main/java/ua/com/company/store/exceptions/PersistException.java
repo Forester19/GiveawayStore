@@ -1,4 +1,4 @@
-package ua.com.company.store.model.dao.exceptions;
+package ua.com.company.store.exceptions;
 
 /**
  * Created by Владислав on 22.11.2017.

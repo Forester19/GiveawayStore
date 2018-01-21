@@ -1,8 +1,7 @@
 package ua.com.company.store.model.dao.factory;
 
-import ua.com.company.store.model.dao.connection.JDBCConnectionPool;
 import ua.com.company.store.model.dao.daoAbstract.GenericDAO;
-import ua.com.company.store.model.dao.exceptions.PersistException;
+import ua.com.company.store.exceptions.PersistException;
 
 /**
  * Created by Владислав on 22.11.2017.
