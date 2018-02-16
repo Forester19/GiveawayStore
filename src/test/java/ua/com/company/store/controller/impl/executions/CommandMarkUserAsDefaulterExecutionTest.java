@@ -32,10 +32,6 @@ createMockObjects();
 commandMarkUserAsDefaulterExecution = new CommandMarkUserAsDefaulterExecution(userService);
     }
 
-    @After
-    public void tearDown() throws Exception {
-
-    }
 
     @Test
     public void execute() throws Exception {
@@ -54,8 +50,6 @@ commandMarkUserAsDefaulterExecution = new CommandMarkUserAsDefaulterExecution(us
         when(request.getParameter(anyString())).thenReturn("0");
         when(userService.getById(anyInt())).thenReturn(user);
         when(userService.getAllUsers()).thenReturn(list);
-
-
 
         String expected = commandMarkUserAsDefaulterExecution.execute(request,response);
         String actual = Redirection.ADMIN_PAGE;

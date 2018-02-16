@@ -50,17 +50,17 @@ public class CommandExecuteOrder implements CommandTypical {
         String userNameByOrder = req.getParameter("userName");
         User user = userService.getUserByNickName(userNameByOrder);
         Order order = orderService.getByParameter(user);
-        try {
-            sendMessage(user.getEmail(), "Test", order.toString());
+       /* try {
+           // sendMessage(user.getEmail(), "Test", order.toString());
         } catch (MessagingException e) {
             logger.error("Error with sending message " + e);
-        }
+        }*/
 
 
         return Redirection.ADMIN_PAGE;
     }
 
-    public void sendMessage(String to, String subj, String text) throws IOException, MessagingException {
+    /*public void sendMessage(String to, String subj, String text) throws IOException, MessagingException {
         Security.addProvider(new com.sun.net.ssl.internal.ssl.Provider());
 
         Properties props = new Properties();
@@ -90,7 +90,7 @@ public class CommandExecuteOrder implements CommandTypical {
 
         Transport.send(message);
     }
-
+*/
 }
 
 

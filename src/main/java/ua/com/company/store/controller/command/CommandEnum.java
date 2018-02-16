@@ -23,7 +23,7 @@ public enum CommandEnum {
     }
     },
     CREATE_REVIEW {{
-        this.key = "GET:/store/createReview";
+        this.key = "POST:/store/createReview";
         this.command = new CommandCreateReview(ReviewService.getInstance());
     }
     },

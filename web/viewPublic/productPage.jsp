@@ -27,7 +27,7 @@
 </nav>
 <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-        <form action="/store/createReview" method="get">
+        <form action="${pageContext.request.contextPath}/store/createReview" method="post">
 
             <div class="form-group">
                 <label for="exampleInputEmail1">Your review: ${user.nickname}</label>

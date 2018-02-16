@@ -4,6 +4,7 @@ import ua.com.company.store.constants.Redirection;
 import ua.com.company.store.controller.command.CommandTypical;
 import ua.com.company.store.model.entity.User;
 import ua.com.company.store.service.ReviewService;
+import ua.com.company.store.utils.RedirectionManager;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -31,6 +32,6 @@ public class CommandCreateReview implements CommandTypical {
         req.setAttribute("product",product);
 
         System.out.println(userWhoCreatedReview + "\n" + reiew + "\n" + Integer.parseInt(product));
-        return Redirection.PRODUCT_PAGE;
+        return Redirection.PRODUCT_PAGE + " " + RedirectionManager.REDIRECTION;
     }
 }

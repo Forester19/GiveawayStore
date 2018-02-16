@@ -8,10 +8,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
-/**
- * Created by Владислав on 27.11.2017.
- */
 public class JDBCConnectionPool {
     private Logger log = null;
     private String url;
@@ -24,17 +22,20 @@ public class JDBCConnectionPool {
 
     private JDBCConnectionPool() {
         log = Logger.getRootLogger();
-
-        this.url = "jdbc:mysql://localhost:3306/onlinestoreproject?autoReconnect=true&useSSL=false&useUnicode=true&amp;characterEncoding=cp1251";
+       /*this.url = "jdbc:mysql://localhost:3306/onlinestoreproject?autoReconnect=true&useSSL=false";
         this.user = "root";
-        this.password = "root";
-        this.maxConn = 10;
 
+        this.password = "root";
+        this.maxConn = 10;*/
+      this.url = "jdbc:mysql://node72188-awaystore.whelastic.net/onlinestoreproject";
+        this.user = "root";
+        this.password = "QKfj0OVGFn";
+        this.maxConn = 10;
         loadDrivers();
     }
 
-    private static JDBCConnectionPool instance;
-    private ArrayList<Connection> freeConnections = new ArrayList<Connection>();
+    private volatile static JDBCConnectionPool instance;
+    private List<Connection> freeConnections = new ArrayList<Connection>();
 
     public static synchronized JDBCConnectionPool getInstanceConnectionPool() {
         if (instance == null) {

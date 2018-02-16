@@ -7,6 +7,9 @@ import ua.com.company.store.model.entity.Product;
 import ua.com.company.store.model.entity.User;
 import ua.com.company.store.model.entity.additional.ProductImage;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -108,10 +111,12 @@ public class ProductImageDAO extends AbstractDao<ProductImage> {
         try {
             connection = getConnectionFromPool();
             connection.setAutoCommit(false);
+
             preparedStatementImageInsert = connection.prepareStatement(imageInser, Statement.RETURN_GENERATED_KEYS);
+
             preparedStatementImageInsert.setInt(1, 0);
             preparedStatementImageInsert.setString(2, image.getPath());
-            preparedStatementImageInsert.setString(3, image.getData());
+            preparedStatementImageInsert.setString(3,image.getData());
             rowAffected = preparedStatementImageInsert.executeUpdate();
             resultSetImage = preparedStatementImageInsert.getGeneratedKeys();
             if (resultSetImage.next()) {
